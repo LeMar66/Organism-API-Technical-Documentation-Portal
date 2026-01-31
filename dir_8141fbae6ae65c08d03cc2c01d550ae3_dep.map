@@ -1,0 +1,22 @@
+<map id="main/ceo/managers/communication" name="main/ceo/managers/communication">
+<area shape="rect" id="node1" href="dir_f0def43da6858815fcb024e72019effa.html" title="data" alt="" coords="207,209,257,235"/>
+<area shape="rect" id="node2" href="dir_e4b9c6f7e7339e84c015f7e12cbe2261.html" title="time" alt="" coords="61,209,113,235"/>
+<area shape="rect" id="node3" href="dir_1076dd02d5eb8cf6d0e12dcc1217a0a2.html" title="bus" alt="" coords="137,209,183,235"/>
+<area shape="poly" id="edge2" href="dir_000004_000007.html" alt="" coords="197,87,221,135,229,166,233,195,228,196,224,167,216,137,192,90"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000004_000007.html" title="2" alt="" coords="234,183,243,197"/>
+<area shape="rect" id="node5" href="dir_b8a3a374acfddd55565b686ebab59609.html" title="include" alt="" coords="137,136,207,161"/>
+<area shape="poly" id="edge1" href="dir_000004_000024.html" alt="" coords="187,89,180,123,175,122,182,88"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000004_000024.html" title="1" alt="" coords="182,113,191,127"/>
+<area shape="poly" id="edge6" href="dir_000024_000007.html" alt="" coords="184,160,216,197,211,201,180,163"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000024_000007.html" title="1" alt="" coords="212,183,222,197"/>
+<area shape="poly" id="edge5" href="dir_000024_000046.html" alt="" coords="160,163,113,203,109,198,157,159"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000024_000046.html" title="1" alt="" coords="115,197,125,211"/>
+<area shape="poly" id="edge3" href="dir_000024_000002.html" alt="" coords="173,162,167,196,162,195,167,161"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000024_000002.html" title="1" alt="" coords="169,185,178,200"/>
+<area shape="rect" id="node7" href="dir_409f97388efe006bc3438b95e9edef48.html" title="components" alt="" coords="282,209,385,235"/>
+<area shape="poly" id="edge4" href="dir_000024_000005.html" alt="" coords="199,159,296,201,293,206,197,164"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000024_000005.html" title="1" alt="" coords="289,187,298,201"/>
+<area shape="rect" id="node6" href="dir_e1b0837b6e78fb9e7feccc25bbd8f53a.html" title="webUI" alt="" coords="38,63,101,88"/>
+<area shape="rect" id="clust2" href="dir_8141fbae6ae65c08d03cc2c01d550ae3.html" alt="" coords="27,52,259,172"/>
+<area shape="rect" id="clust1" href="dir_850aa22a015276891fa6057cf395aea5.html" title="managers" alt="" coords="16,16,269,245"/>
+</map>

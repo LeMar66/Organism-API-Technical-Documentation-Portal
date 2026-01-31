@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classCore_1_1IManager.html" title=" " alt="" coords="5,80,127,105"/>
+<area shape="rect" id="Node000001" href="$classCore_1_1CommunicationManager.html" title="The central network orchestrator for Core 0." alt="" coords="175,5,395,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="101,71,174,39,214,28,216,33,176,45,104,76"/>
+<area shape="rect" id="Node000002" href="$classCore_1_1DataManager.html" title="Manages the global system state in thread&#45;safe PSRAM memory." alt="" coords="211,55,359,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="140,81,210,73,211,79,141,87"/>
+<area shape="rect" id="Node000003" href="$classCore_1_1StorageManager.html" title="Manages persistent data via NVS (fast parameters) and LittleFS (JSON)." alt="" coords="201,104,368,129"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="140,98,202,105,201,110,140,103"/>
+<area shape="rect" id="Node000004" href="$classCore_1_1TimeManager.html" title="Orchestrates temporal integrity and astronomical scheduling." alt="" coords="209,153,360,179"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="106,109,176,138,220,151,219,156,174,143,104,114"/>
+</map>

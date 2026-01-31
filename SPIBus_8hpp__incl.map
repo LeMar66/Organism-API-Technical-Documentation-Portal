@@ -1,0 +1,28 @@
+<map id="main/ceo/managers/bus/include/SPIBus.hpp" name="main/ceo/managers/bus/include/SPIBus.hpp">
+<area shape="rect" id="Node000001" title="Industrial SPI Master bus driver with health monitoring." alt="" coords="307,5,486,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,167,76,192"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="354,48,81,164,79,159,352,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="543,93,690,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="450,43,572,86,570,91,448,48"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="100,167,251,192"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="371,48,205,161,202,156,368,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="275,167,412,192"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="391,47,373,94,353,154,348,152,367,92,386,45"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="715,93,796,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="483,43,702,90,701,95,482,48"/>
+<area shape="rect" id="Node000007" href="$DataManager_8hpp.html" title="The collective consciousness and unified system state mirror." alt="" coords="381,93,519,119"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="412,44,436,80,432,83,407,47"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="382,120,250,140,90,169,89,164,249,135,381,114"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="407,121,234,166,232,161,405,116"/>
+<area shape="poly" id="edge11_Node000007_Node000005" title=" " alt="" coords="434,121,374,161,371,157,431,116"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="571,167,641,192"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="476,116,569,158,567,163,474,121"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="665,167,757,192"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="493,116,656,160,655,166,491,121"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="782,167,915,192"/>
+<area shape="poly" id="edge12_Node000007_Node000010" title=" " alt="" coords="515,116,771,162,770,167,514,121"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="940,167,1024,192"/>
+<area shape="poly" id="edge13_Node000007_Node000011" title=" " alt="" coords="519,114,532,116,727,138,927,164,926,169,727,143,531,121,518,120"/>
+<area shape="rect" id="Node000012" href="$IManager_8hpp.html" title="The abstract behavioral contract for all managers." alt="" coords="436,167,547,192"/>
+<area shape="poly" id="edge14_Node000007_Node000012" title=" " alt="" coords="459,118,480,153,475,156,455,120"/>
+</map>

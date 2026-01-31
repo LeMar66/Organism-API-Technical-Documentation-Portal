@@ -1,0 +1,68 @@
+\doxysection{Hardware\+::DS3231 Class Reference}
+\hypertarget{classHardware_1_1DS3231}{}\label{classHardware_1_1DS3231}\index{Hardware::DS3231@{Hardware::DS3231}}
+
+
+Ultra-\/precisiekklok driver via de thread-\/safe \doxylink{classHardware_1_1I2CBus}{I2\+CBus}.  
+
+
+
+
+{\ttfamily \#include $<$DS3231.\+hpp$>$}
+
+
+
+Inheritance diagram for Hardware\+::DS3231\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classHardware_1_1DS3231__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Hardware\+::DS3231\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classHardware_1_1DS3231__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHardware_1_1DS3231_a5a7b78b48a2c6c91222f7061f67fd644}\label{classHardware_1_1DS3231_a5a7b78b48a2c6c91222f7061f67fd644} 
+{\bfseries DS3231} (\mbox{\hyperlink{classHardware_1_1I2CBus}{I2\+CBus}} \&bus)
+\item 
+\Hypertarget{classHardware_1_1DS3231_a96b8357afbf2d4e58eb4f47b3ae6f082}\label{classHardware_1_1DS3231_a96b8357afbf2d4e58eb4f47b3ae6f082} 
+time\+\_\+t {\bfseries get} ()
+\item 
+\Hypertarget{classHardware_1_1DS3231_ad440bebbb07c3f0299fe2bef7a66ade2}\label{classHardware_1_1DS3231_ad440bebbb07c3f0299fe2bef7a66ade2} 
+uint8\+\_\+t {\bfseries set} (time\+\_\+t t)
+\item 
+\Hypertarget{classHardware_1_1DS3231_a78ec9b47af7c59beed543ba613dc4f86}\label{classHardware_1_1DS3231_a78ec9b47af7c59beed543ba613dc4f86} 
+float {\bfseries get\+Temperature} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classHardware_1_1ITimeSource}{Hardware\+::\+ITime\+Source}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+ITime\+Source} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor ensuring clean cleanup of derived drivers. \end{DoxyCompactList}\item 
+virtual esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1ITimeSource_a24f94103e9ef19b6e2458f56ab00210c}{begin}} (\mbox{\hyperlink{classHardware_1_1I2CBus}{I2\+CBus}} \&bus)=0
+\begin{DoxyCompactList}\small\item\em Hardware handshake and initial configuration. \end{DoxyCompactList}\item 
+virtual time\+\_\+t \mbox{\hyperlink{classHardware_1_1ITimeSource_a105c1b2850e5c5f53266cb80bc07bcdd}{get\+Unix\+Time}} ()=0
+\begin{DoxyCompactList}\small\item\em Fetch the current time directly from the hardware source. \end{DoxyCompactList}\item 
+virtual esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1ITimeSource_a4aa5b696e6d5406187ecc696fa55de53}{set\+Unix\+Time}} (time\+\_\+t now)=0
+\begin{DoxyCompactList}\small\item\em Calibrate or set the hardware time source. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structHardware_1_1ITimeSource_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classHardware_1_1ITimeSource_a2c71853f8f39f3da8f77f808dd1a5992}{get\+State}} () const =0
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\item 
+virtual const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classHardware_1_1ITimeSource_a63517959353c5c31807ca3d63a4e3606}{get\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em The unique identification of the actuator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ultra-\/precisiekklok driver via de thread-\/safe \doxylink{classHardware_1_1I2CBus}{I2\+CBus}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/time/drivers/\+DS3231/include/DS3231.\+hpp\item 
+main/ceo/managers/time/drivers/\+DS3231/DS3231.\+cpp\end{DoxyCompactItemize}

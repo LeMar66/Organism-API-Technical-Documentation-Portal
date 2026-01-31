@@ -1,0 +1,171 @@
+\doxysection{Core\+::Storage\+Manager Class Reference}
+\hypertarget{classCore_1_1StorageManager}{}\label{classCore_1_1StorageManager}\index{Core::StorageManager@{Core::StorageManager}}
+
+
+Manages persistent data via NVS (fast parameters) and Little\+FS (JSON).  
+
+
+
+
+{\ttfamily \#include $<$Storage\+Manager.\+hpp$>$}
+
+
+
+Inheritance diagram for Core\+::Storage\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classCore_1_1StorageManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Core\+::Storage\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classCore_1_1StorageManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCore_1_1StorageManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCore_1_1StorageManager_a502172206ca6402eed9d20b5dbddc35e}{Storage\+Manager}} (\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&state, \mbox{\hyperlink{classCore_1_1TimeManager}{Core\+::\+Time\+Manager}} \&time)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1StorageManager_a8dea1507d9e532303c296b813fb3bdb0}\label{classCore_1_1StorageManager_a8dea1507d9e532303c296b813fb3bdb0} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Storage\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destructor Ensures safe completion of the acquisition task, close active NVS handles. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1StorageManager_a29f7b430e6122f542a2f07cd9ec89c6d}\label{classCore_1_1StorageManager_a29f7b430e6122f542a2f07cd9ec89c6d} 
+{\bfseries Storage\+Manager} (const \mbox{\hyperlink{classCore_1_1StorageManager}{Storage\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1StorageManager_a75747efbaab2c5602f9fcc5a293a07ce}\label{classCore_1_1StorageManager_a75747efbaab2c5602f9fcc5a293a07ce} 
+\mbox{\hyperlink{classCore_1_1StorageManager}{Storage\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classCore_1_1StorageManager}{Storage\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classCore_1_1StorageManager_a940805905e0801a7db99d14a1ed0a349}{begin}} (\mbox{\hyperlink{classHardware_1_1BusManager}{Hardware\+::\+Bus\+Manager}} \texorpdfstring{$\ast$}{*}bus=nullptr)
+\begin{DoxyCompactList}\small\item\em Initializes storage subsystems (NVS \& Little\+FS). \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classCore_1_1StorageManager_a43224cd4b56a0cd29e0a82c020eb82cf}{load\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Loads system configuration and publishes to \doxylink{classCore_1_1DataManager}{Data\+Manager}. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1StorageManager_af15f4dc9fb0cc96d231d450c587c33fa}\label{classCore_1_1StorageManager_af15f4dc9fb0cc96d231d450c587c33fa} 
+esp\+\_\+err\+\_\+t {\bfseries save\+Config} ()
+\begin{DoxyCompactList}\small\item\em Writes current \doxylink{classCore_1_1DataManager}{Data\+Manager} config to Little\+FS, Atomic. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classCore_1_1StorageManager_a1676e58d8c96964a6807f2896426984a}{load\+And\+Inject\+Alarms}} (std\+::function$<$ void(\mbox{\hyperlink{structCore_1_1Alarm__Event__t}{Core\+::\+Alarm\+\_\+\+Event\+\_\+t}} \&)$>$ dispatcher\+Cb)
+\begin{DoxyCompactList}\small\item\em Loads alarms from disk and injects them into the \doxylink{classCore_1_1TimeManager}{Time\+Manager}. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1StorageManager_a44fd1b440c62cf10bacee375216b1386}\label{classCore_1_1StorageManager_a44fd1b440c62cf10bacee375216b1386} 
+esp\+\_\+err\+\_\+t {\bfseries save\+Alarms} ()
+\begin{DoxyCompactList}\small\item\em Retrieves alarms from \doxylink{classCore_1_1TimeManager}{Time\+Manager} and saves them. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1StorageManager_a3c0cf762b0cd0cfe0e19bb7c8c652dff}\label{classCore_1_1StorageManager_a3c0cf762b0cd0cfe0e19bb7c8c652dff} 
+esp\+\_\+err\+\_\+t {\bfseries sync\+To\+NVS} ()
+\begin{DoxyCompactList}\small\item\em Synchronizes runtime data to NVS. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classCore_1_1StorageManager_a283cd06bd399d8be658b654409b15b24}{load\+From\+NVS}} ()
+\begin{DoxyCompactList}\small\item\em Restores parameters from NVS during boot. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1StorageManager_a610b968512d47dabe66c5825b3b7f6eb}\label{classCore_1_1StorageManager_a610b968512d47dabe66c5825b3b7f6eb} 
+esp\+\_\+err\+\_\+t {\bfseries format\+File\+System} ()
+\begin{DoxyCompactList}\small\item\em Formats the file system (Emergency recovery). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCore_1_1StorageManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classCore_1_1StorageManager_acbd97878c6707a9e843308ed1c786b6a}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current health of the sensor subsystem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages persistent data via NVS (fast parameters) and Little\+FS (JSON). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCore_1_1StorageManager_a502172206ca6402eed9d20b5dbddc35e}\label{classCore_1_1StorageManager_a502172206ca6402eed9d20b5dbddc35e} 
+\index{Core::StorageManager@{Core::StorageManager}!StorageManager@{StorageManager}}
+\index{StorageManager@{StorageManager}!Core::StorageManager@{Core::StorageManager}}
+\doxysubsubsection{\texorpdfstring{StorageManager()}{StorageManager()}}
+{\footnotesize\ttfamily Core\+::\+Storage\+Manager\+::\+Storage\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&}]{state,  }\item[{\mbox{\hyperlink{classCore_1_1TimeManager}{Core\+::\+Time\+Manager}} \&}]{time }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Reference to the central data hub. \\
+\hline
+{\em time} & Reference to the \doxylink{classCore_1_1TimeManager}{Time\+Manager} for alarm injection. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCore_1_1StorageManager_a940805905e0801a7db99d14a1ed0a349}\label{classCore_1_1StorageManager_a940805905e0801a7db99d14a1ed0a349} 
+\index{Core::StorageManager@{Core::StorageManager}!begin@{begin}}
+\index{begin@{begin}!Core::StorageManager@{Core::StorageManager}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Core\+::\+Storage\+Manager\+::begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHardware_1_1BusManager}{Hardware\+::\+Bus\+Manager}} \texorpdfstring{$\ast$}{*}}]{bus = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Initializes storage subsystems (NVS \& Little\+FS). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bus} & Hardware resource injection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK if succesful. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1StorageManager_acbd97878c6707a9e843308ed1c786b6a}\label{classCore_1_1StorageManager_acbd97878c6707a9e843308ed1c786b6a} 
+\index{Core::StorageManager@{Core::StorageManager}!getState@{getState}}
+\index{getState@{getState}!Core::StorageManager@{Core::StorageManager}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCore_1_1StorageManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} Core\+::\+Storage\+Manager\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current health of the sensor subsystem. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structCore_1_1StorageManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t} The current status struct. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1StorageManager_a1676e58d8c96964a6807f2896426984a}\label{classCore_1_1StorageManager_a1676e58d8c96964a6807f2896426984a} 
+\index{Core::StorageManager@{Core::StorageManager}!loadAndInjectAlarms@{loadAndInjectAlarms}}
+\index{loadAndInjectAlarms@{loadAndInjectAlarms}!Core::StorageManager@{Core::StorageManager}}
+\doxysubsubsection{\texorpdfstring{loadAndInjectAlarms()}{loadAndInjectAlarms()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Core\+::\+Storage\+Manager\+::load\+And\+Inject\+Alarms (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structCore_1_1Alarm__Event__t}{Core\+::\+Alarm\+\_\+\+Event\+\_\+t}} \&)$>$}]{dispatcher\+Cb }\end{DoxyParamCaption})}
+
+
+
+Loads alarms from disk and injects them into the \doxylink{classCore_1_1TimeManager}{Time\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK upon successful synchronization. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1StorageManager_a43224cd4b56a0cd29e0a82c020eb82cf}\label{classCore_1_1StorageManager_a43224cd4b56a0cd29e0a82c020eb82cf} 
+\index{Core::StorageManager@{Core::StorageManager}!loadConfig@{loadConfig}}
+\index{loadConfig@{loadConfig}!Core::StorageManager@{Core::StorageManager}}
+\doxysubsubsection{\texorpdfstring{loadConfig()}{loadConfig()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Core\+::\+Storage\+Manager\+::load\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads system configuration and publishes to \doxylink{classCore_1_1DataManager}{Data\+Manager}. 
+
+Laadt systeemconfiguratie van Little\+FS en publiceert naar \doxylink{classCore_1_1DataManager}{Data\+Manager}.
+
+\begin{DoxyNote}{Note}
+Acquisition van FS naar binaire publicatie in de State Hub. 
+\end{DoxyNote}
+\Hypertarget{classCore_1_1StorageManager_a283cd06bd399d8be658b654409b15b24}\label{classCore_1_1StorageManager_a283cd06bd399d8be658b654409b15b24} 
+\index{Core::StorageManager@{Core::StorageManager}!loadFromNVS@{loadFromNVS}}
+\index{loadFromNVS@{loadFromNVS}!Core::StorageManager@{Core::StorageManager}}
+\doxysubsubsection{\texorpdfstring{loadFromNVS()}{loadFromNVS()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Core\+::\+Storage\+Manager\+::load\+From\+NVS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restores parameters from NVS during boot. 
+
+Restores system parameters from NVS during the bootstrap sequence. This ensures the organism resumes from its last known state. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/storage/include/\mbox{\hyperlink{StorageManager_8hpp}{Storage\+Manager.\+hpp}}\item 
+main/ceo/managers/storage/\mbox{\hyperlink{StorageManager_8cpp}{Storage\+Manager.\+cpp}}\end{DoxyCompactItemize}

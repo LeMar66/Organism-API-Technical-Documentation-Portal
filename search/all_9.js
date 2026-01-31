@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['i2cbus_0',['i2cbus',['../classHardware_1_1I2CBus.html',1,'Hardware::I2CBus'],['../classHardware_1_1I2CBus.html#acb3eee7a762df426815205e5d9c6e160',1,'Hardware::I2CBus::I2CBus(const I2CBus &amp;)=delete'],['../classHardware_1_1I2CBus.html#abd1829043c2a1b3b8b455a57f48d8d8d',1,'Hardware::I2CBus::I2CBus(i2c_port_t port)']]],
+  ['i2cbus_2ecpp_1',['I2CBus.cpp',['../I2CBus_8cpp.html',1,'']]],
+  ['i2cbus_2ehpp_2',['I2CBus.hpp',['../I2CBus_8hpp.html',1,'']]],
+  ['i2cexpanderactuator_3',['i2cexpanderactuator',['../classHardware_1_1I2CExpanderActuator.html',1,'Hardware::I2CExpanderActuator'],['../classHardware_1_1I2CExpanderActuator.html#a78d312c45c4c97dfb90874bb285dc3d3',1,'Hardware::I2CExpanderActuator::I2CExpanderActuator()']]],
+  ['iactuator_4',['IActuator',['../classHardware_1_1IActuator.html',1,'Hardware']]],
+  ['iactuator_2ehpp_5',['IActuator.hpp',['../IActuator_8hpp.html',1,'']]],
+  ['imanager_6',['IManager',['../classCore_1_1IManager.html',1,'Core']]],
+  ['imanager_2ehpp_7',['IManager.hpp',['../IManager_8hpp.html',1,'']]],
+  ['include_20the_20global_20dna_8',['🏛 include/ (The Global DNA)',['..//home/marcel/Documents/PlatformIO/Organism/README.md#autotoc_md50',1,'']]],
+  ['initialized_9',['initialized',['../structHardware_1_1PinManager_1_1State__Monitor__t.html#ab8f5f78c31e5cc8bbf9f42fde9e2f27d',1,'Hardware::PinManager::State_Monitor_t']]],
+  ['initntp_10',['initNTP',['../classCore_1_1TimeManager.html#a0f69d2d1b760a6195c086c1a8c3e5c50',1,'Core::TimeManager']]],
+  ['interface_20reference_11',['🚀 Interface Reference',['..//home/marcel/Documents/PlatformIO/Organism/main/ceo/managers/time/README.md#autotoc_md37',1,'']]],
+  ['is_5factive_12',['is_active',['../structCore_1_1AlarmEvent__t.html#a4d0a20ebc05e42cd838f99062341e22d',1,'Core::AlarmEvent_t']]],
+  ['is_5fpsram_5fsafe_13',['is_psram_safe',['../classHardware_1_1PinCapabilities.html#ae4331f60292ebe665a6ef3312e69f379',1,'Hardware::PinCapabilities']]],
+  ['is_5fstrapping_5fpin_14',['is_strapping_pin',['../classHardware_1_1PinCapabilities.html#a16f6788c87d3bcf3b6cbf01575177d4c',1,'Hardware::PinCapabilities']]],
+  ['isensor_15',['ISensor',['../classHardware_1_1ISensor.html',1,'Hardware']]],
+  ['isensor_2ehpp_16',['ISensor.hpp',['../ISensor_8hpp.html',1,'']]],
+  ['isinput_17',['IsInput',['../PinRoles_8hpp.html#a8a35731e9f60b78508b32108eaf4143b',1,'Hardware']]],
+  ['isoutput_18',['IsOutput',['../PinRoles_8hpp.html#acc07564d4ccc51da4980917d6501e843',1,'Hardware']]],
+  ['isvalid_19',['isvalid',['../classHardware_1_1SPIBus_1_1BusGuard.html#ad425528ddb2ba8033503397de726280e',1,'Hardware::SPIBus::BusGuard::isValid()'],['../classHardware_1_1UARTBus_1_1BusGuard.html#ae61d3bd9fd508a563c1777664a667f2d',1,'Hardware::UARTBus::BusGuard::isValid()'],['../classCore_1_1DataManager_1_1StateGuard.html#aa6efa1c5101310babf14490437c7da90',1,'Core::DataManager::StateGuard::isValid()']]],
+  ['itimesource_20',['ITimeSource',['../classHardware_1_1ITimeSource.html',1,'Hardware']]],
+  ['itimesource_2ehpp_21',['ITimeSource.hpp',['../ITimeSource_8hpp.html',1,'']]]
+];

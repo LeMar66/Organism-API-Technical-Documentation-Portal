@@ -1,0 +1,70 @@
+\doxysection{Hardware\+::SPIBus\+::Bus\+Guard Class Reference}
+\hypertarget{classHardware_1_1SPIBus_1_1BusGuard}{}\label{classHardware_1_1SPIBus_1_1BusGuard}\index{Hardware::SPIBus::BusGuard@{Hardware::SPIBus::BusGuard}}
+
+
+RAII scoped-\/lock for thread-\/safe SPI access.  
+
+
+
+
+{\ttfamily \#include $<$SPIBus.\+hpp$>$}
+
+
+
+Collaboration diagram for Hardware\+::SPIBus\+::Bus\+Guard\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classHardware_1_1SPIBus_1_1BusGuard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHardware_1_1SPIBus_1_1BusGuard_a8e071451dfd4768901560415cd567fe4}{Bus\+Guard}} (Semaphore\+Handle\+\_\+t m)
+\begin{DoxyCompactList}\small\item\em Attempt to lock the bus mutex within BUS\+\_\+\+TIMEOUT\+\_\+\+TICKS. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1SPIBus_1_1BusGuard_a27b930c15348ca3fb7c5707d6e2e4cf2}\label{classHardware_1_1SPIBus_1_1BusGuard_a27b930c15348ca3fb7c5707d6e2e4cf2} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Bus\+Guard} ()
+\begin{DoxyCompactList}\small\item\em Release the mutex upon destruction. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1SPIBus_1_1BusGuard_ad425528ddb2ba8033503397de726280e}\label{classHardware_1_1SPIBus_1_1BusGuard_ad425528ddb2ba8033503397de726280e} 
+bool {\bfseries is\+Valid} () const
+\begin{DoxyCompactList}\small\item\em Check if the lock was successfully acquired. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1SPIBus_1_1BusGuard_a137da4b4a02113f7f281d1827429b5eb}\label{classHardware_1_1SPIBus_1_1BusGuard_a137da4b4a02113f7f281d1827429b5eb} 
+{\bfseries operator bool} () const
+\item 
+\Hypertarget{classHardware_1_1SPIBus_1_1BusGuard_a6fdcdbccade4487acb6f423bfa142b97}\label{classHardware_1_1SPIBus_1_1BusGuard_a6fdcdbccade4487acb6f423bfa142b97} 
+{\bfseries Bus\+Guard} (const \mbox{\hyperlink{classHardware_1_1SPIBus_1_1BusGuard}{Bus\+Guard}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Prevent guard duplication. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1SPIBus_1_1BusGuard_a9f036e7fccc4bbc8e66639020115682c}\label{classHardware_1_1SPIBus_1_1BusGuard_a9f036e7fccc4bbc8e66639020115682c} 
+\mbox{\hyperlink{classHardware_1_1SPIBus_1_1BusGuard}{Bus\+Guard}} \& {\bfseries operator=} (const \mbox{\hyperlink{classHardware_1_1SPIBus_1_1BusGuard}{Bus\+Guard}} \&)=delete
+\item 
+\Hypertarget{classHardware_1_1SPIBus_1_1BusGuard_a888029948cc531e9d0d5510a6566aaf6}\label{classHardware_1_1SPIBus_1_1BusGuard_a888029948cc531e9d0d5510a6566aaf6} 
+{\bfseries Bus\+Guard} (\mbox{\hyperlink{classHardware_1_1SPIBus_1_1BusGuard}{Bus\+Guard}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor for valid guard transfer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RAII scoped-\/lock for thread-\/safe SPI access. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHardware_1_1SPIBus_1_1BusGuard_a8e071451dfd4768901560415cd567fe4}\label{classHardware_1_1SPIBus_1_1BusGuard_a8e071451dfd4768901560415cd567fe4} 
+\index{Hardware::SPIBus::BusGuard@{Hardware::SPIBus::BusGuard}!BusGuard@{BusGuard}}
+\index{BusGuard@{BusGuard}!Hardware::SPIBus::BusGuard@{Hardware::SPIBus::BusGuard}}
+\doxysubsubsection{\texorpdfstring{BusGuard()}{BusGuard()}}
+{\footnotesize\ttfamily Hardware\+::\+SPIBus\+::\+Bus\+Guard\+::\+Bus\+Guard (\begin{DoxyParamCaption}\item[{Semaphore\+Handle\+\_\+t}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Attempt to lock the bus mutex within BUS\+\_\+\+TIMEOUT\+\_\+\+TICKS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Semaphore handle to manage. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/bus/include/\mbox{\hyperlink{SPIBus_8hpp}{SPIBus.\+hpp}}\item 
+main/ceo/managers/bus/\mbox{\hyperlink{SPIBus_8cpp}{SPIBus.\+cpp}}\end{DoxyCompactItemize}

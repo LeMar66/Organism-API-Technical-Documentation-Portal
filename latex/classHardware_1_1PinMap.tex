@@ -1,0 +1,57 @@
+\doxysection{Hardware\+::Pin\+Map Class Reference}
+\hypertarget{classHardware_1_1PinMap}{}\label{classHardware_1_1PinMap}\index{Hardware::PinMap@{Hardware::PinMap}}
+
+
+Static orchestrator for secure PIN reading.  
+
+
+
+
+{\ttfamily \#include $<$Pin\+Map.\+hpp$>$}
+
+
+
+Collaboration diagram for Hardware\+::Pin\+Map\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classHardware_1_1PinMap__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \mbox{\hyperlink{classHardware_1_1PinMap_ab2cd384611e6c02711d8362e2c48f5cc}{Get}} (\mbox{\hyperlink{PinRoles_8hpp_ae80f1e1b7873a739abbed17dc484d800}{Hardware\+::\+Pin\+Role}} role)
+\begin{DoxyCompactList}\small\item\em Retrieves the GPIO number for a specific role. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1PinMap_a8fd4d3287f90f96b5387ef2428e2b634}\label{classHardware_1_1PinMap_a8fd4d3287f90f96b5387ef2428e2b634} 
+static void {\bfseries validate} ()
+\begin{DoxyCompactList}\small\item\em Runtime validation of pin integrity. Called during bootstrap (\doxylink{CEO_8cpp}{CEO.\+cpp}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Static orchestrator for secure PIN reading. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHardware_1_1PinMap_ab2cd384611e6c02711d8362e2c48f5cc}\label{classHardware_1_1PinMap_ab2cd384611e6c02711d8362e2c48f5cc} 
+\index{Hardware::PinMap@{Hardware::PinMap}!Get@{Get}}
+\index{Get@{Get}!Hardware::PinMap@{Hardware::PinMap}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily static constexpr int Hardware\+::\+Pin\+Map\+::\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{PinRoles_8hpp_ae80f1e1b7873a739abbed17dc484d800}{Hardware\+::\+Pin\+Role}}}]{role }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Retrieves the GPIO number for a specific role. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em role} & The desired hardware role. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The GPIO number, or -\/1 for an invalid role. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/topology/include/\mbox{\hyperlink{PinMap_8hpp}{Pin\+Map.\+hpp}}\end{DoxyCompactItemize}

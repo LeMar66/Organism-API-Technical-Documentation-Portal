@@ -1,0 +1,5 @@
+<map id="Hardware::BusManager" name="Hardware::BusManager">
+<area shape="rect" id="Node000001" title="Orchestrates and monitors all physical communication buses." alt="" coords="5,119,172,324"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="51,5,126,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,84,91,119,86,119,86,84"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="_vfs_littlefs_file_t" name="_vfs_littlefs_file_t">
+<area shape="rect" id="Node000001" title="a file descriptor That&#39;s also a singly linked list used for keeping tracks of all opened file descrip..." alt="" coords="265,669,395,775"/>
+<area shape="poly" id="edge9_Node000001_Node000001" title=" " alt="" coords="396,704,414,710,421,722,419,730,412,735,409,731,414,727,416,722,410,714,394,710"/>
+<area shape="rect" id="Node000002" href="$structlfs__file.html" title=" " alt="" coords="223,441,287,607"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,606,307,653,302,655,284,608"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="288,501,306,505,312,513,314,524,312,535,306,543,301,539,307,533,309,524,307,515,303,510,287,506"/>
+<area shape="rect" id="Node000003" href="$structlfs__mdir.html" title=" " alt="" coords="5,173,79,379"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="81,359,93,377,121,409,152,439,212,489,208,493,148,443,117,413,89,380,77,362"/>
+<area shape="rect" id="Node000004" href="$structlfs__file_1_1lfs__ctz.html" title=" " alt="" coords="103,233,210,319"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="176,318,220,427,215,429,171,320"/>
+<area shape="rect" id="Node000005" href="$structlfs__cache.html" title="internal littlefs data structures ///" alt="" coords="234,213,309,339"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="270,339,264,425,259,425,265,339"/>
+<area shape="rect" id="Node000006" href="$structlfs__file__config.html" title=" " alt="" coords="347,233,449,319"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="400,319,393,448,385,528,371,607,358,654,353,653,366,606,379,527,388,448,395,319"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="377,321,322,419,298,458,294,455,317,416,373,318"/>
+<area shape="rect" id="Node000007" href="$structlfs__attr.html" title=" " alt="" coords="365,5,431,111"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="401,111,401,217,395,217,395,111"/>
+</map>

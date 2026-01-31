@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,80,88,105"/>
+<area shape="rect" id="Node000001" href="$classHardware_1_1ActuatorManager.html" title="The central engine for hardware output operations on Core 1. Synchronizes &#39;Desired State&#39; from DataMa..." alt="" coords="136,5,341,31"/>
+<area shape="poly" id="edge10_Node000000_Node000001" title=" " alt="" coords="77,70,135,40,170,28,172,33,137,44,79,75"/>
+<area shape="rect" id="Node000002" href="$classHardware_1_1BusManager.html" title="Orchestrates and monitors all physical communication buses." alt="" coords="151,55,326,80"/>
+<area shape="poly" id="edge11_Node000000_Node000002" title=" " alt="" coords="101,83,151,76,152,81,102,88"/>
+<area shape="rect" id="Node000003" href="$classHardware_1_1PinManager.html" title="Responsible for the physical configuration and status of GPIOs." alt="" coords="153,104,324,129"/>
+<area shape="poly" id="edge12_Node000000_Node000003" title=" " alt="" coords="102,97,154,103,153,109,101,102"/>
+<area shape="rect" id="Node000004" href="$classHardware_1_1SensorManager.html" title="Orchestrates sensor acquisition and data storage in DataManager. Industrial Grade...." alt="" coords="141,153,336,179"/>
+<area shape="poly" id="edge13_Node000000_Node000004" title=" " alt="" coords="81,110,137,138,177,151,175,156,135,143,78,115"/>
+</map>

@@ -1,0 +1,191 @@
+\doxysection{Hardware\+::Pin\+Manager Class Reference}
+\hypertarget{classHardware_1_1PinManager}{}\label{classHardware_1_1PinManager}\index{Hardware::PinManager@{Hardware::PinManager}}
+
+
+Responsible for the physical configuration and status of GPIOs.  
+
+
+
+
+{\ttfamily \#include $<$Pin\+Manager.\+hpp$>$}
+
+
+
+Inheritance diagram for Hardware\+::Pin\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classHardware_1_1PinManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Hardware\+::Pin\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classHardware_1_1PinManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structHardware_1_1PinManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHardware_1_1PinManager_ace3ffc977fe65f6af1a341336654a8af}{Pin\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1PinManager_a2c768380c93684a62bd56d4848fd1a40}\label{classHardware_1_1PinManager_a2c768380c93684a62bd56d4848fd1a40} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Pin\+Manager} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor Ensures safe completion of the acquisition tasks. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1PinManager_abd50532d0f89e1699263dada867389d1}\label{classHardware_1_1PinManager_abd50532d0f89e1699263dada867389d1} 
+{\bfseries Pin\+Manager} (const \mbox{\hyperlink{classHardware_1_1PinManager}{Pin\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1PinManager_a1851893d1424ecd2f5e506c30ffac035}\label{classHardware_1_1PinManager_a1851893d1424ecd2f5e506c30ffac035} 
+\mbox{\hyperlink{classHardware_1_1PinManager}{Pin\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classHardware_1_1PinManager}{Pin\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1PinManager_a757500f3312bc9ee6c74a231af1b7329}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the basic GPIO environment. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1PinManager_a7d1f4a2ab959976a48f1efd95d0ff532}{setup\+Pin}} (int pin, \mbox{\hyperlink{PinRoles_8hpp_ae80f1e1b7873a739abbed17dc484d800}{Hardware\+::\+Pin\+Role}} role)
+\begin{DoxyCompactList}\small\item\em Configures a GPIO pin based on its hardware role. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHardware_1_1PinManager_af7532bd16ddebe46cbca22bdd7cb5544}{set\+Level}} (int pin, bool level)
+\begin{DoxyCompactList}\small\item\em Sets the level of a configured output pin. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHardware_1_1PinManager_a92606181fbf861bdc7e0b2e63b781332}{get\+Level}} (int pin) const
+\begin{DoxyCompactList}\small\item\em Reads the current physical status of a PIN (Hardware poll). \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1PinManager_a58c05bdd782e095b60d7f421ae71bae5}{validate}} ()
+\begin{DoxyCompactList}\small\item\em Performs a pre-\/flight validation of all assigned GPIO resources. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structHardware_1_1PinManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classHardware_1_1PinManager_a8a5585468e9b873353548d22056a4581}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current health of the subsystem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Responsible for the physical configuration and status of GPIOs. 
+
+Uses the ESP-\/\+IDF driver/gpio.\+h for direct hardware control. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHardware_1_1PinManager_ace3ffc977fe65f6af1a341336654a8af}\label{classHardware_1_1PinManager_ace3ffc977fe65f6af1a341336654a8af} 
+\index{Hardware::PinManager@{Hardware::PinManager}!PinManager@{PinManager}}
+\index{PinManager@{PinManager}!Hardware::PinManager@{Hardware::PinManager}}
+\doxysubsubsection{\texorpdfstring{PinManager()}{PinManager()}}
+{\footnotesize\ttfamily Hardware\+::\+Pin\+Manager\+::\+Pin\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor (Defensive Programming) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHardware_1_1PinManager_a757500f3312bc9ee6c74a231af1b7329}\label{classHardware_1_1PinManager_a757500f3312bc9ee6c74a231af1b7329} 
+\index{Hardware::PinManager@{Hardware::PinManager}!begin@{begin}}
+\index{begin@{begin}!Hardware::PinManager@{Hardware::PinManager}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+Pin\+Manager\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the basic GPIO environment. 
+
+Initialiseert de GPIO omgeving.
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK if successful. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1PinManager_a92606181fbf861bdc7e0b2e63b781332}\label{classHardware_1_1PinManager_a92606181fbf861bdc7e0b2e63b781332} 
+\index{Hardware::PinManager@{Hardware::PinManager}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!Hardware::PinManager@{Hardware::PinManager}}
+\doxysubsubsection{\texorpdfstring{getLevel()}{getLevel()}}
+{\footnotesize\ttfamily bool Hardware\+::\+Pin\+Manager\+::get\+Level (\begin{DoxyParamCaption}\item[{int}]{pin }\end{DoxyParamCaption}) const}
+
+
+
+Reads the current physical status of a PIN (Hardware poll). 
+
+Leest de status van een geconfigureerde input pin (Const).
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & GPIO number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if the level is high. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1PinManager_a8a5585468e9b873353548d22056a4581}\label{classHardware_1_1PinManager_a8a5585468e9b873353548d22056a4581} 
+\index{Hardware::PinManager@{Hardware::PinManager}!getState@{getState}}
+\index{getState@{getState}!Hardware::PinManager@{Hardware::PinManager}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structHardware_1_1PinManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} Hardware\+::\+Pin\+Manager\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current health of the subsystem. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structHardware_1_1PinManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t} The current status struct. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1PinManager_af7532bd16ddebe46cbca22bdd7cb5544}\label{classHardware_1_1PinManager_af7532bd16ddebe46cbca22bdd7cb5544} 
+\index{Hardware::PinManager@{Hardware::PinManager}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!Hardware::PinManager@{Hardware::PinManager}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily void Hardware\+::\+Pin\+Manager\+::set\+Level (\begin{DoxyParamCaption}\item[{int}]{pin,  }\item[{bool}]{level }\end{DoxyParamCaption})}
+
+
+
+Sets the level of a configured output pin. 
+
+Zet het niveau van een geconfigureerde output pin. Maakt gebruik van de officiële ESP-\/\+IDF driver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & GPIO number. \\
+\hline
+{\em level} & True for high (3.\+3V), False for low (GND). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHardware_1_1PinManager_a7d1f4a2ab959976a48f1efd95d0ff532}\label{classHardware_1_1PinManager_a7d1f4a2ab959976a48f1efd95d0ff532} 
+\index{Hardware::PinManager@{Hardware::PinManager}!setupPin@{setupPin}}
+\index{setupPin@{setupPin}!Hardware::PinManager@{Hardware::PinManager}}
+\doxysubsubsection{\texorpdfstring{setupPin()}{setupPin()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+Pin\+Manager\+::setup\+Pin (\begin{DoxyParamCaption}\item[{int}]{pin,  }\item[{\mbox{\hyperlink{PinRoles_8hpp_ae80f1e1b7873a739abbed17dc484d800}{Hardware\+::\+Pin\+Role}}}]{role }\end{DoxyParamCaption})}
+
+
+
+Configures a GPIO pin based on its hardware role. 
+
+Configureert een GPIO pin op basis van zijn hardware rol. Maakt gebruik van de ESP-\/\+IDF HAL voor configuratie.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The physical GPIO number. \\
+\hline
+{\em role} & The assigned Pin\+Role (Input, Output, etc.). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK upon successful configuration. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1PinManager_a58c05bdd782e095b60d7f421ae71bae5}\label{classHardware_1_1PinManager_a58c05bdd782e095b60d7f421ae71bae5} 
+\index{Hardware::PinManager@{Hardware::PinManager}!validate@{validate}}
+\index{validate@{validate}!Hardware::PinManager@{Hardware::PinManager}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+Pin\+Manager\+::validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Performs a pre-\/flight validation of all assigned GPIO resources. 
+
+Validates the physical pin-\/out against the organism\textquotesingle{}s genetic blueprint.
+
+Checks for resource conflicts, strapping pin violations, and ensures that critical communication pins (I2\+C/\+SPI) meet the required hardware capabilities. \begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK if hardware integrity is verified, ESP\+\_\+\+FAIL if critical conflicts are detected. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/pin/include/\mbox{\hyperlink{PinManager_8hpp}{Pin\+Manager.\+hpp}}\item 
+main/ceo/managers/pin/\mbox{\hyperlink{PinManager_8cpp}{Pin\+Manager.\+cpp}}\end{DoxyCompactItemize}

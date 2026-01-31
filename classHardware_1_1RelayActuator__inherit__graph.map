@@ -1,0 +1,5 @@
+<map id="Hardware::RelayActuator" name="Hardware::RelayActuator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,279,183,444"/>
+<area shape="rect" id="Node000002" href="$classHardware_1_1IActuator.html" title="Abstract interface for all hardware outputs (Relays, PWM, Valves). Designed for deterministic synchro..." alt="" coords="22,5,166,231"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,244,97,279,91,279,91,244"/>
+</map>

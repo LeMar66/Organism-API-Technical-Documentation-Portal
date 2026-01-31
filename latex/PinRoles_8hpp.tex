@@ -1,0 +1,98 @@
+\doxysection{components/topology/include/\+Pin\+Roles.hpp File Reference}
+\hypertarget{PinRoles_8hpp}{}\label{PinRoles_8hpp}\index{components/topology/include/PinRoles.hpp@{components/topology/include/PinRoles.hpp}}
+
+
+The functional assignment matrix and behavioral constraints.  
+
+
+{\ttfamily \#include $<$cstdint$>$}\newline
+Include dependency graph for Pin\+Roles.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{PinRoles_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PinRoles_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceAGX}{AGX}}
+\begin{DoxyCompactList}\small\item\em Implementation of the Composition Root. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{PinRoles_8hpp_ae80f1e1b7873a739abbed17dc484d800}\label{PinRoles_8hpp_ae80f1e1b7873a739abbed17dc484d800} 
+enum class \mbox{\hyperlink{PinRoles_8hpp_ae80f1e1b7873a739abbed17dc484d800}{Hardware\+::\+Pin\+Role}} \+: uint8\+\_\+t \{ \newline
+{\bfseries UNUSED} = 0
+, {\bfseries I2\+C\+\_\+\+SDA}
+, {\bfseries I2\+C\+\_\+\+SCL}
+, {\bfseries SPI\+\_\+\+MOSI}
+, \newline
+{\bfseries SPI\+\_\+\+MISO}
+, {\bfseries SPI\+\_\+\+SCK}
+, {\bfseries SPI\+\_\+\+CS}
+, {\bfseries UART\+\_\+\+TX}
+, \newline
+{\bfseries UART\+\_\+\+RX}
+, {\bfseries RS485\+\_\+\+TX}
+, {\bfseries RS485\+\_\+\+RX}
+, {\bfseries RS485\+\_\+\+RE\+\_\+\+DE}
+, \newline
+{\bfseries ANALOG\+\_\+\+INPUT}
+, {\bfseries DIGITAL\+\_\+\+INPUT}
+, {\bfseries INTERRUPT\+\_\+\+PIN}
+, {\bfseries ONE\+\_\+\+WIRE\+\_\+\+BUS}
+, \newline
+{\bfseries TOUCH\+\_\+\+SENSOR}
+, {\bfseries DIGITAL\+\_\+\+OUTPUT}
+, {\bfseries PWM\+\_\+\+OUTPUT}
+, {\bfseries DAC\+\_\+\+OUTPUT}
+, \newline
+{\bfseries RELAY\+\_\+1}
+, {\bfseries PWM\+\_\+\+CHANNEL\+\_\+1}
+, {\bfseries PWM\+\_\+\+CHANNEL\+\_\+2}
+, {\bfseries STEPPER\+\_\+\+STEP}
+, \newline
+{\bfseries STEPPER\+\_\+\+DIR}
+, {\bfseries SLEEP\+\_\+\+WAKEUP}
+, {\bfseries STATUS\+\_\+\+LED}
+ \}
+\begin{DoxyCompactList}\small\item\em Logical roles for GPIO pins. \end{DoxyCompactList}\item 
+\Hypertarget{PinRoles_8hpp_ac15186688e4f518b1f00788d3cc15e0b}\label{PinRoles_8hpp_ac15186688e4f518b1f00788d3cc15e0b} 
+enum class \mbox{\hyperlink{PinRoles_8hpp_ac15186688e4f518b1f00788d3cc15e0b}{Hardware\+::\+Bus\+Type}} \+: uint8\+\_\+t \{ \newline
+{\bfseries I2\+C\+\_\+0}
+, {\bfseries I2\+C\+\_\+1}
+, {\bfseries SPI\+\_\+2}
+, {\bfseries SPI\+\_\+3}
+, \newline
+{\bfseries UART\+\_\+0}
+, {\bfseries UART\+\_\+1}
+, {\bfseries UART\+\_\+2}
+ \}
+\begin{DoxyCompactList}\small\item\em Hardware bus identification for the Bus\+Manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{PinRoles_8hpp_ae0d57bdc08222ee634f35a6a29b7b80e}\label{PinRoles_8hpp_ae0d57bdc08222ee634f35a6a29b7b80e} 
+constexpr const char \texorpdfstring{$\ast$}{*} {\bfseries Hardware\+::\+Pin\+Role\+To\+String} (\mbox{\hyperlink{PinRoles_8hpp_ae80f1e1b7873a739abbed17dc484d800}{Pin\+Role}} r)
+\begin{DoxyCompactList}\small\item\em Convert Pin\+Role to string for \doxylink{namespaceAGX}{AGX} System Logs. \end{DoxyCompactList}\item 
+\Hypertarget{PinRoles_8hpp_a8a35731e9f60b78508b32108eaf4143b}\label{PinRoles_8hpp_a8a35731e9f60b78508b32108eaf4143b} 
+constexpr bool {\bfseries Hardware\+::\+Is\+Input} (\mbox{\hyperlink{PinRoles_8hpp_ae80f1e1b7873a739abbed17dc484d800}{Pin\+Role}} r)
+\begin{DoxyCompactList}\small\item\em Determines whether a role is input-\/oriented (Compile-\/time logic). \end{DoxyCompactList}\item 
+\Hypertarget{PinRoles_8hpp_acc07564d4ccc51da4980917d6501e843}\label{PinRoles_8hpp_acc07564d4ccc51da4980917d6501e843} 
+constexpr bool {\bfseries Hardware\+::\+Is\+Output} (\mbox{\hyperlink{PinRoles_8hpp_ae80f1e1b7873a739abbed17dc484d800}{Pin\+Role}} r)
+\begin{DoxyCompactList}\small\item\em Determines whether a role is output-\/oriented. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The functional assignment matrix and behavioral constraints. 
+
+\DoxyHorRuler{0}
+ \hypertarget{PinRoles_8hpp_autotoc_md13}{}\doxysubsection{\texorpdfstring{AGX Organisme -\/ Advanced Grow Xperience}{AGX Organisme - Advanced Grow Xperience}}\label{PinRoles_8hpp_autotoc_md13}

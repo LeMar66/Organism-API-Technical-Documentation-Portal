@@ -1,0 +1,115 @@
+\doxysection{main/ceo/managers/data/include/\+Data\+Manager.hpp File Reference}
+\hypertarget{DataManager_8hpp}{}\label{DataManager_8hpp}\index{main/ceo/managers/data/include/DataManager.hpp@{main/ceo/managers/data/include/DataManager.hpp}}
+
+
+The collective consciousness and unified system state mirror.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include "{}freertos/\+Free\+RTOS.\+h"{}}\newline
+{\ttfamily \#include "{}freertos/semphr.\+h"{}}\newline
+{\ttfamily \#include "{}esp\+\_\+heap\+\_\+caps.\+h"{}}\newline
+{\ttfamily \#include "{}esp\+\_\+log.\+h"{}}\newline
+{\ttfamily \#include "{}IManager.\+hpp"{}}\newline
+{\ttfamily \#include "{}IOT\+\_\+config.\+hpp"{}}\newline
+Include dependency graph for Data\+Manager.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DataManager_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DataManager_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCore_1_1AlarmEvent__t}{Core\+::\+Alarm\+Event\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Wordt deze wel ergens gebruikt ??. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}}
+\begin{DoxyCompactList}\small\item\em Manages the global system state in thread-\/safe PSRAM memory. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structCore_1_1DataManager_1_1State__Monitor__t}{Core\+::\+Data\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classCore_1_1DataManager_1_1StateGuard}{Core\+::\+Data\+Manager\+::\+State\+Guard$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em RAII wrapper for secure, timed access to system data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceAGX}{AGX}}
+\begin{DoxyCompactList}\small\item\em Implementation of the Composition Root. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{HEALTHY}} = 0
+, \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a059e9861e0400dfbe05c98a841f3f96b}{WARNING}} = 1
+, \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8adad9eb6e270bbf2a6e1abb4c9888ff8d}{ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}} = 2
+, \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a629b2eef665114c872c6fefb200986f5}{ERROR\+\_\+\+BUS\+\_\+\+FAULT}} = 3
+, \newline
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8afddd0fdcd92b33de57dfc5a344db4047}{ERROR\+\_\+\+COMMUNICATION}} = 4
+, \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a5646785d889dde7d0722f3635fcdf01e}{ERROR\+\_\+\+ACTUATION\+\_\+\+FAILED}} = 5
+, \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a99cd1c61610c76a57cb8d10d6df6b870}{CRITICAL}} = 6
+, \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a19da7170bea36556dde582519795f3fc}{FATAL}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em Standardized health states for all system components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The collective consciousness and unified system state mirror. 
+
+\DoxyHorRuler{0}
+ \hypertarget{DataManager_8hpp_autotoc_md23}{}\doxysubsection{\texorpdfstring{AGX Organisme -\/ Advanced Grow Xperience}{AGX Organisme - Advanced Grow Xperience}}\label{DataManager_8hpp_autotoc_md23}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}\label{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8} 
+\index{DataManager.hpp@{DataManager.hpp}!State\_Monitor\_e@{State\_Monitor\_e}}
+\index{State\_Monitor\_e@{State\_Monitor\_e}!DataManager.hpp@{DataManager.hpp}}
+\doxysubsubsection{\texorpdfstring{State\_Monitor\_e}{State\_Monitor\_e}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Standardized health states for all system components. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HEALTHY@{HEALTHY}!DataManager.hpp@{DataManager.hpp}}\index{DataManager.hpp@{DataManager.hpp}!HEALTHY@{HEALTHY}}}\Hypertarget{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}\label{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979} 
+HEALTHY&System operational and within parameters. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WARNING@{WARNING}!DataManager.hpp@{DataManager.hpp}}\index{DataManager.hpp@{DataManager.hpp}!WARNING@{WARNING}}}\Hypertarget{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a059e9861e0400dfbe05c98a841f3f96b}\label{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a059e9861e0400dfbe05c98a841f3f96b} 
+WARNING&Operational but non-\/critical issue detected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR\_NOT\_INITIALIZED@{ERROR\_NOT\_INITIALIZED}!DataManager.hpp@{DataManager.hpp}}\index{DataManager.hpp@{DataManager.hpp}!ERROR\_NOT\_INITIALIZED@{ERROR\_NOT\_INITIALIZED}}}\Hypertarget{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8adad9eb6e270bbf2a6e1abb4c9888ff8d}\label{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8adad9eb6e270bbf2a6e1abb4c9888ff8d} 
+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED&Component failed to start. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR\_BUS\_FAULT@{ERROR\_BUS\_FAULT}!DataManager.hpp@{DataManager.hpp}}\index{DataManager.hpp@{DataManager.hpp}!ERROR\_BUS\_FAULT@{ERROR\_BUS\_FAULT}}}\Hypertarget{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a629b2eef665114c872c6fefb200986f5}\label{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a629b2eef665114c872c6fefb200986f5} 
+ERROR\+\_\+\+BUS\+\_\+\+FAULT&Hardware bus (I2\+C/\+SPI) communication failure. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR\_COMMUNICATION@{ERROR\_COMMUNICATION}!DataManager.hpp@{DataManager.hpp}}\index{DataManager.hpp@{DataManager.hpp}!ERROR\_COMMUNICATION@{ERROR\_COMMUNICATION}}}\Hypertarget{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8afddd0fdcd92b33de57dfc5a344db4047}\label{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8afddd0fdcd92b33de57dfc5a344db4047} 
+ERROR\+\_\+\+COMMUNICATION&Device-\/specific protocol error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR\_ACTUATION\_FAILED@{ERROR\_ACTUATION\_FAILED}!DataManager.hpp@{DataManager.hpp}}\index{DataManager.hpp@{DataManager.hpp}!ERROR\_ACTUATION\_FAILED@{ERROR\_ACTUATION\_FAILED}}}\Hypertarget{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a5646785d889dde7d0722f3635fcdf01e}\label{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a5646785d889dde7d0722f3635fcdf01e} 
+ERROR\+\_\+\+ACTUATION\+\_\+\+FAILED&Actuator feedback mismatch. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CRITICAL@{CRITICAL}!DataManager.hpp@{DataManager.hpp}}\index{DataManager.hpp@{DataManager.hpp}!CRITICAL@{CRITICAL}}}\Hypertarget{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a99cd1c61610c76a57cb8d10d6df6b870}\label{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a99cd1c61610c76a57cb8d10d6df6b870} 
+CRITICAL&Critical failure requiring research. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FATAL@{FATAL}!DataManager.hpp@{DataManager.hpp}}\index{DataManager.hpp@{DataManager.hpp}!FATAL@{FATAL}}}\Hypertarget{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a19da7170bea36556dde582519795f3fc}\label{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8a19da7170bea36556dde582519795f3fc} 
+FATAL&Fatal failure requiring system restart. \\
+\hline
+
+\end{DoxyEnumFields}

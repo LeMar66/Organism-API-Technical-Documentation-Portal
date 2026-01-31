@@ -1,0 +1,10 @@
+<map id="components/contracts/include/ISensor.hpp" name="components/contracts/include/ISensor.hpp">
+<area shape="rect" id="Node000001" title="The abstract behavioral contract for all sensory organs (receptors)." alt="" coords="91,5,257,45"/>
+<area shape="rect" id="Node000002" href="$SensorManager_8cpp.html" title=" " alt="" coords="5,181,204,221"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,58,132,94,118,141,110,182,104,181,112,139,128,92,149,55"/>
+<area shape="rect" id="Node000003" href="$SensorManager_8hpp.html" title="The sensory cortex (afferent system) of the organism." alt="" coords="142,93,347,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,54,231,91,227,95,196,58"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="204,143,137,184,134,179,201,138"/>
+<area shape="rect" id="Node000004" href="$CEO_8cpp.html" title=" " alt="" coords="228,189,368,214"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="266,144,293,187,288,190,261,146"/>
+</map>

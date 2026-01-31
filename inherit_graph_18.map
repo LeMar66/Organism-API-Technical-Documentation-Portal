@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classHardware_1_1IActuator.html" title="Abstract interface for all hardware outputs (Relays, PWM, Valves). Designed for deterministic synchro..." alt="" coords="5,31,157,56"/>
+<area shape="rect" id="Node000001" href="$classHardware_1_1I2CExpanderActuator.html" title=" " alt="" coords="205,5,436,31"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="171,31,205,28,205,33,171,37"/>
+<area shape="rect" id="Node000002" href="$classHardware_1_1RelayActuator.html" title=" " alt="" coords="228,55,413,80"/>
+<area shape="poly" id="edge6_Node000000_Node000002" title=" " alt="" coords="171,50,228,55,228,61,171,55"/>
+</map>

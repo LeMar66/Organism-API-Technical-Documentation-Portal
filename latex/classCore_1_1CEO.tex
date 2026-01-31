@@ -1,0 +1,235 @@
+\doxysection{Core\+::CEO Class Reference}
+\hypertarget{classCore_1_1CEO}{}\label{classCore_1_1CEO}\index{Core::CEO@{Core::CEO}}
+
+
+The central "{}\+Composition Root"{} of the \doxylink{namespaceAGX}{AGX} organism. Manages the longevity, dependency injection, and task pinning of all subsystems.  
+
+
+
+
+{\ttfamily \#include $<$CEO.\+hpp$>$}
+
+
+
+Collaboration diagram for Core\+::CEO\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classCore_1_1CEO__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCore_1_1CEO_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCore_1_1CEO_a543e0f85cd22de139f79e2ccca778fb5}\label{classCore_1_1CEO_a543e0f85cd22de139f79e2ccca778fb5} 
+{\bfseries CEO} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Initializes the base unique pointers. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1CEO_a333ec729be4a51800ed4f4e3e1abbab1}\label{classCore_1_1CEO_a333ec729be4a51800ed4f4e3e1abbab1} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CEO} ()
+\begin{DoxyCompactList}\small\item\em Destructor Ensures safe completion of the acquisition task. Ensures safe shutdown of hardware timers and tasks. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1CEO_ad7f476a0beda798025d7af1dfa88212e}\label{classCore_1_1CEO_ad7f476a0beda798025d7af1dfa88212e} 
+{\bfseries CEO} (const \mbox{\hyperlink{classCore_1_1CEO}{CEO}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1CEO_a9781ca860af4e117db84dde5acc31055}\label{classCore_1_1CEO_a9781ca860af4e117db84dde5acc31055} 
+\mbox{\hyperlink{classCore_1_1CEO}{CEO}} \& {\bfseries operator=} (const \mbox{\hyperlink{classCore_1_1CEO}{CEO}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCore_1_1CEO_a80c8c68438ed1b444b933aea26afc007}{bootup}} ()
+\begin{DoxyCompactList}\small\item\em Start the system bootstrap sequence. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1CEO_a461c43720ea55709cff3ec09790c0fc9}\label{classCore_1_1CEO_a461c43720ea55709cff3ec09790c0fc9} 
+void {\bfseries loop} ()
+\begin{DoxyCompactList}\small\item\em Main loop for the watchdog and system supervision (Core 1). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCore_1_1CEO_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classCore_1_1CEO_a2741251b1dff2765424a6561f91df39d}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the status mirror. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCore_1_1CommunicationManager}{Core\+::\+Communication\+Manager}} \& \mbox{\hyperlink{classCore_1_1CEO_a14601cf3fe4c2371e4bf2e2f6b48f79b}{get\+Communication\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Getter for \doxylink{classCore_1_1CommunicationManager}{Communication\+Manager}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \& \mbox{\hyperlink{classCore_1_1CEO_a478bc77d293922405448373407e166fa}{get\+Data\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Getter for \doxylink{classCore_1_1DataManager}{Data\+Manager}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCore_1_1StorageManager}{Core\+::\+Storage\+Manager}} \& \mbox{\hyperlink{classCore_1_1CEO_a3fba7de1af731e193b4755b18e2d4e43}{get\+Storage\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Getter for \doxylink{classCore_1_1StorageManager}{Storage\+Manager}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCore_1_1TaskMonitor}{Core\+::\+Task\+Monitor}} \& \mbox{\hyperlink{classCore_1_1CEO_a1f841ec30676c7fc361b70d52990020a}{get\+Task\+Monitor}} ()
+\begin{DoxyCompactList}\small\item\em Getter for \doxylink{classCore_1_1TaskMonitor}{Task\+Monitor}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCore_1_1TimeManager}{Core\+::\+Time\+Manager}} \& \mbox{\hyperlink{classCore_1_1CEO_ac7924107f0188a1717942ca0a50884f6}{get\+Time\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Getter for \doxylink{classCore_1_1TimeManager}{Time\+Manager}. \end{DoxyCompactList}\item 
+Core\+::\+Tool\+Box \& \mbox{\hyperlink{classCore_1_1CEO_ad20b3aae894018e1119f26c40d73f734}{get\+Tool\+Box}} ()
+\begin{DoxyCompactList}\small\item\em Getter for Tool\+Box. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHardware_1_1ActuatorManager}{Hardware\+::\+Actuator\+Manager}} \& \mbox{\hyperlink{classCore_1_1CEO_a6f0d0e78b18c7516024c6eaa4d9a87d9}{get\+Actuator\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Getter for Actuator\+Manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHardware_1_1BusManager}{Hardware\+::\+Bus\+Manager}} \& \mbox{\hyperlink{classCore_1_1CEO_ab0f4a0b0988ed084412ccffc40243c15}{get\+Bus\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Getter for Bus\+Manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHardware_1_1PinManager}{Hardware\+::\+Pin\+Manager}} \& \mbox{\hyperlink{classCore_1_1CEO_a516ebb8c11d5a7d796a9247e5f95f59f}{get\+Pin\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Getter for Pin\+Manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHardware_1_1SensorManager}{Hardware\+::\+Sensor\+Manager}} \& \mbox{\hyperlink{classCore_1_1CEO_af386f491e3aba465c8e108f10527ae98}{get\+Sensor\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Getter for Sensor\+Manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The central "{}\+Composition Root"{} of the \doxylink{namespaceAGX}{AGX} organism. Manages the longevity, dependency injection, and task pinning of all subsystems. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCore_1_1CEO_a80c8c68438ed1b444b933aea26afc007}\label{classCore_1_1CEO_a80c8c68438ed1b444b933aea26afc007} 
+\index{Core::CEO@{Core::CEO}!bootup@{bootup}}
+\index{bootup@{bootup}!Core::CEO@{Core::CEO}}
+\doxysubsubsection{\texorpdfstring{bootup()}{bootup()}}
+{\footnotesize\ttfamily bool Core\+::\+CEO\+::bootup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start the system bootstrap sequence. 
+
+\begin{DoxyReturn}{Returns}
+bool true when all critical subsystems (Storage, Bus) have started successfully. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1CEO_a6f0d0e78b18c7516024c6eaa4d9a87d9}\label{classCore_1_1CEO_a6f0d0e78b18c7516024c6eaa4d9a87d9} 
+\index{Core::CEO@{Core::CEO}!getActuatorManager@{getActuatorManager}}
+\index{getActuatorManager@{getActuatorManager}!Core::CEO@{Core::CEO}}
+\doxysubsubsection{\texorpdfstring{getActuatorManager()}{getActuatorManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHardware_1_1ActuatorManager}{Hardware\+::\+Actuator\+Manager}} \& Core\+::\+CEO\+::get\+Actuator\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for Actuator\+Manager. 
+
+\begin{DoxyReturn}{Returns}
+class Actuator\+Manager 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1CEO_ab0f4a0b0988ed084412ccffc40243c15}\label{classCore_1_1CEO_ab0f4a0b0988ed084412ccffc40243c15} 
+\index{Core::CEO@{Core::CEO}!getBusManager@{getBusManager}}
+\index{getBusManager@{getBusManager}!Core::CEO@{Core::CEO}}
+\doxysubsubsection{\texorpdfstring{getBusManager()}{getBusManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHardware_1_1BusManager}{Hardware\+::\+Bus\+Manager}} \& Core\+::\+CEO\+::get\+Bus\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for Bus\+Manager. 
+
+\begin{DoxyReturn}{Returns}
+class Bus\+Manager 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1CEO_a14601cf3fe4c2371e4bf2e2f6b48f79b}\label{classCore_1_1CEO_a14601cf3fe4c2371e4bf2e2f6b48f79b} 
+\index{Core::CEO@{Core::CEO}!getCommunicationManager@{getCommunicationManager}}
+\index{getCommunicationManager@{getCommunicationManager}!Core::CEO@{Core::CEO}}
+\doxysubsubsection{\texorpdfstring{getCommunicationManager()}{getCommunicationManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCore_1_1CommunicationManager}{Core\+::\+Communication\+Manager}} \& Core\+::\+CEO\+::get\+Communication\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for \doxylink{classCore_1_1CommunicationManager}{Communication\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+class \doxylink{classCore_1_1CommunicationManager}{Communication\+Manager} 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1CEO_a478bc77d293922405448373407e166fa}\label{classCore_1_1CEO_a478bc77d293922405448373407e166fa} 
+\index{Core::CEO@{Core::CEO}!getDataManager@{getDataManager}}
+\index{getDataManager@{getDataManager}!Core::CEO@{Core::CEO}}
+\doxysubsubsection{\texorpdfstring{getDataManager()}{getDataManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \& Core\+::\+CEO\+::get\+Data\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for \doxylink{classCore_1_1DataManager}{Data\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+class \doxylink{classCore_1_1DataManager}{Data\+Manager} 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1CEO_a516ebb8c11d5a7d796a9247e5f95f59f}\label{classCore_1_1CEO_a516ebb8c11d5a7d796a9247e5f95f59f} 
+\index{Core::CEO@{Core::CEO}!getPinManager@{getPinManager}}
+\index{getPinManager@{getPinManager}!Core::CEO@{Core::CEO}}
+\doxysubsubsection{\texorpdfstring{getPinManager()}{getPinManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHardware_1_1PinManager}{Hardware\+::\+Pin\+Manager}} \& Core\+::\+CEO\+::get\+Pin\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for Pin\+Manager. 
+
+\begin{DoxyReturn}{Returns}
+class Pin\+Manager 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1CEO_af386f491e3aba465c8e108f10527ae98}\label{classCore_1_1CEO_af386f491e3aba465c8e108f10527ae98} 
+\index{Core::CEO@{Core::CEO}!getSensorManager@{getSensorManager}}
+\index{getSensorManager@{getSensorManager}!Core::CEO@{Core::CEO}}
+\doxysubsubsection{\texorpdfstring{getSensorManager()}{getSensorManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHardware_1_1SensorManager}{Hardware\+::\+Sensor\+Manager}} \& Core\+::\+CEO\+::get\+Sensor\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for Sensor\+Manager. 
+
+\begin{DoxyReturn}{Returns}
+class Sensor\+Manager 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1CEO_a2741251b1dff2765424a6561f91df39d}\label{classCore_1_1CEO_a2741251b1dff2765424a6561f91df39d} 
+\index{Core::CEO@{Core::CEO}!getState@{getState}}
+\index{getState@{getState}!Core::CEO@{Core::CEO}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCore_1_1CEO_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} Core\+::\+CEO\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the status mirror. 
+
+\begin{DoxyReturn}{Returns}
+struct \doxylink{structCore_1_1CEO_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t} 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1CEO_a3fba7de1af731e193b4755b18e2d4e43}\label{classCore_1_1CEO_a3fba7de1af731e193b4755b18e2d4e43} 
+\index{Core::CEO@{Core::CEO}!getStorageManager@{getStorageManager}}
+\index{getStorageManager@{getStorageManager}!Core::CEO@{Core::CEO}}
+\doxysubsubsection{\texorpdfstring{getStorageManager()}{getStorageManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCore_1_1StorageManager}{Core\+::\+Storage\+Manager}} \& Core\+::\+CEO\+::get\+Storage\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for \doxylink{classCore_1_1StorageManager}{Storage\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+class \doxylink{classCore_1_1StorageManager}{Storage\+Manager} 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1CEO_a1f841ec30676c7fc361b70d52990020a}\label{classCore_1_1CEO_a1f841ec30676c7fc361b70d52990020a} 
+\index{Core::CEO@{Core::CEO}!getTaskMonitor@{getTaskMonitor}}
+\index{getTaskMonitor@{getTaskMonitor}!Core::CEO@{Core::CEO}}
+\doxysubsubsection{\texorpdfstring{getTaskMonitor()}{getTaskMonitor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCore_1_1TaskMonitor}{Core\+::\+Task\+Monitor}} \& Core\+::\+CEO\+::get\+Task\+Monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for \doxylink{classCore_1_1TaskMonitor}{Task\+Monitor}. 
+
+\begin{DoxyReturn}{Returns}
+class \doxylink{classCore_1_1TaskMonitor}{Task\+Monitor} 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1CEO_ac7924107f0188a1717942ca0a50884f6}\label{classCore_1_1CEO_ac7924107f0188a1717942ca0a50884f6} 
+\index{Core::CEO@{Core::CEO}!getTimeManager@{getTimeManager}}
+\index{getTimeManager@{getTimeManager}!Core::CEO@{Core::CEO}}
+\doxysubsubsection{\texorpdfstring{getTimeManager()}{getTimeManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCore_1_1TimeManager}{Core\+::\+Time\+Manager}} \& Core\+::\+CEO\+::get\+Time\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for \doxylink{classCore_1_1TimeManager}{Time\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+class \doxylink{classCore_1_1TimeManager}{Time\+Manager} 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1CEO_ad20b3aae894018e1119f26c40d73f734}\label{classCore_1_1CEO_ad20b3aae894018e1119f26c40d73f734} 
+\index{Core::CEO@{Core::CEO}!getToolBox@{getToolBox}}
+\index{getToolBox@{getToolBox}!Core::CEO@{Core::CEO}}
+\doxysubsubsection{\texorpdfstring{getToolBox()}{getToolBox()}}
+{\footnotesize\ttfamily Core\+::\+Tool\+Box \& Core\+::\+CEO\+::get\+Tool\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for Tool\+Box. 
+
+\begin{DoxyReturn}{Returns}
+class Tool\+Box 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/include/\mbox{\hyperlink{CEO_8hpp}{CEO.\+hpp}}\item 
+main/ceo/\mbox{\hyperlink{CEO_8cpp}{CEO.\+cpp}}\end{DoxyCompactItemize}

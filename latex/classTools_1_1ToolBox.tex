@@ -1,0 +1,163 @@
+\doxysection{Tools\+::Tool\+Box Class Reference}
+\hypertarget{classTools_1_1ToolBox}{}\label{classTools_1_1ToolBox}\index{Tools::ToolBox@{Tools::ToolBox}}
+
+
+General system utilities and watchdog management.  
+
+
+
+
+{\ttfamily \#include $<$Tool\+Box.\+hpp$>$}
+
+
+
+Collaboration diagram for Tools\+::Tool\+Box\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classTools_1_1ToolBox__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structTools_1_1ToolBox_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTools_1_1ToolBox_a727e863631bcd683a99ae90b71c04aa2}{Tool\+Box}} (\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&state)
+\begin{DoxyCompactList}\small\item\em Constructor met Dependency Injection. \end{DoxyCompactList}\item 
+\Hypertarget{classTools_1_1ToolBox_af889a3a0c4cd3976a48c358c60e055d0}\label{classTools_1_1ToolBox_af889a3a0c4cd3976a48c358c60e055d0} 
+{\bfseries Tool\+Box} (const \mbox{\hyperlink{classTools_1_1ToolBox}{Tool\+Box}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+\Hypertarget{classTools_1_1ToolBox_a3ddba48ef6d87b45bc1bcff6862f0f36}\label{classTools_1_1ToolBox_a3ddba48ef6d87b45bc1bcff6862f0f36} 
+\mbox{\hyperlink{classTools_1_1ToolBox}{Tool\+Box}} \& {\bfseries operator=} (const \mbox{\hyperlink{classTools_1_1ToolBox}{Tool\+Box}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTools_1_1ToolBox_a8df9967cd15a01d3d93c402bf2cfe0b9}{begin}} (\mbox{\hyperlink{classHardware_1_1BusManager}{Hardware\+::\+Bus\+Manager}} \&bus)
+\begin{DoxyCompactList}\small\item\em Initializes the system utilities. \end{DoxyCompactList}\item 
+\Hypertarget{classTools_1_1ToolBox_ad28f5505c9160e74473839e7c59d2e43}\label{classTools_1_1ToolBox_ad28f5505c9160e74473839e7c59d2e43} 
+void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em Periodic system maintenance tasks (Heap, Temp, Uptime). \end{DoxyCompactList}\item 
+\Hypertarget{classTools_1_1ToolBox_a697cc8cc7d88905bb257bef298c434f3}\label{classTools_1_1ToolBox_a697cc8cc7d88905bb257bef298c434f3} 
+void {\bfseries feed\+Watchdog} ()
+\begin{DoxyCompactList}\small\item\em Powers the Task Watchdog Timer (TWDT). \end{DoxyCompactList}\item 
+\Hypertarget{classTools_1_1ToolBox_a561693892ddb5a7d0baae0ac45ba6266}\label{classTools_1_1ToolBox_a561693892ddb5a7d0baae0ac45ba6266} 
+void {\bfseries enter\+Deep\+Sleep} ()
+\begin{DoxyCompactList}\small\item\em Places the system in Deep Sleep. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTools_1_1ToolBox_ae6f1c04dfe5be4c72199aaa34f4d9da1}{get\+Formatted\+Uptime}} () const
+\begin{DoxyCompactList}\small\item\em Generates a readable uptime string. \end{DoxyCompactList}\item 
+\Hypertarget{classTools_1_1ToolBox_a7a24add647eb712cf73f7ae91f2491fb}\label{classTools_1_1ToolBox_a7a24add647eb712cf73f7ae91f2491fb} 
+time\+\_\+t {\bfseries get\+Now} () const
+\begin{DoxyCompactList}\small\item\em Returns current Unix time (POSIX) \end{DoxyCompactList}\item 
+\Hypertarget{classTools_1_1ToolBox_a97a2da41390d3266de907e1b449e400e}\label{classTools_1_1ToolBox_a97a2da41390d3266de907e1b449e400e} 
+std\+::string {\bfseries get\+Date\+Time\+String} () const
+\begin{DoxyCompactList}\small\item\em ISO-\/8601 date/time string for logs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTools_1_1ToolBox_ab395daed6ad49f14d6cb67555018c7df}{safe\+Reset}} (const char \texorpdfstring{$\ast$}{*}reason)
+\begin{DoxyCompactList}\small\item\em Performs a safe system reboot with logging. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classTools_1_1ToolBox_a5fa201c21439f16de888835f712795bc}{get\+Cpu\+Temperature}} () const
+\begin{DoxyCompactList}\small\item\em Gets the internal CPU temperature. \end{DoxyCompactList}\item 
+\Hypertarget{classTools_1_1ToolBox_af3b975ab250b4dd9a70cf4e654d20ca5}\label{classTools_1_1ToolBox_af3b975ab250b4dd9a70cf4e654d20ca5} 
+void {\bfseries publish\+Heap\+Stats} ()
+\begin{DoxyCompactList}\small\item\em Publishes heap statistics to the Data\+Manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structTools_1_1ToolBox_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classTools_1_1ToolBox_aa85cb09717542377797c0e9d49869945}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em Geeft de actuele gezondheid van het sensor-\/subsysteem terug . \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General system utilities and watchdog management. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTools_1_1ToolBox_a727e863631bcd683a99ae90b71c04aa2}\label{classTools_1_1ToolBox_a727e863631bcd683a99ae90b71c04aa2} 
+\index{Tools::ToolBox@{Tools::ToolBox}!ToolBox@{ToolBox}}
+\index{ToolBox@{ToolBox}!Tools::ToolBox@{Tools::ToolBox}}
+\doxysubsubsection{\texorpdfstring{ToolBox()}{ToolBox()}}
+{\footnotesize\ttfamily Tools\+::\+Tool\+Box\+::\+Tool\+Box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor met Dependency Injection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Referentie naar de centrale data-\/hub. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTools_1_1ToolBox_a8df9967cd15a01d3d93c402bf2cfe0b9}\label{classTools_1_1ToolBox_a8df9967cd15a01d3d93c402bf2cfe0b9} 
+\index{Tools::ToolBox@{Tools::ToolBox}!begin@{begin}}
+\index{begin@{begin}!Tools::ToolBox@{Tools::ToolBox}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void Tools\+::\+Tool\+Box\+::begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHardware_1_1BusManager}{Hardware\+::\+Bus\+Manager}} \&}]{bus }\end{DoxyParamCaption})}
+
+
+
+Initializes the system utilities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bus} & Reference to hardware buses. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTools_1_1ToolBox_a5fa201c21439f16de888835f712795bc}\label{classTools_1_1ToolBox_a5fa201c21439f16de888835f712795bc} 
+\index{Tools::ToolBox@{Tools::ToolBox}!getCpuTemperature@{getCpuTemperature}}
+\index{getCpuTemperature@{getCpuTemperature}!Tools::ToolBox@{Tools::ToolBox}}
+\doxysubsubsection{\texorpdfstring{getCpuTemperature()}{getCpuTemperature()}}
+{\footnotesize\ttfamily float Tools\+::\+Tool\+Box\+::get\+Cpu\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the internal CPU temperature. 
+
+\begin{DoxyReturn}{Returns}
+float Temperature in Celsius. 
+\end{DoxyReturn}
+\Hypertarget{classTools_1_1ToolBox_ae6f1c04dfe5be4c72199aaa34f4d9da1}\label{classTools_1_1ToolBox_ae6f1c04dfe5be4c72199aaa34f4d9da1} 
+\index{Tools::ToolBox@{Tools::ToolBox}!getFormattedUptime@{getFormattedUptime}}
+\index{getFormattedUptime@{getFormattedUptime}!Tools::ToolBox@{Tools::ToolBox}}
+\doxysubsubsection{\texorpdfstring{getFormattedUptime()}{getFormattedUptime()}}
+{\footnotesize\ttfamily std\+::string Tools\+::\+Tool\+Box\+::get\+Formatted\+Uptime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Generates a readable uptime string. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string Formatted as "{}\+DDd HHh MMm"{}. 
+\end{DoxyReturn}
+\Hypertarget{classTools_1_1ToolBox_aa85cb09717542377797c0e9d49869945}\label{classTools_1_1ToolBox_aa85cb09717542377797c0e9d49869945} 
+\index{Tools::ToolBox@{Tools::ToolBox}!getState@{getState}}
+\index{getState@{getState}!Tools::ToolBox@{Tools::ToolBox}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTools_1_1ToolBox_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} Tools\+::\+Tool\+Box\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Geeft de actuele gezondheid van het sensor-\/subsysteem terug . 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structTools_1_1ToolBox_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t} De actuele status struct. 
+\end{DoxyReturn}
+\Hypertarget{classTools_1_1ToolBox_ab395daed6ad49f14d6cb67555018c7df}\label{classTools_1_1ToolBox_ab395daed6ad49f14d6cb67555018c7df} 
+\index{Tools::ToolBox@{Tools::ToolBox}!safeReset@{safeReset}}
+\index{safeReset@{safeReset}!Tools::ToolBox@{Tools::ToolBox}}
+\doxysubsubsection{\texorpdfstring{safeReset()}{safeReset()}}
+{\footnotesize\ttfamily void Tools\+::\+Tool\+Box\+::safe\+Reset (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{reason }\end{DoxyParamCaption})}
+
+
+
+Performs a safe system reboot with logging. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reason} & The reason for the reset (for audit trail). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/tool/include/\mbox{\hyperlink{ToolBox_8hpp}{Tool\+Box.\+hpp}}\item 
+main/tool/\mbox{\hyperlink{ToolBox_8cpp}{Tool\+Box.\+cpp}}\end{DoxyCompactItemize}

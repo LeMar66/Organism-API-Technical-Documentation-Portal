@@ -1,0 +1,82 @@
+\doxysection{Hardware\+::Actuator\+Manager\+::State\+\_\+\+Monitor\+\_\+t Struct Reference}
+\hypertarget{structHardware_1_1ActuatorManager_1_1State__Monitor__t}{}\label{structHardware_1_1ActuatorManager_1_1State__Monitor__t}\index{Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}}
+
+
+Telemetry \& Health-\/\+State Awareness.  
+
+
+
+
+{\ttfamily \#include $<$Actuator\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for Hardware\+::Actuator\+Manager\+::State\+\_\+\+Monitor\+\_\+t\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{structHardware_1_1ActuatorManager_1_1State__Monitor__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structHardware_1_1ActuatorManager_1_1State__Monitor__t_a508510e25d7bc366900212e5834a0763}{actuator\+\_\+failed}} \mbox{[}17\mbox{]}
+\item 
+size\+\_\+t \mbox{\hyperlink{structHardware_1_1ActuatorManager_1_1State__Monitor__t_aaf61994eaea2fa18377aa3974abb65ed}{actuator\+\_\+count}}
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structHardware_1_1ActuatorManager_1_1State__Monitor__t_a360336f78cdcd6469325757916bc6425}{all\+\_\+status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structHardware_1_1ActuatorManager_1_1State__Monitor__t_a77ce7b92d45b55fe2bf3347c135b1f70}{last\+\_\+update}} = 0
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structHardware_1_1ActuatorManager_1_1State__Monitor__t_af2e83caf98c1f8245f3bfd591fe50509}{status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{structHardware_1_1ActuatorManager_1_1State__Monitor__t_a13d583d9969b783b9ba0d1aa883314a8}{last\+\_\+error}} = ESP\+\_\+\+OK
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Telemetry \& Health-\/\+State Awareness. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structHardware_1_1ActuatorManager_1_1State__Monitor__t_aaf61994eaea2fa18377aa3974abb65ed}\label{structHardware_1_1ActuatorManager_1_1State__Monitor__t_aaf61994eaea2fa18377aa3974abb65ed} 
+\index{Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}!actuator\_count@{actuator\_count}}
+\index{actuator\_count@{actuator\_count}!Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{actuator\_count}{actuator\_count}}
+{\footnotesize\ttfamily size\+\_\+t Hardware\+::\+Actuator\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::actuator\+\_\+count}
+
+Number of registered actuators. \Hypertarget{structHardware_1_1ActuatorManager_1_1State__Monitor__t_a508510e25d7bc366900212e5834a0763}\label{structHardware_1_1ActuatorManager_1_1State__Monitor__t_a508510e25d7bc366900212e5834a0763} 
+\index{Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}!actuator\_failed@{actuator\_failed}}
+\index{actuator\_failed@{actuator\_failed}!Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{actuator\_failed}{actuator\_failed}}
+{\footnotesize\ttfamily char Hardware\+::\+Actuator\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::actuator\+\_\+failed\mbox{[}17\mbox{]}}
+
+Last actuator processed. \Hypertarget{structHardware_1_1ActuatorManager_1_1State__Monitor__t_a360336f78cdcd6469325757916bc6425}\label{structHardware_1_1ActuatorManager_1_1State__Monitor__t_a360336f78cdcd6469325757916bc6425} 
+\index{Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}!all\_status@{all\_status}}
+\index{all\_status@{all\_status}!Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{all\_status}{all\_status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Hardware\+::\+Actuator\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::all\+\_\+status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+General States of all actuators. \Hypertarget{structHardware_1_1ActuatorManager_1_1State__Monitor__t_a13d583d9969b783b9ba0d1aa883314a8}\label{structHardware_1_1ActuatorManager_1_1State__Monitor__t_a13d583d9969b783b9ba0d1aa883314a8} 
+\index{Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}!last\_error@{last\_error}}
+\index{last\_error@{last\_error}!Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_error}{last\_error}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+Actuator\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+error = ESP\+\_\+\+OK}
+
+Last recorded error. \Hypertarget{structHardware_1_1ActuatorManager_1_1State__Monitor__t_a77ce7b92d45b55fe2bf3347c135b1f70}\label{structHardware_1_1ActuatorManager_1_1State__Monitor__t_a77ce7b92d45b55fe2bf3347c135b1f70} 
+\index{Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}!last\_update@{last\_update}}
+\index{last\_update@{last\_update}!Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_update}{last\_update}}
+{\footnotesize\ttfamily uint32\+\_\+t Hardware\+::\+Actuator\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+update = 0}
+
+Last successful timestamp. \Hypertarget{structHardware_1_1ActuatorManager_1_1State__Monitor__t_af2e83caf98c1f8245f3bfd591fe50509}\label{structHardware_1_1ActuatorManager_1_1State__Monitor__t_af2e83caf98c1f8245f3bfd591fe50509} 
+\index{Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}!status@{status}}
+\index{status@{status}!Hardware::ActuatorManager::State\_Monitor\_t@{Hardware::ActuatorManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Hardware\+::\+Actuator\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+The "{}\+At a Glance"{} status. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/actuator/include/\mbox{\hyperlink{ActuatorManager_8hpp}{Actuator\+Manager.\+hpp}}\end{DoxyCompactItemize}

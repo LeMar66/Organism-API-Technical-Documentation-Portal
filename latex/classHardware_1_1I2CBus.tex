@@ -1,0 +1,161 @@
+\doxysection{Hardware\+::I2\+CBus Class Reference}
+\hypertarget{classHardware_1_1I2CBus}{}\label{classHardware_1_1I2CBus}\index{Hardware::I2CBus@{Hardware::I2CBus}}
+
+
+Hardware gatekeeper for I2C communication.  
+
+
+
+
+{\ttfamily \#include $<$I2\+CBus.\+hpp$>$}
+
+
+
+Collaboration diagram for Hardware\+::I2\+CBus\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classHardware_1_1I2CBus__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classHardware_1_1I2CBus_1_1BusGuard}{Bus\+Guard}}
+\begin{DoxyCompactList}\small\item\em RAII scoped-\/lock for thread-\/safe bus access. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structHardware_1_1I2CBus_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHardware_1_1I2CBus_abd1829043c2a1b3b8b455a57f48d8d8d}{I2\+CBus}} (i2c\+\_\+port\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Inject hardware port resources. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1I2CBus_a0549e7d7f797b4a1694facc3fb3084e2}\label{classHardware_1_1I2CBus_a0549e7d7f797b4a1694facc3fb3084e2} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+I2\+CBus} ()
+\begin{DoxyCompactList}\small\item\em Destructor Ensures safe completion of the acquisition task, ensuring resource cleanup. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1I2CBus_acb3eee7a762df426815205e5d9c6e160}\label{classHardware_1_1I2CBus_acb3eee7a762df426815205e5d9c6e160} 
+{\bfseries I2\+CBus} (const \mbox{\hyperlink{classHardware_1_1I2CBus}{I2\+CBus}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1I2CBus_a3abd728acccedbf4a255331ee7467f51}\label{classHardware_1_1I2CBus_a3abd728acccedbf4a255331ee7467f51} 
+\mbox{\hyperlink{classHardware_1_1I2CBus}{I2\+CBus}} \& {\bfseries operator=} (const \mbox{\hyperlink{classHardware_1_1I2CBus}{I2\+CBus}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1I2CBus_a119ab963d366f00feb70a202f664dcfb}{begin}} (int sda, int scl, uint32\+\_\+t speed=400000)
+\begin{DoxyCompactList}\small\item\em Initialize the I2C master bus. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1I2CBus_a9fc00891a2cc04eb5101580e791ad0c7}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Attempt autonomous recovery of the bus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structHardware_1_1I2CBus_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classHardware_1_1I2CBus_a1461fdb1b6d0882e09ad1f1261f631a3}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current health of the subsystem. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHardware_1_1I2CBus_1_1BusGuard}{Bus\+Guard}} \mbox{\hyperlink{classHardware_1_1I2CBus_ad92b17e0f07f34792564efd1a0bbce17}{acquire}} ()
+\begin{DoxyCompactList}\small\item\em Acquire temporary ownership of the bus. \end{DoxyCompactList}\item 
+i2c\+\_\+master\+\_\+bus\+\_\+handle\+\_\+t \mbox{\hyperlink{classHardware_1_1I2CBus_a1798c618aff821ef85801a1d020b8193}{get\+Handle}} ()
+\begin{DoxyCompactList}\small\item\em Access the underlying ESP-\/\+IDF bus handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHardware_1_1I2CBus_aec3ff24c816ab8e625d3592cd1a7e46f}\label{classHardware_1_1I2CBus_aec3ff24c816ab8e625d3592cd1a7e46f} 
+static constexpr Tick\+Type\+\_\+t {\bfseries BUS\+\_\+\+TIMEOUT\+\_\+\+TICKS} = pd\+MS\+\_\+\+TO\+\_\+\+TICKS(100)
+\begin{DoxyCompactList}\small\item\em Default timeout for bus transactions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hardware gatekeeper for I2C communication. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHardware_1_1I2CBus_abd1829043c2a1b3b8b455a57f48d8d8d}\label{classHardware_1_1I2CBus_abd1829043c2a1b3b8b455a57f48d8d8d} 
+\index{Hardware::I2CBus@{Hardware::I2CBus}!I2CBus@{I2CBus}}
+\index{I2CBus@{I2CBus}!Hardware::I2CBus@{Hardware::I2CBus}}
+\doxysubsubsection{\texorpdfstring{I2CBus()}{I2CBus()}}
+{\footnotesize\ttfamily Hardware\+::\+I2\+CBus\+::\+I2\+CBus (\begin{DoxyParamCaption}\item[{i2c\+\_\+port\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Inject hardware port resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The I2C port number (e.\+g., I2\+C\+\_\+\+NUM\+\_\+0). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHardware_1_1I2CBus_ad92b17e0f07f34792564efd1a0bbce17}\label{classHardware_1_1I2CBus_ad92b17e0f07f34792564efd1a0bbce17} 
+\index{Hardware::I2CBus@{Hardware::I2CBus}!acquire@{acquire}}
+\index{acquire@{acquire}!Hardware::I2CBus@{Hardware::I2CBus}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHardware_1_1I2CBus_1_1BusGuard}{Bus\+Guard}} Hardware\+::\+I2\+CBus\+::acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Acquire temporary ownership of the bus. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classHardware_1_1I2CBus_1_1BusGuard}{Bus\+Guard} RAII object. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1I2CBus_a119ab963d366f00feb70a202f664dcfb}\label{classHardware_1_1I2CBus_a119ab963d366f00feb70a202f664dcfb} 
+\index{Hardware::I2CBus@{Hardware::I2CBus}!begin@{begin}}
+\index{begin@{begin}!Hardware::I2CBus@{Hardware::I2CBus}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+I2\+CBus\+::begin (\begin{DoxyParamCaption}\item[{int}]{sda,  }\item[{int}]{scl,  }\item[{uint32\+\_\+t}]{speed = {\ttfamily 400000} }\end{DoxyParamCaption})}
+
+
+
+Initialize the I2C master bus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sda} & GPIO number for Data line. \\
+\hline
+{\em scl} & GPIO number for Clock line. \\
+\hline
+{\em speed} & Clock frequency in Hz (default 400k\+Hz). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK on success, or failure code. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1I2CBus_a1798c618aff821ef85801a1d020b8193}\label{classHardware_1_1I2CBus_a1798c618aff821ef85801a1d020b8193} 
+\index{Hardware::I2CBus@{Hardware::I2CBus}!getHandle@{getHandle}}
+\index{getHandle@{getHandle}!Hardware::I2CBus@{Hardware::I2CBus}}
+\doxysubsubsection{\texorpdfstring{getHandle()}{getHandle()}}
+{\footnotesize\ttfamily i2c\+\_\+master\+\_\+bus\+\_\+handle\+\_\+t Hardware\+::\+I2\+CBus\+::get\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the underlying ESP-\/\+IDF bus handle. 
+
+\begin{DoxyReturn}{Returns}
+i2c\+\_\+master\+\_\+bus\+\_\+handle\+\_\+t The driver handle. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1I2CBus_a1461fdb1b6d0882e09ad1f1261f631a3}\label{classHardware_1_1I2CBus_a1461fdb1b6d0882e09ad1f1261f631a3} 
+\index{Hardware::I2CBus@{Hardware::I2CBus}!getState@{getState}}
+\index{getState@{getState}!Hardware::I2CBus@{Hardware::I2CBus}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structHardware_1_1I2CBus_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} Hardware\+::\+I2\+CBus\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current health of the subsystem. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structHardware_1_1I2CBus_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t} The current status struct. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1I2CBus_a9fc00891a2cc04eb5101580e791ad0c7}\label{classHardware_1_1I2CBus_a9fc00891a2cc04eb5101580e791ad0c7} 
+\index{Hardware::I2CBus@{Hardware::I2CBus}!reset@{reset}}
+\index{reset@{reset}!Hardware::I2CBus@{Hardware::I2CBus}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+I2\+CBus\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Attempt autonomous recovery of the bus. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t Result of the recovery attempt. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/bus/include/\mbox{\hyperlink{I2CBus_8hpp}{I2\+CBus.\+hpp}}\item 
+main/ceo/managers/bus/\mbox{\hyperlink{I2CBus_8cpp}{I2\+CBus.\+cpp}}\end{DoxyCompactItemize}

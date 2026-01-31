@@ -1,0 +1,74 @@
+\doxysection{Core\+::Time\+Manager\+::State\+\_\+\+Monitor\+\_\+t Struct Reference}
+\hypertarget{structCore_1_1TimeManager_1_1State__Monitor__t}{}\label{structCore_1_1TimeManager_1_1State__Monitor__t}\index{Core::TimeManager::State\_Monitor\_t@{Core::TimeManager::State\_Monitor\_t}}
+
+
+Telemetry \& Health-\/\+State Awareness.  
+
+
+
+
+{\ttfamily \#include $<$Time\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for Core\+::Time\+Manager\+::State\+\_\+\+Monitor\+\_\+t\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{structCore_1_1TimeManager_1_1State__Monitor__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structCore_1_1TimeManager_1_1State__Monitor__t_aaca0fc147fe569500d7544cbdc08ffce}{RTC\+\_\+failed}} \mbox{[}17\mbox{]}
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structCore_1_1TimeManager_1_1State__Monitor__t_a8a563a3817d599d0079282e4166fc20d}{all\+\_\+status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCore_1_1TimeManager_1_1State__Monitor__t_afa71692f50e9b6b5bb9a92082b7910cc}{last\+\_\+update}} = 0
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structCore_1_1TimeManager_1_1State__Monitor__t_a23d8ce6b8a2731e9edcee4fd96cebcd5}{status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{structCore_1_1TimeManager_1_1State__Monitor__t_af7e5951a51e074dcada64fd675b7b33b}{last\+\_\+error}} = ESP\+\_\+\+OK
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Telemetry \& Health-\/\+State Awareness. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structCore_1_1TimeManager_1_1State__Monitor__t_a8a563a3817d599d0079282e4166fc20d}\label{structCore_1_1TimeManager_1_1State__Monitor__t_a8a563a3817d599d0079282e4166fc20d} 
+\index{Core::TimeManager::State\_Monitor\_t@{Core::TimeManager::State\_Monitor\_t}!all\_status@{all\_status}}
+\index{all\_status@{all\_status}!Core::TimeManager::State\_Monitor\_t@{Core::TimeManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{all\_status}{all\_status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Core\+::\+Time\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::all\+\_\+status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+Status van de totale actuator-\/gezondheid. \Hypertarget{structCore_1_1TimeManager_1_1State__Monitor__t_af7e5951a51e074dcada64fd675b7b33b}\label{structCore_1_1TimeManager_1_1State__Monitor__t_af7e5951a51e074dcada64fd675b7b33b} 
+\index{Core::TimeManager::State\_Monitor\_t@{Core::TimeManager::State\_Monitor\_t}!last\_error@{last\_error}}
+\index{last\_error@{last\_error}!Core::TimeManager::State\_Monitor\_t@{Core::TimeManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_error}{last\_error}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Core\+::\+Time\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+error = ESP\+\_\+\+OK}
+
+Last recorded error. \Hypertarget{structCore_1_1TimeManager_1_1State__Monitor__t_afa71692f50e9b6b5bb9a92082b7910cc}\label{structCore_1_1TimeManager_1_1State__Monitor__t_afa71692f50e9b6b5bb9a92082b7910cc} 
+\index{Core::TimeManager::State\_Monitor\_t@{Core::TimeManager::State\_Monitor\_t}!last\_update@{last\_update}}
+\index{last\_update@{last\_update}!Core::TimeManager::State\_Monitor\_t@{Core::TimeManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_update}{last\_update}}
+{\footnotesize\ttfamily uint32\+\_\+t Core\+::\+Time\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+update = 0}
+
+Last successful timestamp. \Hypertarget{structCore_1_1TimeManager_1_1State__Monitor__t_aaca0fc147fe569500d7544cbdc08ffce}\label{structCore_1_1TimeManager_1_1State__Monitor__t_aaca0fc147fe569500d7544cbdc08ffce} 
+\index{Core::TimeManager::State\_Monitor\_t@{Core::TimeManager::State\_Monitor\_t}!RTC\_failed@{RTC\_failed}}
+\index{RTC\_failed@{RTC\_failed}!Core::TimeManager::State\_Monitor\_t@{Core::TimeManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{RTC\_failed}{RTC\_failed}}
+{\footnotesize\ttfamily char Core\+::\+Time\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::\+RTC\+\_\+failed\mbox{[}17\mbox{]}}
+
+RTC. \Hypertarget{structCore_1_1TimeManager_1_1State__Monitor__t_a23d8ce6b8a2731e9edcee4fd96cebcd5}\label{structCore_1_1TimeManager_1_1State__Monitor__t_a23d8ce6b8a2731e9edcee4fd96cebcd5} 
+\index{Core::TimeManager::State\_Monitor\_t@{Core::TimeManager::State\_Monitor\_t}!status@{status}}
+\index{status@{status}!Core::TimeManager::State\_Monitor\_t@{Core::TimeManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Core\+::\+Time\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+The "{}\+At a Glance"{} status. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/time/include/\mbox{\hyperlink{TimeManager_8hpp}{Time\+Manager.\+hpp}}\end{DoxyCompactItemize}

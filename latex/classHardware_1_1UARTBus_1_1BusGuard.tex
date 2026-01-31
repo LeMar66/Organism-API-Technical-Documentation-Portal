@@ -1,0 +1,61 @@
+\doxysection{Hardware\+::UARTBus\+::Bus\+Guard Class Reference}
+\hypertarget{classHardware_1_1UARTBus_1_1BusGuard}{}\label{classHardware_1_1UARTBus_1_1BusGuard}\index{Hardware::UARTBus::BusGuard@{Hardware::UARTBus::BusGuard}}
+
+
+RAII scoped-\/lock for thread-\/safe UART access.  
+
+
+
+
+{\ttfamily \#include $<$UARTBus.\+hpp$>$}
+
+
+
+Collaboration diagram for Hardware\+::UARTBus\+::Bus\+Guard\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classHardware_1_1UARTBus_1_1BusGuard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHardware_1_1UARTBus_1_1BusGuard_a215b304761fe24a0f20dde253911701b}{Bus\+Guard}} (\mbox{\hyperlink{classHardware_1_1UARTBus}{UARTBus}} \&bus)
+\begin{DoxyCompactList}\small\item\em Attempt to lock the bus mutex. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1UARTBus_1_1BusGuard_af0a79d93c4f5c4093808366d9684d4f4}\label{classHardware_1_1UARTBus_1_1BusGuard_af0a79d93c4f5c4093808366d9684d4f4} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Bus\+Guard} ()
+\begin{DoxyCompactList}\small\item\em Release the mutex upon destruction. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1UARTBus_1_1BusGuard_ae61d3bd9fd508a563c1777664a667f2d}\label{classHardware_1_1UARTBus_1_1BusGuard_ae61d3bd9fd508a563c1777664a667f2d} 
+bool {\bfseries is\+Valid} () const
+\begin{DoxyCompactList}\small\item\em Check if the lock was successfully acquired. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1UARTBus_1_1BusGuard_ad2a26d80e09baf6194f0923eb3f47edb}\label{classHardware_1_1UARTBus_1_1BusGuard_ad2a26d80e09baf6194f0923eb3f47edb} 
+{\bfseries operator bool} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RAII scoped-\/lock for thread-\/safe UART access. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHardware_1_1UARTBus_1_1BusGuard_a215b304761fe24a0f20dde253911701b}\label{classHardware_1_1UARTBus_1_1BusGuard_a215b304761fe24a0f20dde253911701b} 
+\index{Hardware::UARTBus::BusGuard@{Hardware::UARTBus::BusGuard}!BusGuard@{BusGuard}}
+\index{BusGuard@{BusGuard}!Hardware::UARTBus::BusGuard@{Hardware::UARTBus::BusGuard}}
+\doxysubsubsection{\texorpdfstring{BusGuard()}{BusGuard()}}
+{\footnotesize\ttfamily Hardware\+::\+UARTBus\+::\+Bus\+Guard\+::\+Bus\+Guard (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHardware_1_1UARTBus}{UARTBus}} \&}]{bus }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Attempt to lock the bus mutex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bus} & Reference to the parent \doxylink{classHardware_1_1UARTBus}{UARTBus}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/bus/include/\mbox{\hyperlink{UARTBus_8hpp}{UARTBus.\+hpp}}\item 
+main/ceo/managers/bus/\mbox{\hyperlink{UARTBus_8cpp}{UARTBus.\+cpp}}\end{DoxyCompactItemize}

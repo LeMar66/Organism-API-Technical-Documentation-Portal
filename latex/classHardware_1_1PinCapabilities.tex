@@ -1,0 +1,68 @@
+\doxysection{Hardware\+::Pin\+Capabilities Class Reference}
+\hypertarget{classHardware_1_1PinCapabilities}{}\label{classHardware_1_1PinCapabilities}\index{Hardware::PinCapabilities@{Hardware::PinCapabilities}}
+
+
+Statische hardware-\/mogelijkheden per chip-\/variant.  
+
+
+
+
+{\ttfamily \#include $<$Pin\+Capabilities.\+hpp$>$}
+
+
+
+Collaboration diagram for Hardware\+::Pin\+Capabilities\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classHardware_1_1PinCapabilities__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{classHardware_1_1PinCapabilities_ad8e3ae97ef17caeb232a256a60773992}{has\+\_\+output}} (int pin)
+\begin{DoxyCompactList}\small\item\em Controleert of een pin output-\/capable is. Cruciaal voor ESP32 (WROVER/\+WROOM) waar GPIO 34-\/39 \textquotesingle{}Input Only\textquotesingle{} zijn. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1PinCapabilities_a616fd6bfe73b874b0a7cc21ef2123a7d}\label{classHardware_1_1PinCapabilities_a616fd6bfe73b874b0a7cc21ef2123a7d} 
+static constexpr bool {\bfseries has\+\_\+pull\+\_\+resistor} (int pin)
+\begin{DoxyCompactList}\small\item\em Controleert of een pin interne pull-\/ups/pull-\/downs heeft. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1PinCapabilities_a3181d15c5800676de5ffc7e2c05574fd}\label{classHardware_1_1PinCapabilities_a3181d15c5800676de5ffc7e2c05574fd} 
+static constexpr bool {\bfseries has\+\_\+adc} (int pin)
+\begin{DoxyCompactList}\small\item\em Controleert of een pin ADC ondersteunt. Gebaseerd op de interne ADC1 en ADC2 toewijzing. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1PinCapabilities_ae4331f60292ebe665a6ef3312e69f379}\label{classHardware_1_1PinCapabilities_ae4331f60292ebe665a6ef3312e69f379} 
+static constexpr bool {\bfseries is\+\_\+psram\+\_\+safe} (int pin)
+\begin{DoxyCompactList}\small\item\em Controleert of de pin veilig is i.\+c.\+m. PSRAM (Quad/\+Octal SPI). Voorkomt systeem-\/crashes door GPIO-\/gebruik van pinnen die de interne Flash/\+PSRAM aansturen. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1PinCapabilities_a16f6788c87d3bcf3b6cbf01575177d4c}\label{classHardware_1_1PinCapabilities_a16f6788c87d3bcf3b6cbf01575177d4c} 
+static constexpr bool {\bfseries is\+\_\+strapping\+\_\+pin} (int pin)
+\begin{DoxyCompactList}\small\item\em Controleert of de pin een \textquotesingle{}Strapping Pin\textquotesingle{} is. Waarschuwing bij gebruik van pinnen die de boot-\/mode beïnvloeden. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Statische hardware-\/mogelijkheden per chip-\/variant. 
+
+Alles is \textquotesingle{}constexpr\textquotesingle{} zodat de compiler de validatie uitvoert (Zero CPU overhead). 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHardware_1_1PinCapabilities_ad8e3ae97ef17caeb232a256a60773992}\label{classHardware_1_1PinCapabilities_ad8e3ae97ef17caeb232a256a60773992} 
+\index{Hardware::PinCapabilities@{Hardware::PinCapabilities}!has\_output@{has\_output}}
+\index{has\_output@{has\_output}!Hardware::PinCapabilities@{Hardware::PinCapabilities}}
+\doxysubsubsection{\texorpdfstring{has\_output()}{has\_output()}}
+{\footnotesize\ttfamily static constexpr bool Hardware\+::\+Pin\+Capabilities\+::has\+\_\+output (\begin{DoxyParamCaption}\item[{int}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Controleert of een pin output-\/capable is. Cruciaal voor ESP32 (WROVER/\+WROOM) waar GPIO 34-\/39 \textquotesingle{}Input Only\textquotesingle{} zijn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & Het GPIO nummer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true als de pin push-\/pull output ondersteunt. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/topology/include/\mbox{\hyperlink{PinCapabilities_8hpp}{Pin\+Capabilities.\+hpp}}\end{DoxyCompactItemize}

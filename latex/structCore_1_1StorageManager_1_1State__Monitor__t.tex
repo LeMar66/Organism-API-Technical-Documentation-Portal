@@ -1,0 +1,82 @@
+\doxysection{Core\+::Storage\+Manager\+::State\+\_\+\+Monitor\+\_\+t Struct Reference}
+\hypertarget{structCore_1_1StorageManager_1_1State__Monitor__t}{}\label{structCore_1_1StorageManager_1_1State__Monitor__t}\index{Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}}
+
+
+Telemetry \& Health-\/\+State Awareness.  
+
+
+
+
+{\ttfamily \#include $<$Storage\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for Core\+::Storage\+Manager\+::State\+\_\+\+Monitor\+\_\+t\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{structCore_1_1StorageManager_1_1State__Monitor__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structCore_1_1StorageManager_1_1State__Monitor__t_a97b2cd9caa550a4178cf438e061fdb36}{fs\+\_\+mounted}}
+\item 
+bool \mbox{\hyperlink{structCore_1_1StorageManager_1_1State__Monitor__t_a42427600cfcffa904b363634c9223283}{nvs\+\_\+ok}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCore_1_1StorageManager_1_1State__Monitor__t_a7581143fe7762e3fdba9bca96a363210}{free\+\_\+bytes}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCore_1_1StorageManager_1_1State__Monitor__t_ac172f170a1a67b167c1b71d248d81e7e}{last\+\_\+update}} = 0
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structCore_1_1StorageManager_1_1State__Monitor__t_afca5d440b7c1b380fa18106747babc9b}{status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{structCore_1_1StorageManager_1_1State__Monitor__t_a2e5ddb8f1ab669947b170af3055302b2}{last\+\_\+error}} = ESP\+\_\+\+OK
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Telemetry \& Health-\/\+State Awareness. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structCore_1_1StorageManager_1_1State__Monitor__t_a7581143fe7762e3fdba9bca96a363210}\label{structCore_1_1StorageManager_1_1State__Monitor__t_a7581143fe7762e3fdba9bca96a363210} 
+\index{Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}!free\_bytes@{free\_bytes}}
+\index{free\_bytes@{free\_bytes}!Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{free\_bytes}{free\_bytes}}
+{\footnotesize\ttfamily uint32\+\_\+t Core\+::\+Storage\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::free\+\_\+bytes}
+
+Available space on the file system. \Hypertarget{structCore_1_1StorageManager_1_1State__Monitor__t_a97b2cd9caa550a4178cf438e061fdb36}\label{structCore_1_1StorageManager_1_1State__Monitor__t_a97b2cd9caa550a4178cf438e061fdb36} 
+\index{Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}!fs\_mounted@{fs\_mounted}}
+\index{fs\_mounted@{fs\_mounted}!Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{fs\_mounted}{fs\_mounted}}
+{\footnotesize\ttfamily bool Core\+::\+Storage\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::fs\+\_\+mounted}
+
+Mounting status of the Little\+FS partition. \Hypertarget{structCore_1_1StorageManager_1_1State__Monitor__t_a2e5ddb8f1ab669947b170af3055302b2}\label{structCore_1_1StorageManager_1_1State__Monitor__t_a2e5ddb8f1ab669947b170af3055302b2} 
+\index{Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}!last\_error@{last\_error}}
+\index{last\_error@{last\_error}!Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_error}{last\_error}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Core\+::\+Storage\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+error = ESP\+\_\+\+OK}
+
+Last recorded error. \Hypertarget{structCore_1_1StorageManager_1_1State__Monitor__t_ac172f170a1a67b167c1b71d248d81e7e}\label{structCore_1_1StorageManager_1_1State__Monitor__t_ac172f170a1a67b167c1b71d248d81e7e} 
+\index{Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}!last\_update@{last\_update}}
+\index{last\_update@{last\_update}!Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_update}{last\_update}}
+{\footnotesize\ttfamily uint32\+\_\+t Core\+::\+Storage\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+update = 0}
+
+Last successful timestamp. \Hypertarget{structCore_1_1StorageManager_1_1State__Monitor__t_a42427600cfcffa904b363634c9223283}\label{structCore_1_1StorageManager_1_1State__Monitor__t_a42427600cfcffa904b363634c9223283} 
+\index{Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}!nvs\_ok@{nvs\_ok}}
+\index{nvs\_ok@{nvs\_ok}!Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{nvs\_ok}{nvs\_ok}}
+{\footnotesize\ttfamily bool Core\+::\+Storage\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::nvs\+\_\+ok}
+
+Status of the NVS namespace flash. \Hypertarget{structCore_1_1StorageManager_1_1State__Monitor__t_afca5d440b7c1b380fa18106747babc9b}\label{structCore_1_1StorageManager_1_1State__Monitor__t_afca5d440b7c1b380fa18106747babc9b} 
+\index{Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}!status@{status}}
+\index{status@{status}!Core::StorageManager::State\_Monitor\_t@{Core::StorageManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Core\+::\+Storage\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+The "{}\+At a Glance"{} status. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/storage/include/\mbox{\hyperlink{StorageManager_8hpp}{Storage\+Manager.\+hpp}}\end{DoxyCompactItemize}

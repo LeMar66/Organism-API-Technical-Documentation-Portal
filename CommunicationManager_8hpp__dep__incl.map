@@ -1,0 +1,13 @@
+<map id="main/ceo/managers/communication/include/CommunicationManager.hpp" name="main/ceo/managers/communication/include/CommunicationManager.hpp">
+<area shape="rect" id="Node000001" title="The external interface and vocal apparatus of the organism." alt="" coords="138,5,402,45"/>
+<area shape="rect" id="Node000002" href="$CEO_8cpp.html" title=" " alt="" coords="5,189,145,214"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,53,105,70,80,95,70,118,68,144,74,188,69,189,62,144,65,117,76,92,102,66,133,48"/>
+<area shape="rect" id="Node000003" href="$ActuatorManager_8cpp.html" title=" " alt="" coords="215,181,424,221"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="300,55,311,73,321,93,328,140,325,181,320,181,322,140,315,94,307,75,295,58"/>
+<area shape="rect" id="Node000004" href="$ActuatorManager_8hpp.html" title="Interface for all executive organs (limbs) of the organism." alt="" coords="90,93,306,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="247,58,216,95,212,91,243,54"/>
+<area shape="rect" id="Node000005" href="$CommunicationManager_8cpp.html" title=" " alt="" coords="381,93,637,133"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="336,48,457,91,456,96,335,53"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="161,144,93,191,90,186,158,139"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="237,139,294,179,291,183,234,143"/>
+</map>

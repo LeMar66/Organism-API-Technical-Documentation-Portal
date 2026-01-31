@@ -1,0 +1,7 @@
+<map id="main/ceo/managers/storage/include/StorageManager.hpp" name="main/ceo/managers/storage/include/StorageManager.hpp">
+<area shape="rect" id="Node000001" title="The long&#45;term memory and archivist (hippocampus) of the organism." alt="" coords="67,5,278,45"/>
+<area shape="rect" id="Node000002" href="$CEO_8cpp.html" title=" " alt="" coords="5,101,145,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,57,91,102,87,98,139,53"/>
+<area shape="rect" id="Node000003" href="$StorageManager_8cpp.html" title="Implementation of hybrid storage management according to AGX Rule." alt="" coords="169,93,373,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="206,52,251,91,248,95,203,56"/>
+</map>

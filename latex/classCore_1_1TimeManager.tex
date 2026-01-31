@@ -1,0 +1,495 @@
+\doxysection{Core\+::Time\+Manager Class Reference}
+\hypertarget{classCore_1_1TimeManager}{}\label{classCore_1_1TimeManager}\index{Core::TimeManager@{Core::TimeManager}}
+
+
+Orchestrates temporal integrity and astronomical scheduling.  
+
+
+
+
+{\ttfamily \#include $<$Time\+Manager.\+hpp$>$}
+
+
+
+Inheritance diagram for Core\+::Time\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classCore_1_1TimeManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Core\+::Time\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classCore_1_1TimeManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCore_1_1TimeManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCore_1_1TimeManager_a22ec37fef18f78d90cfacd62d718172c}\label{classCore_1_1TimeManager_a22ec37fef18f78d90cfacd62d718172c} 
+{\bfseries Time\+Manager} (\mbox{\hyperlink{classHardware_1_1I2CBus}{Hardware\+::\+I2\+CBus}} \&bus, \mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&shared\+State)
+\begin{DoxyCompactList}\small\item\em Construct \doxylink{classCore_1_1TimeManager}{Time\+Manager} with Resource Injection. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1TimeManager_a79a9099b74e445652458377ac3dc2435}\label{classCore_1_1TimeManager_a79a9099b74e445652458377ac3dc2435} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Time\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destructor Ensures safe completion of the acquisition task.\+voor \doxylink{classCore_1_1TimeManager}{Time\+Manager}. Zorgt voor een veilige afhandeling van de RTC-\/pointer en het stoppen van lopende taken. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1TimeManager_a4c08a7f41df6544d1a64d988ab40542d}\label{classCore_1_1TimeManager_a4c08a7f41df6544d1a64d988ab40542d} 
+{\bfseries Time\+Manager} (const \mbox{\hyperlink{classCore_1_1TimeManager}{Time\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1TimeManager_af64cdc11923ed9ca310da5ef2cce1d1e}\label{classCore_1_1TimeManager_af64cdc11923ed9ca310da5ef2cce1d1e} 
+\mbox{\hyperlink{classCore_1_1TimeManager}{Time\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classCore_1_1TimeManager}{Time\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classCore_1_1TimeManager_a3fc826cf5999bfc98b9e48898d01f1c9}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Initialize RTC and synchronize system clock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCore_1_1TimeManager_a2f084cb2c938939ddf980e3bbf0e1faa}{update}} ()
+\begin{DoxyCompactList}\small\item\em Main execution loop for alarm verification. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classCore_1_1TimeManager_a0f69d2d1b760a6195c086c1a8c3e5c50}{init\+NTP}} (const char \texorpdfstring{$\ast$}{*}srv1="{}pool.\+ntp.\+org"{}, const char \texorpdfstring{$\ast$}{*}srv2="{}time.\+nist.\+gov"{}, const char \texorpdfstring{$\ast$}{*}srv3="{}europe.\+pool.\+ntp.\+org"{})
+\begin{DoxyCompactList}\small\item\em Initialize NTP synchronization. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classCore_1_1TimeManager_a34fdeba5a9fbd8a183249055d689e634}{add\+Alarm}} (uint32\+\_\+t id, const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{TimeManager_8hpp_a07743bde3daa4f19268f18a392dca3bb}{Alarm\+\_\+\+Frequency\+\_\+e}} freq, int h, int m, int s, std\+::function$<$ void(\mbox{\hyperlink{structCore_1_1Alarm__Event__t}{Alarm\+\_\+\+Event\+\_\+t}} \&)$>$ cb)
+\begin{DoxyCompactList}\small\item\em Registers a new alarm into the fixed-\/size scheduler array. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classCore_1_1TimeManager_a8be5239eb73c793fc412cf309bfea123}{remove\+Alarm}} (uint32\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Remove an alarm by its unique identifier. \end{DoxyCompactList}\item 
+const std\+::array$<$ \mbox{\hyperlink{structCore_1_1Alarm__Event__t}{Alarm\+\_\+\+Event\+\_\+t}}, \mbox{\hyperlink{classCore_1_1TimeManager_a873275a84ffbf6aa533d05c9be5e9dfb}{MAX\+\_\+\+ALARMS}} $>$ \& \mbox{\hyperlink{classCore_1_1TimeManager_a349e571cc8132a3d6c056ea323293bc8}{get\+Alarms}} () const
+\begin{DoxyCompactList}\small\item\em The complete list of alarms. The caller can loop through this to find active alarms. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCore_1_1Alarm__Event__t}{Alarm\+\_\+\+Event\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCore_1_1TimeManager_a615252efec58f093111f17a254802038}{get\+Alarm\+By\+Id}} (uint32\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Retrieves a pointer to an alarm by its unique ID. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1TimeManager_af0e0d93f3c73e4036d065256ec6c1040}\label{classCore_1_1TimeManager_af0e0d93f3c73e4036d065256ec6c1040} 
+void {\bfseries get\+ISOTime} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t len) const
+\begin{DoxyCompactList}\small\item\em Buffer injection for ISO time string. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1TimeManager_a8a30391d92d3d72e805124be5b9aa423}\label{classCore_1_1TimeManager_a8a30391d92d3d72e805124be5b9aa423} 
+time\+\_\+t {\bfseries get\+Unix\+Time} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a80459bb461c9975999b7e3ac359b0f97}\label{classCore_1_1TimeManager_a80459bb461c9975999b7e3ac359b0f97} 
+struct tm {\bfseries get\+Current\+Time\+Struct} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a9a901141f02f78e6b14cb8de5ad5ba50}\label{classCore_1_1TimeManager_a9a901141f02f78e6b14cb8de5ad5ba50} 
+int {\bfseries get\+Milli\+Seconds} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_aaa6956be0cb17b4d0d9a84d576c0868a}\label{classCore_1_1TimeManager_aaa6956be0cb17b4d0d9a84d576c0868a} 
+int {\bfseries get\+Second} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a422be86130405568bdd254aff1444a90}\label{classCore_1_1TimeManager_a422be86130405568bdd254aff1444a90} 
+int {\bfseries get\+Minute} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_aac50929d0bbd35719443f759ad30452b}\label{classCore_1_1TimeManager_aac50929d0bbd35719443f759ad30452b} 
+int {\bfseries get\+Hour} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a08a6a4bb9d3dd013291443d96a2d1cb0}\label{classCore_1_1TimeManager_a08a6a4bb9d3dd013291443d96a2d1cb0} 
+int {\bfseries get\+Day} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_aa9193cb851ce6eae30e08b1e5a5931de}\label{classCore_1_1TimeManager_aa9193cb851ce6eae30e08b1e5a5931de} 
+int {\bfseries get\+Day\+Of\+Year} (time\+\_\+t time) const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a3b72734637de8f606d2623b53e93819a}\label{classCore_1_1TimeManager_a3b72734637de8f606d2623b53e93819a} 
+int {\bfseries get\+ISOWeek} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a2b4bbc80e76492b0fafc5ae42be39d51}\label{classCore_1_1TimeManager_a2b4bbc80e76492b0fafc5ae42be39d51} 
+int {\bfseries get\+Month} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_ab967308e47d20edb7fb6ba7afc21111f}\label{classCore_1_1TimeManager_ab967308e47d20edb7fb6ba7afc21111f} 
+int {\bfseries get\+Quarter} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a223ef949d10f0c56213a4ded9b2d3700}\label{classCore_1_1TimeManager_a223ef949d10f0c56213a4ded9b2d3700} 
+int {\bfseries get\+Year} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_ae40ceeeb622d3c6aee24aa6f88e1536d}\label{classCore_1_1TimeManager_ae40ceeeb622d3c6aee24aa6f88e1536d} 
+bool {\bfseries is\+Odd\+Day} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a9f898ebd72e33ae74b65dfbd8eb99f86}\label{classCore_1_1TimeManager_a9f898ebd72e33ae74b65dfbd8eb99f86} 
+bool {\bfseries is\+Even\+Day} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a3c3cd7b4f289fbdf4342a1727fb5c981}\label{classCore_1_1TimeManager_a3c3cd7b4f289fbdf4342a1727fb5c981} 
+bool {\bfseries is\+Weekend} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a240cc0a3e697bb0349a3564d7f7a558c}\label{classCore_1_1TimeManager_a240cc0a3e697bb0349a3564d7f7a558c} 
+bool {\bfseries is\+Work\+Day} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a116286e08797ddf6e1d73e784106983f}\label{classCore_1_1TimeManager_a116286e08797ddf6e1d73e784106983f} 
+bool {\bfseries is\+Holiday} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a8e498b1343816eea2c55cd95dc4854ad}\label{classCore_1_1TimeManager_a8e498b1343816eea2c55cd95dc4854ad} 
+bool {\bfseries is\+Leap\+Year} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a475a771b29fff9506fa9f74314597c15}\label{classCore_1_1TimeManager_a475a771b29fff9506fa9f74314597c15} 
+bool {\bfseries is\+Sunrise} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_ab74f67f8381496266d64fce7870469ef}\label{classCore_1_1TimeManager_ab74f67f8381496266d64fce7870469ef} 
+bool {\bfseries is\+Sunset} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_a89d035c443f6eb8489c8157da95f0877}\label{classCore_1_1TimeManager_a89d035c443f6eb8489c8157da95f0877} 
+bool {\bfseries is\+DST} () const
+\item 
+\Hypertarget{classCore_1_1TimeManager_ad6542a381d6838a08c534939d87ae4de}\label{classCore_1_1TimeManager_ad6542a381d6838a08c534939d87ae4de} 
+\mbox{\hyperlink{TimeManager_8hpp_a9dd3e87d2ef3cc612161d35d2230caa5}{Season\+\_\+e}} {\bfseries get\+Season} () const
+\item 
+void \mbox{\hyperlink{classCore_1_1TimeManager_a0623f5eeb390d57dce8926b321d80c49}{get\+Sunrise}} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t len, int offset\+Min) const
+\begin{DoxyCompactList}\small\item\em Calculates the sunrise time and formats it as a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCore_1_1TimeManager_a724d72b18cd4ccdd3ee254e8c3a0aa1c}{get\+Sunset}} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t len, int offset\+Min) const
+\begin{DoxyCompactList}\small\item\em Calculates the sunset time and formats it as a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{TimeManager_8hpp_a88ab4beb43852a01911290cb52ba8d46}{Moon\+\_\+\+Phase\+\_\+e}} \mbox{\hyperlink{classCore_1_1TimeManager_a30b7e6f581815dc303bb30c8a54b516d}{get\+Moon\+Phase}} () const
+\begin{DoxyCompactList}\small\item\em Get the Moon phase. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCore_1_1TimeManager_ae3ad251ef10dd84da336a642f3c6dac5}{get\+Moon\+Phase\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the name of the moon phase. \end{DoxyCompactList}\item 
+int64\+\_\+t \mbox{\hyperlink{classCore_1_1TimeManager_acb1fa8644a95df772f0013b8cd3858b5}{get\+Difference}} (time\+\_\+t start, time\+\_\+t end=0) const
+\begin{DoxyCompactList}\small\item\em Calculate duration between timestamps. \end{DoxyCompactList}\item 
+struct tm \mbox{\hyperlink{classCore_1_1TimeManager_a32debb89e7acb40a3a20652f34abfe31}{add\+Duration\+To\+Struct}} (uint32\+\_\+t duration, const struct tm \texorpdfstring{$\ast$}{*}start=nullptr)
+\begin{DoxyCompactList}\small\item\em Add a duration to a specific date/time structure. \end{DoxyCompactList}\item 
+struct tm \mbox{\hyperlink{classCore_1_1TimeManager_ac06870aaa32850a499f00c4d14d68440}{add\+Struct\+To\+Struct}} (const struct tm \&offset, const struct tm \texorpdfstring{$\ast$}{*}basis=nullptr)
+\begin{DoxyCompactList}\small\item\em Add two time structs together (e.\+g. base date + offset period). \end{DoxyCompactList}\item 
+int64\+\_\+t \mbox{\hyperlink{classCore_1_1TimeManager_a50bc1bdf1697729af9c306d0ca0a05eb}{get\+Difference\+Between\+Structs}} (const struct tm \&start, const struct tm \texorpdfstring{$\ast$}{*}end=nullptr)
+\begin{DoxyCompactList}\small\item\em Calculates the difference in seconds between two date/time structures. \end{DoxyCompactList}\item 
+struct tm \mbox{\hyperlink{classCore_1_1TimeManager_aa3dc32fc7cda17cb0e70f15edbf2ffa7}{to\+Date\+Time}} (time\+\_\+t time) const
+\begin{DoxyCompactList}\small\item\em Converts a Unix timestamp to a readable struct tm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCore_1_1TimeManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classCore_1_1TimeManager_a5739b95228b5f97743d332d034f8b962}{get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current health of the subsystem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCore_1_1TimeManager_a873275a84ffbf6aa533d05c9be5e9dfb}\label{classCore_1_1TimeManager_a873275a84ffbf6aa533d05c9be5e9dfb} 
+static constexpr uint8\+\_\+t {\bfseries MAX\+\_\+\+ALARMS} = 16
+\begin{DoxyCompactList}\small\item\em Fixed allocation limit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Orchestrates temporal integrity and astronomical scheduling. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCore_1_1TimeManager_a34fdeba5a9fbd8a183249055d689e634}\label{classCore_1_1TimeManager_a34fdeba5a9fbd8a183249055d689e634} 
+\index{Core::TimeManager@{Core::TimeManager}!addAlarm@{addAlarm}}
+\index{addAlarm@{addAlarm}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{addAlarm()}{addAlarm()}}
+{\footnotesize\ttfamily uint32\+\_\+t Core\+::\+Time\+Manager\+::add\+Alarm (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{name,  }\item[{\mbox{\hyperlink{TimeManager_8hpp_a07743bde3daa4f19268f18a392dca3bb}{Alarm\+\_\+\+Frequency\+\_\+e}}}]{freq,  }\item[{int}]{h,  }\item[{int}]{m,  }\item[{int}]{s,  }\item[{std\+::function$<$ void(\mbox{\hyperlink{structCore_1_1Alarm__Event__t}{Alarm\+\_\+\+Event\+\_\+t}} \&)$>$}]{cb }\end{DoxyParamCaption})}
+
+
+
+Registers a new alarm into the fixed-\/size scheduler array. 
+
+This function validates the provided time units and attempts to find an available slot in the internal storage. If the ID already exists, it may overwrite or fail depending on the implementation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & Unique identifier for the alarm (must be non-\/zero). \\
+\hline
+\mbox{\texttt{ in}}  & {\em name} & Human-\/readable name (copied into a fixed char array, null-\/terminated). \\
+\hline
+\mbox{\texttt{ in}}  & {\em freq} & The execution frequency (e.\+g., DAILY, WEEKLY, SEASON). \\
+\hline
+\mbox{\texttt{ in}}  & {\em h} & Hour (0-\/23). \\
+\hline
+\mbox{\texttt{ in}}  & {\em m} & Minute (0-\/59). \\
+\hline
+\mbox{\texttt{ in}}  & {\em s} & Second (0-\/59). \\
+\hline
+\mbox{\texttt{ in}}  & {\em cb} & The callback function to execute when the alarm triggers.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t Returns the assigned Alarm ID on success, or 0 if validation fails or the scheduler capacity (MAX\+\_\+\+ALARMS) is reached.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The name is safely copied using strncpy. If the name exceeds the internal buffer size, it will be truncated. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+The callback is stored as a std\+::function. Ensure the captured context remains valid when the alarm triggers. 
+\end{DoxyWarning}
+\Hypertarget{classCore_1_1TimeManager_a32debb89e7acb40a3a20652f34abfe31}\label{classCore_1_1TimeManager_a32debb89e7acb40a3a20652f34abfe31} 
+\index{Core::TimeManager@{Core::TimeManager}!addDurationToStruct@{addDurationToStruct}}
+\index{addDurationToStruct@{addDurationToStruct}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{addDurationToStruct()}{addDurationToStruct()}}
+{\footnotesize\ttfamily struct tm Core\+::\+Time\+Manager\+::add\+Duration\+To\+Struct (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{duration,  }\item[{const struct tm \texorpdfstring{$\ast$}{*}}]{start = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Add a duration to a specific date/time structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & The time to be added in seconds. \\
+\hline
+{\em start} & Pointer to the start struct. If nullptr, "{}nu"{} is used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct tm The resulting date and time. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1TimeManager_ac06870aaa32850a499f00c4d14d68440}\label{classCore_1_1TimeManager_ac06870aaa32850a499f00c4d14d68440} 
+\index{Core::TimeManager@{Core::TimeManager}!addStructToStruct@{addStructToStruct}}
+\index{addStructToStruct@{addStructToStruct}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{addStructToStruct()}{addStructToStruct()}}
+{\footnotesize\ttfamily struct tm Core\+::\+Time\+Manager\+::add\+Struct\+To\+Struct (\begin{DoxyParamCaption}\item[{const struct tm \&}]{offset,  }\item[{const struct tm \texorpdfstring{$\ast$}{*}}]{basis = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Add two time structs together (e.\+g. base date + offset period). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & The struct containing the values ​​to be added (weeks, days, hours, etc.). \\
+\hline
+{\em basis} & The reference date. If nullptr, the current time (\textquotesingle{}now\textquotesingle{}) is used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct tm The normalized resulting date and time. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1TimeManager_a3fc826cf5999bfc98b9e48898d01f1c9}\label{classCore_1_1TimeManager_a3fc826cf5999bfc98b9e48898d01f1c9} 
+\index{Core::TimeManager@{Core::TimeManager}!begin@{begin}}
+\index{begin@{begin}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Core\+::\+Time\+Manager\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize RTC and synchronize system clock. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK on success. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCore_1_1IManager}{Core\+::\+IManager}}.
+
+\Hypertarget{classCore_1_1TimeManager_a615252efec58f093111f17a254802038}\label{classCore_1_1TimeManager_a615252efec58f093111f17a254802038} 
+\index{Core::TimeManager@{Core::TimeManager}!getAlarmById@{getAlarmById}}
+\index{getAlarmById@{getAlarmById}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{getAlarmById()}{getAlarmById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCore_1_1Alarm__Event__t}{Alarm\+\_\+\+Event\+\_\+t}} \texorpdfstring{$\ast$}{*} Core\+::\+Time\+Manager\+::get\+Alarm\+By\+Id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+Retrieves a pointer to an alarm by its unique ID. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & The unique identifier to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Alarm\+\_\+\+Event\+\_\+t\texorpdfstring{$\ast$}{*} Pointer to the alarm if found, nullptr otherwise.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Accessing the returned pointer is only safe as long as the alarm is not removed or the \doxylink{classCore_1_1TimeManager}{Time\+Manager} is not destroyed. 
+\end{DoxyNote}
+\Hypertarget{classCore_1_1TimeManager_a349e571cc8132a3d6c056ea323293bc8}\label{classCore_1_1TimeManager_a349e571cc8132a3d6c056ea323293bc8} 
+\index{Core::TimeManager@{Core::TimeManager}!getAlarms@{getAlarms}}
+\index{getAlarms@{getAlarms}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{getAlarms()}{getAlarms()}}
+{\footnotesize\ttfamily const std\+::array$<$ \mbox{\hyperlink{structCore_1_1Alarm__Event__t}{Alarm\+\_\+\+Event\+\_\+t}}, \mbox{\hyperlink{classCore_1_1TimeManager_a873275a84ffbf6aa533d05c9be5e9dfb}{Time\+Manager\+::\+MAX\+\_\+\+ALARMS}} $>$ \& Core\+::\+Time\+Manager\+::get\+Alarms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The complete list of alarms. The caller can loop through this to find active alarms. 
+
+\begin{DoxyReturn}{Returns}
+std\+:Array 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1TimeManager_acb1fa8644a95df772f0013b8cd3858b5}\label{classCore_1_1TimeManager_acb1fa8644a95df772f0013b8cd3858b5} 
+\index{Core::TimeManager@{Core::TimeManager}!getDifference@{getDifference}}
+\index{getDifference@{getDifference}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{getDifference()}{getDifference()}}
+{\footnotesize\ttfamily int64\+\_\+t Core\+::\+Time\+Manager\+::get\+Difference (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{start,  }\item[{time\+\_\+t}]{end = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Calculate duration between timestamps. 
+
+brief Berekent het tijdsverschil in seconden tussen twee tijdstippen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The starting time (Unix timestamp). \\
+\hline
+{\em end} & The end time. If 0, the current system time is used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int64\+\_\+t The difference in seconds (positive if end is later than start). 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1TimeManager_a50bc1bdf1697729af9c306d0ca0a05eb}\label{classCore_1_1TimeManager_a50bc1bdf1697729af9c306d0ca0a05eb} 
+\index{Core::TimeManager@{Core::TimeManager}!getDifferenceBetweenStructs@{getDifferenceBetweenStructs}}
+\index{getDifferenceBetweenStructs@{getDifferenceBetweenStructs}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{getDifferenceBetweenStructs()}{getDifferenceBetweenStructs()}}
+{\footnotesize\ttfamily int64\+\_\+t Core\+::\+Time\+Manager\+::get\+Difference\+Between\+Structs (\begin{DoxyParamCaption}\item[{const struct tm \&}]{start,  }\item[{const struct tm \texorpdfstring{$\ast$}{*}}]{end = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Calculates the difference in seconds between two date/time structures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The reference struct. \\
+\hline
+{\em end} & Pointer to the final struct. If nullptr, "{}nu"{} is used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int64\+\_\+t The difference in seconds (positive if end is later than start). 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1TimeManager_a30b7e6f581815dc303bb30c8a54b516d}\label{classCore_1_1TimeManager_a30b7e6f581815dc303bb30c8a54b516d} 
+\index{Core::TimeManager@{Core::TimeManager}!getMoonPhase@{getMoonPhase}}
+\index{getMoonPhase@{getMoonPhase}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{getMoonPhase()}{getMoonPhase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{TimeManager_8hpp_a88ab4beb43852a01911290cb52ba8d46}{Moon\+\_\+\+Phase\+\_\+e}} Core\+::\+Time\+Manager\+::get\+Moon\+Phase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the Moon phase. 
+
+\begin{DoxyReturn}{Returns}
+Moon\+\_\+\+Phase\+\_\+e. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1TimeManager_ae3ad251ef10dd84da336a642f3c6dac5}\label{classCore_1_1TimeManager_ae3ad251ef10dd84da336a642f3c6dac5} 
+\index{Core::TimeManager@{Core::TimeManager}!getMoonPhaseName@{getMoonPhaseName}}
+\index{getMoonPhaseName@{getMoonPhaseName}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{getMoonPhaseName()}{getMoonPhaseName()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} Core\+::\+Time\+Manager\+::get\+Moon\+Phase\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the name of the moon phase. 
+
+\begin{DoxyReturn}{Returns}
+Char Moonphase name 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1TimeManager_a5739b95228b5f97743d332d034f8b962}\label{classCore_1_1TimeManager_a5739b95228b5f97743d332d034f8b962} 
+\index{Core::TimeManager@{Core::TimeManager}!getState@{getState}}
+\index{getState@{getState}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCore_1_1TimeManager_1_1State__Monitor__t}{Core\+::\+Time\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t}} Core\+::\+Time\+Manager\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current health of the subsystem. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structCore_1_1TimeManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t} The current status struct. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1TimeManager_a0623f5eeb390d57dce8926b321d80c49}\label{classCore_1_1TimeManager_a0623f5eeb390d57dce8926b321d80c49} 
+\index{Core::TimeManager@{Core::TimeManager}!getSunrise@{getSunrise}}
+\index{getSunrise@{getSunrise}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{getSunrise()}{getSunrise()}}
+{\footnotesize\ttfamily void Core\+::\+Time\+Manager\+::get\+Sunrise (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{size\+\_\+t}]{len,  }\item[{int}]{offset\+Min }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the sunrise time and formats it as a string. 
+
+This function determines the astronomical sunrise based on the stored geographic coordinates and the current date. The result is written directly to the provided buffer, typically in "{}\+HH\+:\+MM"{} format.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em buffer} & Pointer to the character array where the formatted time will be stored. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & Maximum size of the buffer (including the null-\/terminator). \\
+\hline
+\mbox{\texttt{ in}}  & {\em offset\+Min} & Time offset in minutes to be applied (e.\+g., for time zones or DST).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method is thread-\/safe and does not modify the internal state of the manager. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+calculate\+Astro\+Time 
+
+\doxylink{classCore_1_1TimeManager_a724d72b18cd4ccdd3ee254e8c3a0aa1c}{get\+Sunset} 
+\end{DoxySeeAlso}
+\Hypertarget{classCore_1_1TimeManager_a724d72b18cd4ccdd3ee254e8c3a0aa1c}\label{classCore_1_1TimeManager_a724d72b18cd4ccdd3ee254e8c3a0aa1c} 
+\index{Core::TimeManager@{Core::TimeManager}!getSunset@{getSunset}}
+\index{getSunset@{getSunset}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{getSunset()}{getSunset()}}
+{\footnotesize\ttfamily void Core\+::\+Time\+Manager\+::get\+Sunset (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{size\+\_\+t}]{len,  }\item[{int}]{offset\+Min }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the sunset time and formats it as a string. 
+
+This function determines the astronomical sunset based on the stored geographic coordinates and current date. The result is written directly to the provided buffer, typically in "{}\+HH\+:\+MM"{} format.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em buffer} & Pointer to the character array where the formatted time will be stored. \\
+\hline
+\mbox{\texttt{ in}}  & {\em len} & Maximum size of the buffer (including the null-\/terminator). \\
+\hline
+\mbox{\texttt{ in}}  & {\em offset\+Min} & Time offset in minutes to be applied (e.\+g., for time zones or DST).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method is thread-\/safe and does not modify the internal state of the manager. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+calculate\+Astro\+Time 
+
+\doxylink{classCore_1_1TimeManager_a0623f5eeb390d57dce8926b321d80c49}{get\+Sunrise} 
+\end{DoxySeeAlso}
+\Hypertarget{classCore_1_1TimeManager_a0f69d2d1b760a6195c086c1a8c3e5c50}\label{classCore_1_1TimeManager_a0f69d2d1b760a6195c086c1a8c3e5c50} 
+\index{Core::TimeManager@{Core::TimeManager}!initNTP@{initNTP}}
+\index{initNTP@{initNTP}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{initNTP()}{initNTP()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Core\+::\+Time\+Manager\+::init\+NTP (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{srv1 = {\ttfamily "{}pool.ntp.org"{}},  }\item[{const char \texorpdfstring{$\ast$}{*}}]{srv2 = {\ttfamily "{}time.nist.gov"{}},  }\item[{const char \texorpdfstring{$\ast$}{*}}]{srv3 = {\ttfamily "{}europe.pool.ntp.org"{}} }\end{DoxyParamCaption})}
+
+
+
+Initialize NTP synchronization. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK on success. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1TimeManager_a8be5239eb73c793fc412cf309bfea123}\label{classCore_1_1TimeManager_a8be5239eb73c793fc412cf309bfea123} 
+\index{Core::TimeManager@{Core::TimeManager}!removeAlarm@{removeAlarm}}
+\index{removeAlarm@{removeAlarm}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{removeAlarm()}{removeAlarm()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Core\+::\+Time\+Manager\+::remove\+Alarm (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+Remove an alarm by its unique identifier. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK on success. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1TimeManager_aa3dc32fc7cda17cb0e70f15edbf2ffa7}\label{classCore_1_1TimeManager_aa3dc32fc7cda17cb0e70f15edbf2ffa7} 
+\index{Core::TimeManager@{Core::TimeManager}!toDateTime@{toDateTime}}
+\index{toDateTime@{toDateTime}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{toDateTime()}{toDateTime()}}
+{\footnotesize\ttfamily struct tm Core\+::\+Time\+Manager\+::to\+Date\+Time (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{time }\end{DoxyParamCaption}) const}
+
+
+
+Converts a Unix timestamp to a readable struct tm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The Unix timestamp (time\+\_\+t). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct tm The decomposed time (local). 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Returns an empty struct (zeroed) on invalid input. 
+\end{DoxyNote}
+\Hypertarget{classCore_1_1TimeManager_a2f084cb2c938939ddf980e3bbf0e1faa}\label{classCore_1_1TimeManager_a2f084cb2c938939ddf980e3bbf0e1faa} 
+\index{Core::TimeManager@{Core::TimeManager}!update@{update}}
+\index{update@{update}!Core::TimeManager@{Core::TimeManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Core\+::\+Time\+Manager\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main execution loop for alarm verification. 
+
+Run on Core 1. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/time/include/\mbox{\hyperlink{TimeManager_8hpp}{Time\+Manager.\+hpp}}\item 
+main/ceo/managers/time/\mbox{\hyperlink{TimeManager_8cpp}{Time\+Manager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,20 @@
+<map id="lfs_dir_commit_commit" name="lfs_dir_commit_commit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="308,879,476,944"/>
+<area shape="rect" id="Node000002" href="$structlfs.html" title=" " alt="" coords="279,631,385,816"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="364,815,379,862,374,864,359,817"/>
+<area shape="rect" id="Node000003" href="$structlfs__cache.html" title="internal littlefs data structures ///" alt="" coords="5,343,80,469"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="61,468,75,504,94,537,132,582,177,622,223,656,266,683,263,688,220,660,173,626,129,586,90,540,70,506,56,470"/>
+<area shape="rect" id="Node000004" href="$structlfs_1_1lfs__mlist.html" title=" " alt="" coords="105,363,199,449"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="178,448,274,615,269,618,174,450"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="201,373,218,382,224,393,226,406,223,421,217,431,212,428,218,419,221,406,219,394,215,386,198,378"/>
+<area shape="rect" id="Node000005" href="$structlfs__mdir.html" title=" " alt="" coords="115,5,189,211"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="155,211,155,347,149,347,149,211"/>
+<area shape="rect" id="Node000006" href="$structlfs__gstate.html" title=" " alt="" coords="293,363,371,449"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="335,449,335,614,329,614,329,449"/>
+<area shape="rect" id="Node000007" href="$structlfs_1_1lfs__lookahead.html" title=" " alt="" coords="396,333,524,479"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="442,480,422,543,397,608,393,617,388,614,392,606,417,541,437,478"/>
+<area shape="rect" id="Node000008" href="$structlfs__config.html" title=" " alt="" coords="548,273,671,539"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="559,540,533,577,500,609,474,621,449,622,426,623,400,633,400,633,397,629,397,628,425,617,449,617,472,616,497,604,529,574,555,537"/>
+<area shape="rect" id="Node000009" href="$structlfs__commit.html" title=" " alt="" coords="410,641,497,806"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="429,807,413,856,410,864,405,862,408,854,424,805"/>
+</map>

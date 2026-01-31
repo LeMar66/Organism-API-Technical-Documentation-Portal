@@ -1,0 +1,57 @@
+<map id="main/ceo/managers/bus/include/BusManager.hpp" name="main/ceo/managers/bus/include/BusManager.hpp">
+<area shape="rect" id="Node000001" title="The peripheral nervous system managing all communication pathways." alt="" coords="833,5,1018,45"/>
+<area shape="rect" id="Node000002" href="$IActuator_8hpp.html" title="The abstract behavioral contract for all executive organs (limbs)." alt="" coords="43,269,210,309"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="819,34,657,43,474,56,316,74,262,84,231,96,209,113,191,134,162,183,143,231,133,270,128,268,138,230,157,181,186,131,206,109,228,91,260,79,316,69,473,51,657,38,819,29"/>
+<area shape="rect" id="Node000003" href="$ActuatorManager_8cpp.html" title=" " alt="" coords="46,445,255,485"/>
+<area shape="poly" id="edge28_Node000001_Node000003" title=" " alt="" coords="819,33,662,41,480,53,309,72,239,83,186,96,120,112,63,125,40,135,23,150,12,171,8,200,8,291,11,316,19,339,48,382,85,417,120,443,117,447,81,421,44,386,15,342,6,317,3,291,3,200,7,169,19,146,38,131,61,120,119,106,185,91,238,78,308,66,479,48,662,35,819,28"/>
+<area shape="rect" id="Node000004" href="$ActuatorManager_8hpp.html" title="Interface for all executive organs (limbs) of the organism." alt="" coords="116,357,332,397"/>
+<area shape="poly" id="edge29_Node000001_Node000004" title=" " alt="" coords="819,30,736,35,641,46,542,66,446,96,406,113,377,129,351,151,322,183,290,228,264,277,232,358,227,356,259,275,285,226,318,180,348,147,374,125,404,108,444,91,540,61,640,41,735,30,818,25"/>
+<area shape="rect" id="Node000005" href="$CEO_8cpp.html" title=" " alt="" coords="717,453,857,478"/>
+<area shape="poly" id="edge27_Node000001_Node000005" title=" " alt="" coords="1032,32,1272,54,1556,90,1686,112,1793,138,1834,152,1865,167,1886,182,1893,199,1893,291,1891,301,1884,312,1858,330,1817,347,1764,362,1628,390,1465,413,1291,431,1121,446,857,463,857,458,1121,440,1291,426,1465,407,1627,384,1763,357,1815,342,1855,325,1880,308,1886,299,1888,290,1888,201,1882,186,1863,171,1832,157,1791,143,1685,118,1555,95,1272,60,1032,37"/>
+<area shape="rect" id="Node000006" href="$ISensor_8hpp.html" title="The abstract behavioral contract for all sensory organs (receptors)." alt="" coords="491,93,658,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="836,51,652,96,651,91,835,46"/>
+<area shape="rect" id="Node000007" href="$SensorManager_8cpp.html" title=" " alt="" coords="335,269,534,309"/>
+<area shape="poly" id="edge32_Node000001_Node000007" title=" " alt="" coords="883,55,747,132,577,224,478,272,475,267,575,219,745,127,880,50"/>
+<area shape="rect" id="Node000008" href="$SensorManager_8hpp.html" title="The sensory cortex (afferent system) of the organism." alt="" coords="332,181,537,221"/>
+<area shape="poly" id="edge33_Node000001_Node000008" title=" " alt="" coords="819,33,725,40,626,52,539,70,506,82,482,95,464,114,452,137,440,182,434,180,447,135,460,111,478,91,504,77,538,65,626,47,725,35,819,28"/>
+<area shape="rect" id="Node000009" href="$ITimeSource_8hpp.html" title="The abstract behavioral contract for all temporal reference organs." alt="" coords="1048,93,1235,133"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="986,48,1095,91,1093,96,984,53"/>
+<area shape="rect" id="Node000012" href="$CommunicationManager_8hpp.html" title="The external interface and vocal apparatus of the organism." alt="" coords="559,269,823,309"/>
+<area shape="poly" id="edge31_Node000001_Node000012" title=" " alt="" coords="905,58,845,135,767,223,716,271,712,267,763,219,841,131,901,55"/>
+<area shape="rect" id="Node000014" href="$StorageManager_8cpp.html" title="Implementation of hybrid storage management according to AGX Rule." alt="" coords="1133,357,1337,397"/>
+<area shape="poly" id="edge34_Node000001_Node000014" title=" " alt="" coords="1033,36,1234,65,1352,87,1472,113,1586,144,1686,180,1729,200,1766,221,1795,244,1817,268,1826,290,1824,301,1816,311,1793,324,1750,335,1624,353,1474,366,1337,374,1337,369,1474,361,1623,348,1749,330,1791,319,1813,307,1819,299,1820,290,1812,271,1792,248,1763,225,1727,204,1684,185,1584,149,1471,118,1351,92,1233,71,1032,41"/>
+<area shape="rect" id="Node000015" href="$StorageManager_8hpp.html" title="The long&#45;term memory and archivist (hippocampus) of the organism." alt="" coords="847,269,1057,309"/>
+<area shape="poly" id="edge35_Node000001_Node000015" title=" " alt="" coords="931,59,953,269,947,269,926,59"/>
+<area shape="rect" id="Node000016" href="$ToolBox_8cpp.html" title=" " alt="" coords="1393,277,1559,302"/>
+<area shape="poly" id="edge36_Node000001_Node000016" title=" " alt="" coords="1032,33,1139,53,1195,69,1248,91,1320,135,1385,188,1436,239,1468,275,1464,278,1432,242,1381,192,1317,140,1245,96,1193,74,1138,58,1031,38"/>
+<area shape="rect" id="Node000017" href="$ToolBox_8hpp.html" title="The metabolic support and universal toolkit of the organism." alt="" coords="1584,277,1803,302"/>
+<area shape="poly" id="edge37_Node000001_Node000017" title=" " alt="" coords="1032,35,1160,56,1230,71,1298,91,1414,136,1524,189,1615,238,1676,274,1673,279,1613,243,1522,194,1412,141,1296,96,1229,76,1159,61,1031,40"/>
+<area shape="rect" id="Node000018" href="$BusManager_8cpp.html" title=" " alt="" coords="1928,93,2107,133"/>
+<area shape="poly" id="edge30_Node000001_Node000018" title=" " alt="" coords="1032,28,1419,47,1664,66,1910,91,1928,93,1928,98,1909,96,1663,71,1419,53,1032,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,322,104,359,103,378,107,397,119,422,135,444,131,447,114,425,101,398,98,378,99,358,109,321"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="160,316,204,355,201,359,157,320"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="201,410,169,447,165,443,197,406"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="346,394,717,451,716,456,345,400"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="576,148,569,186,551,223,522,251,487,272,484,267,518,247,547,220,564,184,571,147"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="534,143,467,184,464,179,531,138"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="370,230,345,248,326,271,319,290,326,308,364,350,410,384,461,410,515,430,570,444,624,453,717,461,716,467,623,458,569,449,514,435,459,415,407,388,361,354,322,311,314,290,322,268,342,244,367,226"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="437,235,437,269,432,269,432,235"/>
+<area shape="rect" id="Node000010" href="$TimeManager_8cpp.html" title=" " alt="" coords="1183,269,1369,309"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="1202,138,1230,156,1253,180,1265,202,1273,226,1278,269,1273,270,1267,227,1260,204,1249,183,1226,160,1199,142"/>
+<area shape="rect" id="Node000011" href="$TimeManager_8hpp.html" title="The biological clock and circadian rhythm (pacemaker) of the organism." alt="" coords="1044,181,1239,221"/>
+<area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="1144,147,1144,181,1139,181,1139,147"/>
+<area shape="poly" id="edge14_Node000011_Node000005" title=" " alt="" coords="1127,235,1102,273,1071,311,1018,361,956,400,888,432,825,455,823,450,885,427,953,395,1015,357,1067,308,1098,269,1122,232"/>
+<area shape="poly" id="edge24_Node000011_Node000010" title=" " alt="" coords="1184,227,1248,267,1245,271,1181,231"/>
+<area shape="poly" id="edge15_Node000011_Node000012" title=" " alt="" coords="1031,226,790,272,789,267,1030,221"/>
+<area shape="poly" id="edge20_Node000011_Node000014" title=" " alt="" coords="1149,234,1158,271,1174,308,1193,334,1214,355,1210,359,1189,337,1170,311,1153,272,1144,235"/>
+<area shape="poly" id="edge21_Node000011_Node000015" title=" " alt="" coords="1089,229,995,272,992,267,1086,225"/>
+<area shape="poly" id="edge25_Node000011_Node000016" title=" " alt="" coords="1229,222,1432,274,1431,279,1227,227"/>
+<area shape="poly" id="edge26_Node000011_Node000017" title=" " alt="" coords="1253,217,1620,274,1619,279,1252,222"/>
+<area shape="poly" id="edge17_Node000012_Node000003" title=" " alt="" coords="620,316,210,448,208,443,618,311"/>
+<area shape="poly" id="edge18_Node000012_Node000004" title=" " alt="" coords="575,314,327,360,326,355,574,309"/>
+<area shape="poly" id="edge16_Node000012_Node000005" title=" " alt="" coords="666,322,654,340,646,359,643,378,649,396,665,415,686,430,732,450,730,455,683,435,661,419,644,399,638,378,641,357,649,337,661,319"/>
+<area shape="rect" id="Node000013" href="$CommunicationManager_8cpp.html" title=" " alt="" coords="659,357,915,397"/>
+<area shape="poly" id="edge19_Node000012_Node000013" title=" " alt="" coords="724,317,767,355,764,359,721,321"/>
+<area shape="poly" id="edge22_Node000015_Node000005" title=" " alt="" coords="954,324,947,362,940,381,929,399,909,419,885,434,836,455,834,450,882,430,905,415,925,396,935,379,942,360,949,323"/>
+<area shape="poly" id="edge23_Node000015_Node000014" title=" " alt="" coords="1028,311,1174,355,1172,360,1026,316"/>
+</map>

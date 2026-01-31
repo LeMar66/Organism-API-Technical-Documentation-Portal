@@ -1,0 +1,5 @@
+<map id="Hardware::SensorManager" name="Hardware::SensorManager">
+<area shape="rect" id="Node000001" title="Orchestrates sensor acquisition and data storage in DataManager. Industrial Grade...." alt="" coords="5,119,192,324"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="61,5,136,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,84,101,119,96,119,96,84"/>
+</map>

@@ -1,0 +1,89 @@
+\doxysection{Core\+::Task\+Monitor Class Reference}
+\hypertarget{classCore_1_1TaskMonitor}{}\label{classCore_1_1TaskMonitor}\index{Core::TaskMonitor@{Core::TaskMonitor}}
+
+
+The system supervisor that translates hardware health into telemetry.  
+
+
+
+
+{\ttfamily \#include $<$Task\+Monitor.\+hpp$>$}
+
+
+
+Collaboration diagram for Core\+::Task\+Monitor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classCore_1_1TaskMonitor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCore_1_1TaskMonitor_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCore_1_1TaskMonitor_a02bbc96f37cbe9e356e7616d8ab4235a}\label{classCore_1_1TaskMonitor_a02bbc96f37cbe9e356e7616d8ab4235a} 
+{\bfseries Task\+Monitor} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1TaskMonitor_a385e0454b9359e385cec08a0a1da2e6c}\label{classCore_1_1TaskMonitor_a385e0454b9359e385cec08a0a1da2e6c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Task\+Monitor} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor Ensures safe completion of the acquisition task. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1TaskMonitor_a2d72f18d909d8cff6b17f6a591aa1a40}\label{classCore_1_1TaskMonitor_a2d72f18d909d8cff6b17f6a591aa1a40} 
+{\bfseries Task\+Monitor} (const \mbox{\hyperlink{classCore_1_1TaskMonitor}{Task\+Monitor}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1TaskMonitor_af152556b5c967797df169229529e3fe5}\label{classCore_1_1TaskMonitor_af152556b5c967797df169229529e3fe5} 
+\mbox{\hyperlink{classCore_1_1TaskMonitor}{Task\+Monitor}} \& {\bfseries operator=} (const \mbox{\hyperlink{classCore_1_1TaskMonitor}{Task\+Monitor}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCore_1_1TaskMonitor_a1410b8d6713c0b54f988058209e616d8}{update}} (\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&state)
+\begin{DoxyCompactList}\small\item\em Update the statistics in the \doxylink{classCore_1_1DataManager}{Data\+Manager}. Direct binary commit to the State Mirror. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1TaskMonitor_a812ecdb2a5501fc2b349bbf88dc1d9af}\label{classCore_1_1TaskMonitor_a812ecdb2a5501fc2b349bbf88dc1d9af} 
+void {\bfseries log\+Task\+Stats} ()
+\begin{DoxyCompactList}\small\item\em Logs a detailed table of all active Free\+RTOS tasks to the terminal. Uses esp\+\_\+log for professional output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCore_1_1TaskMonitor_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classCore_1_1TaskMonitor_a1c256e6e356921065709ab1d11f7ac51}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current health of the subsystem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The system supervisor that translates hardware health into telemetry. 
+
+Monitors Stack High Water Marks, Heap Integrity, and Core Affinity. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCore_1_1TaskMonitor_a1c256e6e356921065709ab1d11f7ac51}\label{classCore_1_1TaskMonitor_a1c256e6e356921065709ab1d11f7ac51} 
+\index{Core::TaskMonitor@{Core::TaskMonitor}!getState@{getState}}
+\index{getState@{getState}!Core::TaskMonitor@{Core::TaskMonitor}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCore_1_1TaskMonitor_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} Core\+::\+Task\+Monitor\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current health of the subsystem. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structCore_1_1TaskMonitor_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t} The current status struct. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1TaskMonitor_a1410b8d6713c0b54f988058209e616d8}\label{classCore_1_1TaskMonitor_a1410b8d6713c0b54f988058209e616d8} 
+\index{Core::TaskMonitor@{Core::TaskMonitor}!update@{update}}
+\index{update@{update}!Core::TaskMonitor@{Core::TaskMonitor}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Core\+::\+Task\+Monitor\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&}]{state }\end{DoxyParamCaption})}
+
+
+
+Update the statistics in the \doxylink{classCore_1_1DataManager}{Data\+Manager}. Direct binary commit to the State Mirror. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Reference to the central \doxylink{classCore_1_1DataManager}{Data\+Manager}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/task/include/\mbox{\hyperlink{TaskMonitor_8hpp}{Task\+Monitor.\+hpp}}\item 
+main/ceo/task/\mbox{\hyperlink{TaskMonitor_8cpp}{Task\+Monitor.\+cpp}}\end{DoxyCompactItemize}

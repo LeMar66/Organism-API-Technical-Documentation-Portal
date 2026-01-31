@@ -1,0 +1,3 @@
+<map id="Core::CEO" name="Core::CEO">
+<area shape="rect" id="Node000001" title="The central &quot;Composition Root&quot; of the AGX organism. Manages the longevity, dependency injection,..." alt="" coords="5,5,225,271"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Hardware::BusManager::State_Monitor_t" name="Hardware::BusManager::State_Monitor_t">
+<area shape="rect" id="Node000001" title="Telemetry &amp; Health&#45;State Awareness." alt="" coords="204,188,371,328"/>
+<area shape="rect" id="Node000002" href="$structHardware_1_1I2CBus_1_1State__Monitor__t.html" title="Telemetry &amp; Health&#45;State Awareness." alt="" coords="5,5,177,125"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,124,206,174,203,178,150,128"/>
+<area shape="rect" id="Node000003" href="$structHardware_1_1SPIBus_1_1State__Monitor__t.html" title=" " alt="" coords="202,5,373,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="290,126,290,172,285,172,285,126"/>
+<area shape="rect" id="Node000004" href="$structHardware_1_1UARTBus_1_1State__Monitor__t.html" title=" " alt="" coords="397,5,549,125"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="417,128,368,178,364,174,413,124"/>
+</map>

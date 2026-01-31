@@ -1,0 +1,75 @@
+\doxysection{Hardware\+::Bus\+Manager\+::State\+\_\+\+Monitor\+\_\+t Struct Reference}
+\hypertarget{structHardware_1_1BusManager_1_1State__Monitor__t}{}\label{structHardware_1_1BusManager_1_1State__Monitor__t}\index{Hardware::BusManager::State\_Monitor\_t@{Hardware::BusManager::State\_Monitor\_t}}
+
+
+Telemetry \& Health-\/\+State Awareness.  
+
+
+
+
+{\ttfamily \#include $<$Bus\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for Hardware\+::Bus\+Manager\+::State\+\_\+\+Monitor\+\_\+t\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structHardware_1_1BusManager_1_1State__Monitor__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structHardware_1_1BusManager_1_1State__Monitor__t_afcfb25d009cbfed6dc99752fc1ef1650}\label{structHardware_1_1BusManager_1_1State__Monitor__t_afcfb25d009cbfed6dc99752fc1ef1650} 
+\mbox{\hyperlink{structHardware_1_1I2CBus_1_1State__Monitor__t}{Hardware\+::\+I2\+CBus\+::\+State\+\_\+\+Monitor\+\_\+t}} {\bfseries i2c}
+\item 
+\Hypertarget{structHardware_1_1BusManager_1_1State__Monitor__t_a7750aef3eeced4070b4e8d124a5455c3}\label{structHardware_1_1BusManager_1_1State__Monitor__t_a7750aef3eeced4070b4e8d124a5455c3} 
+\mbox{\hyperlink{structHardware_1_1SPIBus_1_1State__Monitor__t}{Hardware\+::\+SPIBus\+::\+State\+\_\+\+Monitor\+\_\+t}} {\bfseries spi}
+\item 
+\Hypertarget{structHardware_1_1BusManager_1_1State__Monitor__t_adc5034686e99c3c9cc4eaaca25b48ae8}\label{structHardware_1_1BusManager_1_1State__Monitor__t_adc5034686e99c3c9cc4eaaca25b48ae8} 
+\mbox{\hyperlink{structHardware_1_1UARTBus_1_1State__Monitor__t}{Hardware\+::\+UARTBus\+::\+State\+\_\+\+Monitor\+\_\+t}} {\bfseries uart}
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structHardware_1_1BusManager_1_1State__Monitor__t_a5586883e345ca0a7be4d6a0232fdd8ec}{all\+\_\+status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structHardware_1_1BusManager_1_1State__Monitor__t_a847ce28e7847b109048a8a09c0774ba3}{last\+\_\+update}} = 0
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structHardware_1_1BusManager_1_1State__Monitor__t_a5bf95be2f807d882b914858c65e0345a}{status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{structHardware_1_1BusManager_1_1State__Monitor__t_a4df7af9540d8d5dd5628c0dc4be7b00a}{last\+\_\+error}} = ESP\+\_\+\+OK
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Telemetry \& Health-\/\+State Awareness. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structHardware_1_1BusManager_1_1State__Monitor__t_a5586883e345ca0a7be4d6a0232fdd8ec}\label{structHardware_1_1BusManager_1_1State__Monitor__t_a5586883e345ca0a7be4d6a0232fdd8ec} 
+\index{Hardware::BusManager::State\_Monitor\_t@{Hardware::BusManager::State\_Monitor\_t}!all\_status@{all\_status}}
+\index{all\_status@{all\_status}!Hardware::BusManager::State\_Monitor\_t@{Hardware::BusManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{all\_status}{all\_status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Hardware\+::\+Bus\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::all\+\_\+status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+General States of all busses \Hypertarget{structHardware_1_1BusManager_1_1State__Monitor__t_a4df7af9540d8d5dd5628c0dc4be7b00a}\label{structHardware_1_1BusManager_1_1State__Monitor__t_a4df7af9540d8d5dd5628c0dc4be7b00a} 
+\index{Hardware::BusManager::State\_Monitor\_t@{Hardware::BusManager::State\_Monitor\_t}!last\_error@{last\_error}}
+\index{last\_error@{last\_error}!Hardware::BusManager::State\_Monitor\_t@{Hardware::BusManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_error}{last\_error}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+Bus\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+error = ESP\+\_\+\+OK}
+
+Last recorded error. \Hypertarget{structHardware_1_1BusManager_1_1State__Monitor__t_a847ce28e7847b109048a8a09c0774ba3}\label{structHardware_1_1BusManager_1_1State__Monitor__t_a847ce28e7847b109048a8a09c0774ba3} 
+\index{Hardware::BusManager::State\_Monitor\_t@{Hardware::BusManager::State\_Monitor\_t}!last\_update@{last\_update}}
+\index{last\_update@{last\_update}!Hardware::BusManager::State\_Monitor\_t@{Hardware::BusManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_update}{last\_update}}
+{\footnotesize\ttfamily uint32\+\_\+t Hardware\+::\+Bus\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+update = 0}
+
+Last successful timestamp. \Hypertarget{structHardware_1_1BusManager_1_1State__Monitor__t_a5bf95be2f807d882b914858c65e0345a}\label{structHardware_1_1BusManager_1_1State__Monitor__t_a5bf95be2f807d882b914858c65e0345a} 
+\index{Hardware::BusManager::State\_Monitor\_t@{Hardware::BusManager::State\_Monitor\_t}!status@{status}}
+\index{status@{status}!Hardware::BusManager::State\_Monitor\_t@{Hardware::BusManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Hardware\+::\+Bus\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+The "{}\+At a Glance"{} status. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/bus/include/\mbox{\hyperlink{BusManager_8hpp}{Bus\+Manager.\+hpp}}\end{DoxyCompactItemize}

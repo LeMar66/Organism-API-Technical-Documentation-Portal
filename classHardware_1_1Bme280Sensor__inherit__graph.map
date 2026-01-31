@@ -1,0 +1,5 @@
+<map id="Hardware::Bme280Sensor" name="Hardware::Bme280Sensor">
+<area shape="rect" id="Node000001" title="Driver voor BME280 (Temperatuur, Luchtvochtigheid, Luchtdruk)." alt="" coords="5,259,188,424"/>
+<area shape="rect" id="Node000002" href="$classHardware_1_1ISensor.html" title="Abstract interface for all physical sensors (Temp, Humidity, Pressure)." alt="" coords="30,5,163,211"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,224,99,259,94,259,94,224"/>
+</map>

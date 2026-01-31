@@ -1,0 +1,82 @@
+\doxysection{Hardware\+::Sensor\+Manager\+::State\+\_\+\+Monitor\+\_\+t Struct Reference}
+\hypertarget{structHardware_1_1SensorManager_1_1State__Monitor__t}{}\label{structHardware_1_1SensorManager_1_1State__Monitor__t}\index{Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}}
+
+
+Telemetry \& Health-\/\+State Awareness.  
+
+
+
+
+{\ttfamily \#include $<$Sensor\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for Hardware\+::Sensor\+Manager\+::State\+\_\+\+Monitor\+\_\+t\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{structHardware_1_1SensorManager_1_1State__Monitor__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structHardware_1_1SensorManager_1_1State__Monitor__t_af34983c4eaa1cf104910e124689f470a}{sensor\+\_\+failed}} \mbox{[}17\mbox{]}
+\item 
+size\+\_\+t \mbox{\hyperlink{structHardware_1_1SensorManager_1_1State__Monitor__t_a14ca9bd8dbb16c1f38317c1ed54b1465}{total\+\_\+sensors}}
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structHardware_1_1SensorManager_1_1State__Monitor__t_a92c1f68bc1c6ba781a1700c9251e856b}{all\+\_\+status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structHardware_1_1SensorManager_1_1State__Monitor__t_a2309f4753bb14cf29d3ab2c677f9dabf}{last\+\_\+update}} = 0
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structHardware_1_1SensorManager_1_1State__Monitor__t_a5cd91eb504c4bb2e4665543fb0c5f75b}{status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{structHardware_1_1SensorManager_1_1State__Monitor__t_a7bd58fb1025424e41bb1306ff66a5688}{last\+\_\+error}} = ESP\+\_\+\+OK
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Telemetry \& Health-\/\+State Awareness. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structHardware_1_1SensorManager_1_1State__Monitor__t_a92c1f68bc1c6ba781a1700c9251e856b}\label{structHardware_1_1SensorManager_1_1State__Monitor__t_a92c1f68bc1c6ba781a1700c9251e856b} 
+\index{Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}!all\_status@{all\_status}}
+\index{all\_status@{all\_status}!Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{all\_status}{all\_status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Hardware\+::\+Sensor\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::all\+\_\+status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+General States of all sensors. \Hypertarget{structHardware_1_1SensorManager_1_1State__Monitor__t_a7bd58fb1025424e41bb1306ff66a5688}\label{structHardware_1_1SensorManager_1_1State__Monitor__t_a7bd58fb1025424e41bb1306ff66a5688} 
+\index{Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}!last\_error@{last\_error}}
+\index{last\_error@{last\_error}!Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_error}{last\_error}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+Sensor\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+error = ESP\+\_\+\+OK}
+
+Last recorded error. \Hypertarget{structHardware_1_1SensorManager_1_1State__Monitor__t_a2309f4753bb14cf29d3ab2c677f9dabf}\label{structHardware_1_1SensorManager_1_1State__Monitor__t_a2309f4753bb14cf29d3ab2c677f9dabf} 
+\index{Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}!last\_update@{last\_update}}
+\index{last\_update@{last\_update}!Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_update}{last\_update}}
+{\footnotesize\ttfamily uint32\+\_\+t Hardware\+::\+Sensor\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+update = 0}
+
+Last successful timestamp. \Hypertarget{structHardware_1_1SensorManager_1_1State__Monitor__t_af34983c4eaa1cf104910e124689f470a}\label{structHardware_1_1SensorManager_1_1State__Monitor__t_af34983c4eaa1cf104910e124689f470a} 
+\index{Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}!sensor\_failed@{sensor\_failed}}
+\index{sensor\_failed@{sensor\_failed}!Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{sensor\_failed}{sensor\_failed}}
+{\footnotesize\ttfamily char Hardware\+::\+Sensor\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::sensor\+\_\+failed\mbox{[}17\mbox{]}}
+
+Last sensor processed. \Hypertarget{structHardware_1_1SensorManager_1_1State__Monitor__t_a5cd91eb504c4bb2e4665543fb0c5f75b}\label{structHardware_1_1SensorManager_1_1State__Monitor__t_a5cd91eb504c4bb2e4665543fb0c5f75b} 
+\index{Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}!status@{status}}
+\index{status@{status}!Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Hardware\+::\+Sensor\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+The "{}\+At a Glance"{} status. \Hypertarget{structHardware_1_1SensorManager_1_1State__Monitor__t_a14ca9bd8dbb16c1f38317c1ed54b1465}\label{structHardware_1_1SensorManager_1_1State__Monitor__t_a14ca9bd8dbb16c1f38317c1ed54b1465} 
+\index{Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}!total\_sensors@{total\_sensors}}
+\index{total\_sensors@{total\_sensors}!Hardware::SensorManager::State\_Monitor\_t@{Hardware::SensorManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{total\_sensors}{total\_sensors}}
+{\footnotesize\ttfamily size\+\_\+t Hardware\+::\+Sensor\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::total\+\_\+sensors}
+
+Number of registered sensors. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/sensor/include/\mbox{\hyperlink{SensorManager_8hpp}{Sensor\+Manager.\+hpp}}\end{DoxyCompactItemize}

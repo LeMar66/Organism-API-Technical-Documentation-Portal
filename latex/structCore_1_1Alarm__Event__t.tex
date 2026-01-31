@@ -1,0 +1,107 @@
+\doxysection{Core\+::Alarm\+\_\+\+Event\+\_\+t Struct Reference}
+\hypertarget{structCore_1_1Alarm__Event__t}{}\label{structCore_1_1Alarm__Event__t}\index{Core::Alarm\_Event\_t@{Core::Alarm\_Event\_t}}
+
+
+Full context for a timed event using fixed-\/memory.  
+
+
+
+
+{\ttfamily \#include $<$Time\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for Core\+::Alarm\+\_\+\+Event\+\_\+t\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{structCore_1_1Alarm__Event__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_af169a26bbfff9130317c135890f39b62}\label{structCore_1_1Alarm__Event__t_af169a26bbfff9130317c135890f39b62} 
+uint32\+\_\+t {\bfseries id} = 0
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_afe7adbc01f9fe2b1861518325500f13d}\label{structCore_1_1Alarm__Event__t_afe7adbc01f9fe2b1861518325500f13d} 
+char {\bfseries name} \mbox{[}32\mbox{]} = \{0\}
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_a570419de4f5f48d065203068a625925d}\label{structCore_1_1Alarm__Event__t_a570419de4f5f48d065203068a625925d} 
+int {\bfseries hour} = 0
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_a5413834b56ff7ec7247d9f9218791355}\label{structCore_1_1Alarm__Event__t_a5413834b56ff7ec7247d9f9218791355} 
+int {\bfseries minute} = 0
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_a723434952d7fa1ee9e14a32125b3c957}\label{structCore_1_1Alarm__Event__t_a723434952d7fa1ee9e14a32125b3c957} 
+int {\bfseries second} = 0
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_a1b42af9ca64fe629afe4f00a23c37163}\label{structCore_1_1Alarm__Event__t_a1b42af9ca64fe629afe4f00a23c37163} 
+\mbox{\hyperlink{TimeManager_8hpp_a07743bde3daa4f19268f18a392dca3bb}{Alarm\+\_\+\+Frequency\+\_\+e}} {\bfseries frequency} = Alarm\+\_\+\+Frequency\+\_\+e\+::\+DAILY
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_a768e96723f3bc2eb0e57433683bca476}\label{structCore_1_1Alarm__Event__t_a768e96723f3bc2eb0e57433683bca476} 
+\mbox{\hyperlink{TimeManager_8hpp_a2ab58d4af89f1dbdfc3accbceeb926cf}{Alarm\+\_\+\+State\+\_\+e}} {\bfseries status} = Alarm\+\_\+\+State\+\_\+e\+::\+INACTIVE
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_a2bdf65a7eeb7994006fa93a89488ebdc}\label{structCore_1_1Alarm__Event__t_a2bdf65a7eeb7994006fa93a89488ebdc} 
+uint16\+\_\+t {\bfseries action\+\_\+id} = 0
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_a30ec13b0d671084b6720df25ff3097b2}\label{structCore_1_1Alarm__Event__t_a30ec13b0d671084b6720df25ff3097b2} 
+uint32\+\_\+t {\bfseries target\+\_\+id} = 0
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_aa372e2babbbace6c327e8924aaa90581}\label{structCore_1_1Alarm__Event__t_aa372e2babbbace6c327e8924aaa90581} 
+int32\+\_\+t {\bfseries target\+\_\+value} = 0
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_a85ef5d2914e3c5b94370fb90bfdd4c2d}\label{structCore_1_1Alarm__Event__t_a85ef5d2914e3c5b94370fb90bfdd4c2d} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>int8\_t {\bfseries second}\\
+\>int8\_t {\bfseries minute}\\
+\>int8\_t {\bfseries hour}\\
+\>int8\_t {\bfseries day}\\
+\>int8\_t {\bfseries month}\\
+\>uint8\_t {\bfseries days\_of\_week}\\
+\>\>{\em Bitmask: bit0=Sun, bit1=Mon... }\\
+\} {\bfseries time}\\
+
+\end{tabbing}\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_a48fa2a88f77908c96645d2331507a6dc}\label{structCore_1_1Alarm__Event__t_a48fa2a88f77908c96645d2331507a6dc} 
+uint32\+\_\+t {\bfseries interval}
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_a4036f763eedb07b3419a14da20e55c73}\label{structCore_1_1Alarm__Event__t_a4036f763eedb07b3419a14da20e55c73} 
+\mbox{\hyperlink{TimeManager_8hpp_a9dd3e87d2ef3cc612161d35d2230caa5}{Season\+\_\+e}} {\bfseries target\+\_\+season}
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_af0eaaf140dbe52c0b702d00ed5153dc3}\label{structCore_1_1Alarm__Event__t_af0eaaf140dbe52c0b702d00ed5153dc3} 
+int16\+\_\+t {\bfseries astro\+\_\+offset\+\_\+min}
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_afd5841ba2d56466cf608d434efd8ac25}\label{structCore_1_1Alarm__Event__t_afd5841ba2d56466cf608d434efd8ac25} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t {\bfseries skip\_days\_mask} = 0\\
+\>\>{\em Bitmask for days 1-\/31. }\\
+\>uint64\_t {\bfseries skip\_weeks\_mask} = 0\\
+\>\>{\em Bitmask for weeks 1-\/52. }\\
+\>uint8\_t {\bfseries skip\_months\_mask} = 0\\
+\>\>{\em Bitmask for months 1-\/12. }\\
+\>uint8\_t {\bfseries skip\_moon\_mask} = 0\\
+\>\>{\em Bitmask voor maanfasen. }\\
+\>bool {\bfseries weekend}\\
+\>bool {\bfseries workdays}\\
+\} {\bfseries exclude}\\
+
+\end{tabbing}\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_add579a706cd84614d2f19edac2e83437}\label{structCore_1_1Alarm__Event__t_add579a706cd84614d2f19edac2e83437} 
+std\+::function$<$ void(\mbox{\hyperlink{structCore_1_1Alarm__Event__t}{Alarm\+\_\+\+Event\+\_\+t}} \&)$>$ {\bfseries callback} = nullptr
+\item 
+\Hypertarget{structCore_1_1Alarm__Event__t_aac90cdbb0d410a74f96748031e7e8874}\label{structCore_1_1Alarm__Event__t_aac90cdbb0d410a74f96748031e7e8874} 
+time\+\_\+t {\bfseries last\+\_\+triggered} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Full context for a timed event using fixed-\/memory. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/time/include/\mbox{\hyperlink{TimeManager_8hpp}{Time\+Manager.\+hpp}}\end{DoxyCompactItemize}

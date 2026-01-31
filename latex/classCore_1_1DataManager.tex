@@ -1,0 +1,143 @@
+\doxysection{Core\+::Data\+Manager Class Reference}
+\hypertarget{classCore_1_1DataManager}{}\label{classCore_1_1DataManager}\index{Core::DataManager@{Core::DataManager}}
+
+
+Manages the global system state in thread-\/safe PSRAM memory.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Manager.\+hpp$>$}
+
+
+
+Inheritance diagram for Core\+::Data\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classCore_1_1DataManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Core\+::Data\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classCore_1_1DataManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCore_1_1DataManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classCore_1_1DataManager_1_1StateGuard}{State\+Guard}}
+\begin{DoxyCompactList}\small\item\em RAII wrapper for secure, timed access to system data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCore_1_1DataManager_ad34bdd30e7c92612d89a7be1644c218b}\label{classCore_1_1DataManager_ad34bdd30e7c92612d89a7be1644c218b} 
+{\bfseries Data\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Initializes the base unique pointers. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1DataManager_a2ca20ece47287ca70a90cbf6acc34d0e}\label{classCore_1_1DataManager_a2ca20ece47287ca70a90cbf6acc34d0e} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Data\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destructor Ensures safe completion of the acquisition task. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1DataManager_a06c464d0e1ecb6f02d087f4014f983b0}\label{classCore_1_1DataManager_a06c464d0e1ecb6f02d087f4014f983b0} 
+{\bfseries Data\+Manager} (const \mbox{\hyperlink{classCore_1_1DataManager}{Data\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1DataManager_a78ecd389e140e06393b1fcc7be6f118a}\label{classCore_1_1DataManager_a78ecd389e140e06393b1fcc7be6f118a} 
+\mbox{\hyperlink{classCore_1_1DataManager}{Data\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classCore_1_1DataManager}{Data\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCore_1_1DataManager_a2bc5502557eb88e0c467df12e5e10194}{set\+Operating\+Mode}} (uint32\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Updates the global operating mode of the organism. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCore_1_1DataManager_a087a6236439bd574891d42e203fe5cb0}{set\+Device\+Name}} (const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Sets the human-\/readable device identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCore_1_1DataManager_1_1StateGuard}{State\+Guard}}$<$ c\+JSON \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classCore_1_1DataManager_a2ab6b8fad3ebe3b073ae5d16e685a95e}{sensors}} ()
+\begin{DoxyCompactList}\small\item\em Access to Sensor\textquotesingle{}s data (Temp, humidity, etc). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCore_1_1DataManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classCore_1_1DataManager_a7c81d9226d0cd195f4ab3f48d73aea2f}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current health of the subsystem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCore_1_1DataManager_ad702030ea46f03d029da0f226b1ac473}\label{classCore_1_1DataManager_ad702030ea46f03d029da0f226b1ac473} 
+static constexpr Tick\+Type\+\_\+t {\bfseries LOCK\+\_\+\+TIMEOUT} = pd\+MS\+\_\+\+TO\+\_\+\+TICKS(50)
+\begin{DoxyCompactList}\small\item\em Mute acquisition timeout to prevent deadlock in industrial processes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the global system state in thread-\/safe PSRAM memory. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCore_1_1DataManager_a7c81d9226d0cd195f4ab3f48d73aea2f}\label{classCore_1_1DataManager_a7c81d9226d0cd195f4ab3f48d73aea2f} 
+\index{Core::DataManager@{Core::DataManager}!getState@{getState}}
+\index{getState@{getState}!Core::DataManager@{Core::DataManager}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCore_1_1DataManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} Core\+::\+Data\+Manager\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current health of the subsystem. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structCore_1_1DataManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t} The current status struct. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1DataManager_a2ab6b8fad3ebe3b073ae5d16e685a95e}\label{classCore_1_1DataManager_a2ab6b8fad3ebe3b073ae5d16e685a95e} 
+\index{Core::DataManager@{Core::DataManager}!sensors@{sensors}}
+\index{sensors@{sensors}!Core::DataManager@{Core::DataManager}}
+\doxysubsubsection{\texorpdfstring{sensors()}{sensors()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCore_1_1DataManager_1_1StateGuard}{State\+Guard}}$<$ c\+JSON \texorpdfstring{$\ast$}{*} $>$ Core\+::\+Data\+Manager\+::sensors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access to Sensor\textquotesingle{}s data (Temp, humidity, etc). 
+
+\begin{DoxyReturn}{Returns}
+State\+Guard$<$c\+JSON \texorpdfstring{$\ast$}{*}$>$ RAII-\/controlled data. 
+\end{DoxyReturn}
+\Hypertarget{classCore_1_1DataManager_a087a6236439bd574891d42e203fe5cb0}\label{classCore_1_1DataManager_a087a6236439bd574891d42e203fe5cb0} 
+\index{Core::DataManager@{Core::DataManager}!setDeviceName@{setDeviceName}}
+\index{setDeviceName@{setDeviceName}!Core::DataManager@{Core::DataManager}}
+\doxysubsubsection{\texorpdfstring{setDeviceName()}{setDeviceName()}}
+{\footnotesize\ttfamily void Core\+::\+Data\+Manager\+::set\+Device\+Name (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name }\end{DoxyParamCaption})}
+
+
+
+Sets the human-\/readable device identifier. 
+
+Thread-\/safe update of the device name buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & C-\/style string containing the new name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+The name will be truncated if it exceeds the internal buffer size. 
+\end{DoxyWarning}
+\Hypertarget{classCore_1_1DataManager_a2bc5502557eb88e0c467df12e5e10194}\label{classCore_1_1DataManager_a2bc5502557eb88e0c467df12e5e10194} 
+\index{Core::DataManager@{Core::DataManager}!setOperatingMode@{setOperatingMode}}
+\index{setOperatingMode@{setOperatingMode}!Core::DataManager@{Core::DataManager}}
+\doxysubsubsection{\texorpdfstring{setOperatingMode()}{setOperatingMode()}}
+{\footnotesize\ttfamily void Core\+::\+Data\+Manager\+::set\+Operating\+Mode (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Updates the global operating mode of the organism. 
+
+Updates the system\textquotesingle{}s operating mode with safety validation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The new System\+Operating\+Mode\+\_\+t value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Validates the mode before applying to ensure system stability. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/data/include/\mbox{\hyperlink{DataManager_8hpp}{Data\+Manager.\+hpp}}\item 
+main/ceo/managers/data/\mbox{\hyperlink{DataManager_8cpp}{Data\+Manager.\+cpp}}\end{DoxyCompactItemize}

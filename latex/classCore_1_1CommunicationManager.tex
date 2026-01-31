@@ -1,0 +1,113 @@
+\doxysection{Core\+::Communication\+Manager Class Reference}
+\hypertarget{classCore_1_1CommunicationManager}{}\label{classCore_1_1CommunicationManager}\index{Core::CommunicationManager@{Core::CommunicationManager}}
+
+
+The central network orchestrator for Core 0.  
+
+
+
+
+{\ttfamily \#include $<$Communication\+Manager.\+hpp$>$}
+
+
+
+Inheritance diagram for Core\+::Communication\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classCore_1_1CommunicationManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Core\+::Communication\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classCore_1_1CommunicationManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCore_1_1CommunicationManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCore_1_1CommunicationManager_a96ac5c4f3bbc23b655b0c701d4bb7804}{Communication\+Manager}} (\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&state, \mbox{\hyperlink{classCore_1_1TimeManager}{Core\+::\+Time\+Manager}} \&time\+Mgr, \mbox{\hyperlink{classHardware_1_1BusManager}{Hardware\+::\+Bus\+Manager}} \&bus\+Mgr)
+\begin{DoxyCompactList}\small\item\em Constructor with Dependency Injection. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1CommunicationManager_aa6db70149dc607b7a203e1023946ea41}\label{classCore_1_1CommunicationManager_aa6db70149dc607b7a203e1023946ea41} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Communication\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destructor Ensures safe completion of the acquisition tasks. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1CommunicationManager_a98fd85ff4b5896377790870e87d248b5}\label{classCore_1_1CommunicationManager_a98fd85ff4b5896377790870e87d248b5} 
+{\bfseries Communication\+Manager} (const \mbox{\hyperlink{classCore_1_1CommunicationManager}{Communication\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1CommunicationManager_a09b31951f3c21fd77f2001afc192ef1b}\label{classCore_1_1CommunicationManager_a09b31951f3c21fd77f2001afc192ef1b} 
+\mbox{\hyperlink{classCore_1_1CommunicationManager}{Communication\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classCore_1_1CommunicationManager}{Communication\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classCore_1_1CommunicationManager_a57ddaa7be7d639492254ed869e0e17e9}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Starts the network stack and creates the Free\+RTOS task on Core 0. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1CommunicationManager_a491d48ffb24fe3f9327b191981ec394b}\label{classCore_1_1CommunicationManager_a491d48ffb24fe3f9327b191981ec394b} 
+void {\bfseries task\+Loop} ()
+\begin{DoxyCompactList}\small\item\em Main run for Core 0. Manages periodic broadcasting and status checks. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1CommunicationManager_ab231833d9d8d5c83fc6a14bccadcd506}\label{classCore_1_1CommunicationManager_ab231833d9d8d5c83fc6a14bccadcd506} 
+\mbox{\hyperlink{structCore_1_1CommunicationManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} {\bfseries get\+State} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCore_1_1CommunicationManager_a4f42001c43da5b7f1091b0d57a23712f}\label{classCore_1_1CommunicationManager_a4f42001c43da5b7f1091b0d57a23712f} 
+static void {\bfseries wifi\+Event\+Handler} (void \texorpdfstring{$\ast$}{*}arg, esp\+\_\+event\+\_\+base\+\_\+t event\+\_\+base, int32\+\_\+t event\+\_\+id, void \texorpdfstring{$\ast$}{*}event\+\_\+data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The central network orchestrator for Core 0. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCore_1_1CommunicationManager_a96ac5c4f3bbc23b655b0c701d4bb7804}\label{classCore_1_1CommunicationManager_a96ac5c4f3bbc23b655b0c701d4bb7804} 
+\index{Core::CommunicationManager@{Core::CommunicationManager}!CommunicationManager@{CommunicationManager}}
+\index{CommunicationManager@{CommunicationManager}!Core::CommunicationManager@{Core::CommunicationManager}}
+\doxysubsubsection{\texorpdfstring{CommunicationManager()}{CommunicationManager()}}
+{\footnotesize\ttfamily Core\+::\+Communication\+Manager\+::\+Communication\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&}]{state,  }\item[{\mbox{\hyperlink{classCore_1_1TimeManager}{Core\+::\+Time\+Manager}} \&}]{time\+Mgr,  }\item[{\mbox{\hyperlink{classHardware_1_1BusManager}{Hardware\+::\+Bus\+Manager}} \&}]{bus\+Mgr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor with Dependency Injection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shared\+State} & Reference to central memory (PSRAM). \\
+\hline
+{\em \doxylink{classCore_1_1TimeManager}{Time\+Manager}} & Reference to Communiciations. (Wi\+Fi,MQTT, NOW, .....etc.) \\
+\hline
+{\em bus\+Manager} & Hardware bus reference (I2\+C/\+SPI/1-\/\+Wire). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCore_1_1CommunicationManager_a57ddaa7be7d639492254ed869e0e17e9}\label{classCore_1_1CommunicationManager_a57ddaa7be7d639492254ed869e0e17e9} 
+\index{Core::CommunicationManager@{Core::CommunicationManager}!begin@{begin}}
+\index{begin@{begin}!Core::CommunicationManager@{Core::CommunicationManager}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Core\+::\+Communication\+Manager\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Starts the network stack and creates the Free\+RTOS task on Core 0. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK bij succes. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCore_1_1IManager}{Core\+::\+IManager}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/communication/include/\mbox{\hyperlink{CommunicationManager_8hpp}{Communication\+Manager.\+hpp}}\item 
+main/ceo/managers/communication/\mbox{\hyperlink{CommunicationManager_8cpp}{Communication\+Manager.\+cpp}}\end{DoxyCompactItemize}

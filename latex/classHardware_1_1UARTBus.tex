@@ -1,0 +1,179 @@
+\doxysection{Hardware\+::UARTBus Class Reference}
+\hypertarget{classHardware_1_1UARTBus}{}\label{classHardware_1_1UARTBus}\index{Hardware::UARTBus@{Hardware::UARTBus}}
+
+
+Hardware gatekeeper for UART communication.  
+
+
+
+
+{\ttfamily \#include $<$UARTBus.\+hpp$>$}
+
+
+
+Collaboration diagram for Hardware\+::UARTBus\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classHardware_1_1UARTBus__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classHardware_1_1UARTBus_1_1BusGuard}{Bus\+Guard}}
+\begin{DoxyCompactList}\small\item\em RAII scoped-\/lock for thread-\/safe UART access. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structHardware_1_1UARTBus_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHardware_1_1UARTBus_ae81d8a1a65f79be328d159962a1c0eb9}{UARTBus}} (uart\+\_\+port\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Inject hardware port resources. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1UARTBus_a604fa12e8fb1fa21df4b5d4a6cf51886}\label{classHardware_1_1UARTBus_a604fa12e8fb1fa21df4b5d4a6cf51886} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+UARTBus} ()
+\begin{DoxyCompactList}\small\item\em Destructor Ensures safe completion of the acquisition task, ensuring driver uninstallation and memory cleanup. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1UARTBus_a55e278fd4e7a429d7c1d18714e1effb9}\label{classHardware_1_1UARTBus_a55e278fd4e7a429d7c1d18714e1effb9} 
+{\bfseries UARTBus} (const \mbox{\hyperlink{classHardware_1_1UARTBus}{UARTBus}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1UARTBus_a301a1a7028aa54c596fb4d4305a5e945}\label{classHardware_1_1UARTBus_a301a1a7028aa54c596fb4d4305a5e945} 
+\mbox{\hyperlink{classHardware_1_1UARTBus}{UARTBus}} \& {\bfseries operator=} (const \mbox{\hyperlink{classHardware_1_1UARTBus}{UARTBus}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1UARTBus_a7a79b3e80252fc60df3fef15f9c3820c}{begin}} (int tx\+\_\+pin, int rx\+\_\+pin, uint32\+\_\+t baudrate)
+\begin{DoxyCompactList}\small\item\em Initialize the UART driver and configure pins. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1UARTBus_a4845481432820a8d0353720493fa05fa}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Attempt autonomous recovery of the UART peripheral. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1UARTBus_a9ec9401106160153d15ce2bbfaceccab}\label{classHardware_1_1UARTBus_a9ec9401106160153d15ce2bbfaceccab} 
+void {\bfseries flush} ()
+\begin{DoxyCompactList}\small\item\em Clear the hardware and software buffers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structHardware_1_1UARTBus_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classHardware_1_1UARTBus_a90cbe6a52622019901ce466364a15728}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current health of the subsystem. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHardware_1_1UARTBus_1_1BusGuard}{Bus\+Guard}} \mbox{\hyperlink{classHardware_1_1UARTBus_a7bd69ac1ca9d9ca1c80b7111a41757b1}{acquire}} ()
+\begin{DoxyCompactList}\small\item\em Acquire temporary ownership of the UART bus. \end{DoxyCompactList}\item 
+uart\+\_\+port\+\_\+t \mbox{\hyperlink{classHardware_1_1UARTBus_aff1aa45bb2fd793b8debd3d9fda2cbb7}{get\+Port}} () const
+\begin{DoxyCompactList}\small\item\em Access the underlying ESP-\/\+IDF port identifier. \end{DoxyCompactList}\item 
+Semaphore\+Handle\+\_\+t \mbox{\hyperlink{classHardware_1_1UARTBus_a1786dd463fb58820ca34851075dbd54f}{get\+Mutex}} ()
+\begin{DoxyCompactList}\small\item\em Access the synchronization mutex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHardware_1_1UARTBus_a72cdb85131adcd65ab0c3f0cfdbfb65f}\label{classHardware_1_1UARTBus_a72cdb85131adcd65ab0c3f0cfdbfb65f} 
+static constexpr Tick\+Type\+\_\+t {\bfseries BUS\+\_\+\+TIMEOUT\+\_\+\+TICKS} = pd\+MS\+\_\+\+TO\+\_\+\+TICKS(100)
+\begin{DoxyCompactList}\small\item\em Default timeout for bus arbitration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hardware gatekeeper for UART communication. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHardware_1_1UARTBus_ae81d8a1a65f79be328d159962a1c0eb9}\label{classHardware_1_1UARTBus_ae81d8a1a65f79be328d159962a1c0eb9} 
+\index{Hardware::UARTBus@{Hardware::UARTBus}!UARTBus@{UARTBus}}
+\index{UARTBus@{UARTBus}!Hardware::UARTBus@{Hardware::UARTBus}}
+\doxysubsubsection{\texorpdfstring{UARTBus()}{UARTBus()}}
+{\footnotesize\ttfamily Hardware\+::\+UARTBus\+::\+UARTBus (\begin{DoxyParamCaption}\item[{uart\+\_\+port\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Inject hardware port resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The UART port number (e.\+g., UART\+\_\+\+NUM\+\_\+1). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHardware_1_1UARTBus_a7bd69ac1ca9d9ca1c80b7111a41757b1}\label{classHardware_1_1UARTBus_a7bd69ac1ca9d9ca1c80b7111a41757b1} 
+\index{Hardware::UARTBus@{Hardware::UARTBus}!acquire@{acquire}}
+\index{acquire@{acquire}!Hardware::UARTBus@{Hardware::UARTBus}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHardware_1_1UARTBus_1_1BusGuard}{Bus\+Guard}} Hardware\+::\+UARTBus\+::acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Acquire temporary ownership of the UART bus. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classHardware_1_1UARTBus_1_1BusGuard}{Bus\+Guard} RAII object. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1UARTBus_a7a79b3e80252fc60df3fef15f9c3820c}\label{classHardware_1_1UARTBus_a7a79b3e80252fc60df3fef15f9c3820c} 
+\index{Hardware::UARTBus@{Hardware::UARTBus}!begin@{begin}}
+\index{begin@{begin}!Hardware::UARTBus@{Hardware::UARTBus}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+UARTBus\+::begin (\begin{DoxyParamCaption}\item[{int}]{tx\+\_\+pin,  }\item[{int}]{rx\+\_\+pin,  }\item[{uint32\+\_\+t}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Initialize the UART driver and configure pins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+pin} & GPIO number for Transmit line. \\
+\hline
+{\em rx\+\_\+pin} & GPIO number for Receive line. \\
+\hline
+{\em baudrate} & Communication speed (e.\+g., 115200). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK on success, or failure code. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1UARTBus_a1786dd463fb58820ca34851075dbd54f}\label{classHardware_1_1UARTBus_a1786dd463fb58820ca34851075dbd54f} 
+\index{Hardware::UARTBus@{Hardware::UARTBus}!getMutex@{getMutex}}
+\index{getMutex@{getMutex}!Hardware::UARTBus@{Hardware::UARTBus}}
+\doxysubsubsection{\texorpdfstring{getMutex()}{getMutex()}}
+{\footnotesize\ttfamily Semaphore\+Handle\+\_\+t Hardware\+::\+UARTBus\+::get\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the synchronization mutex. 
+
+\begin{DoxyReturn}{Returns}
+Semaphore\+Handle\+\_\+t The mutex handle. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1UARTBus_aff1aa45bb2fd793b8debd3d9fda2cbb7}\label{classHardware_1_1UARTBus_aff1aa45bb2fd793b8debd3d9fda2cbb7} 
+\index{Hardware::UARTBus@{Hardware::UARTBus}!getPort@{getPort}}
+\index{getPort@{getPort}!Hardware::UARTBus@{Hardware::UARTBus}}
+\doxysubsubsection{\texorpdfstring{getPort()}{getPort()}}
+{\footnotesize\ttfamily uart\+\_\+port\+\_\+t Hardware\+::\+UARTBus\+::get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the underlying ESP-\/\+IDF port identifier. 
+
+\begin{DoxyReturn}{Returns}
+uart\+\_\+port\+\_\+t The port ID. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1UARTBus_a90cbe6a52622019901ce466364a15728}\label{classHardware_1_1UARTBus_a90cbe6a52622019901ce466364a15728} 
+\index{Hardware::UARTBus@{Hardware::UARTBus}!getState@{getState}}
+\index{getState@{getState}!Hardware::UARTBus@{Hardware::UARTBus}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structHardware_1_1UARTBus_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} Hardware\+::\+UARTBus\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current health of the subsystem. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structHardware_1_1UARTBus_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t} The current status struct. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1UARTBus_a4845481432820a8d0353720493fa05fa}\label{classHardware_1_1UARTBus_a4845481432820a8d0353720493fa05fa} 
+\index{Hardware::UARTBus@{Hardware::UARTBus}!reset@{reset}}
+\index{reset@{reset}!Hardware::UARTBus@{Hardware::UARTBus}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+UARTBus\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Attempt autonomous recovery of the UART peripheral. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t Result of the recovery attempt. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/bus/include/\mbox{\hyperlink{UARTBus_8hpp}{UARTBus.\+hpp}}\item 
+main/ceo/managers/bus/\mbox{\hyperlink{UARTBus_8cpp}{UARTBus.\+cpp}}\end{DoxyCompactItemize}

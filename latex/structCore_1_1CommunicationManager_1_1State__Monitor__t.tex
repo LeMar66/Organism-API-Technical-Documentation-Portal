@@ -1,0 +1,81 @@
+\doxysection{Core\+::Communication\+Manager\+::State\+\_\+\+Monitor\+\_\+t Struct Reference}
+\hypertarget{structCore_1_1CommunicationManager_1_1State__Monitor__t}{}\label{structCore_1_1CommunicationManager_1_1State__Monitor__t}\index{Core::CommunicationManager::State\_Monitor\_t@{Core::CommunicationManager::State\_Monitor\_t}}
+
+
+Telemetry \& Health-\/\+State Awareness.  
+
+
+
+
+{\ttfamily \#include $<$Communication\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for Core\+::Communication\+Manager\+::State\+\_\+\+Monitor\+\_\+t\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{structCore_1_1CommunicationManager_1_1State__Monitor__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structCore_1_1CommunicationManager_1_1State__Monitor__t_ab25abea53007c9ccf9e01f0742edb7ab}\label{structCore_1_1CommunicationManager_1_1State__Monitor__t_ab25abea53007c9ccf9e01f0742edb7ab} 
+bool {\bfseries wifi\+\_\+connected} = false
+\item 
+\Hypertarget{structCore_1_1CommunicationManager_1_1State__Monitor__t_a2e9b98f32a497a86c03ba0e25b2351dd}\label{structCore_1_1CommunicationManager_1_1State__Monitor__t_a2e9b98f32a497a86c03ba0e25b2351dd} 
+bool {\bfseries mqtt\+\_\+connected} = false
+\item 
+\Hypertarget{structCore_1_1CommunicationManager_1_1State__Monitor__t_adf13316cd331fffb67186bfa3589c6ad}\label{structCore_1_1CommunicationManager_1_1State__Monitor__t_adf13316cd331fffb67186bfa3589c6ad} 
+bool {\bfseries ap\+\_\+active} = false
+\item 
+\Hypertarget{structCore_1_1CommunicationManager_1_1State__Monitor__t_a0dd527f94c4d467790c048ef81552ac2}\label{structCore_1_1CommunicationManager_1_1State__Monitor__t_a0dd527f94c4d467790c048ef81552ac2} 
+uint8\+\_\+t {\bfseries clients\+\_\+count} = 0
+\item 
+\Hypertarget{structCore_1_1CommunicationManager_1_1State__Monitor__t_ac67ec0dbcaa1bbe850532e23c0164e2f}\label{structCore_1_1CommunicationManager_1_1State__Monitor__t_ac67ec0dbcaa1bbe850532e23c0164e2f} 
+int8\+\_\+t {\bfseries rssi} = 0
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structCore_1_1CommunicationManager_1_1State__Monitor__t_a3c15271aba5e6dedc052685403b4f84c}{all\+\_\+status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCore_1_1CommunicationManager_1_1State__Monitor__t_a58e17cb33017097404b988363fa56d5e}{last\+\_\+update}} = 0
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structCore_1_1CommunicationManager_1_1State__Monitor__t_aaf2e0b070775fbca8fbcd4830a7d5487}{status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{structCore_1_1CommunicationManager_1_1State__Monitor__t_a08252fe44f642d6cb04671e34324e4eb}{last\+\_\+error}} = ESP\+\_\+\+OK
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Telemetry \& Health-\/\+State Awareness. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structCore_1_1CommunicationManager_1_1State__Monitor__t_a3c15271aba5e6dedc052685403b4f84c}\label{structCore_1_1CommunicationManager_1_1State__Monitor__t_a3c15271aba5e6dedc052685403b4f84c} 
+\index{Core::CommunicationManager::State\_Monitor\_t@{Core::CommunicationManager::State\_Monitor\_t}!all\_status@{all\_status}}
+\index{all\_status@{all\_status}!Core::CommunicationManager::State\_Monitor\_t@{Core::CommunicationManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{all\_status}{all\_status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Core\+::\+Communication\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::all\+\_\+status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+General States of all communications. \Hypertarget{structCore_1_1CommunicationManager_1_1State__Monitor__t_a08252fe44f642d6cb04671e34324e4eb}\label{structCore_1_1CommunicationManager_1_1State__Monitor__t_a08252fe44f642d6cb04671e34324e4eb} 
+\index{Core::CommunicationManager::State\_Monitor\_t@{Core::CommunicationManager::State\_Monitor\_t}!last\_error@{last\_error}}
+\index{last\_error@{last\_error}!Core::CommunicationManager::State\_Monitor\_t@{Core::CommunicationManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_error}{last\_error}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Core\+::\+Communication\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+error = ESP\+\_\+\+OK}
+
+Last recorded error. \Hypertarget{structCore_1_1CommunicationManager_1_1State__Monitor__t_a58e17cb33017097404b988363fa56d5e}\label{structCore_1_1CommunicationManager_1_1State__Monitor__t_a58e17cb33017097404b988363fa56d5e} 
+\index{Core::CommunicationManager::State\_Monitor\_t@{Core::CommunicationManager::State\_Monitor\_t}!last\_update@{last\_update}}
+\index{last\_update@{last\_update}!Core::CommunicationManager::State\_Monitor\_t@{Core::CommunicationManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_update}{last\_update}}
+{\footnotesize\ttfamily uint32\+\_\+t Core\+::\+Communication\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+update = 0}
+
+Last successful timestamp. \Hypertarget{structCore_1_1CommunicationManager_1_1State__Monitor__t_aaf2e0b070775fbca8fbcd4830a7d5487}\label{structCore_1_1CommunicationManager_1_1State__Monitor__t_aaf2e0b070775fbca8fbcd4830a7d5487} 
+\index{Core::CommunicationManager::State\_Monitor\_t@{Core::CommunicationManager::State\_Monitor\_t}!status@{status}}
+\index{status@{status}!Core::CommunicationManager::State\_Monitor\_t@{Core::CommunicationManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Core\+::\+Communication\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+The "{}\+At a Glance"{} status. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/communication/include/\mbox{\hyperlink{CommunicationManager_8hpp}{Communication\+Manager.\+hpp}}\end{DoxyCompactItemize}

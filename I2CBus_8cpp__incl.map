@@ -1,0 +1,35 @@
+<map id="main/ceo/managers/bus/I2CBus.cpp" name="main/ceo/managers/bus/I2CBus.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="550,5,729,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,240,76,265"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="581,48,440,96,238,174,81,237,79,232,236,169,438,91,580,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="100,240,184,265"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="599,48,181,237,179,232,597,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="873,240,1024,265"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="724,43,783,63,842,91,887,122,920,165,936,196,945,226,940,227,931,198,916,168,883,126,839,96,781,68,722,48"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="711,93,829,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="672,43,740,84,738,88,670,48"/>
+<area shape="rect" id="Node000006" href="$I2CBus_8hpp.html" title="Industrial I2C Master bus driver with health monitoring." alt="" coords="592,93,687,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="642,46,642,79,637,79,637,46"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="687,114,806,140,858,154,887,164,918,194,939,226,935,229,914,197,885,169,856,159,805,145,686,120"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="617,240,688,265"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="643,119,653,226,648,227,638,119"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="727,167,874,192"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="666,116,763,159,761,163,664,121"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="712,240,849,265"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="651,117,717,190,759,229,755,233,713,194,647,121"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="520,167,601,192"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="628,121,585,159,582,156,625,117"/>
+<area shape="rect" id="Node000011" href="$DataManager_8hpp.html" title="The collective consciousness and unified system state mirror." alt="" coords="359,167,496,192"/>
+<area shape="poly" id="edge11_Node000006_Node000011" title=" " alt="" coords="606,121,475,165,474,160,604,116"/>
+<area shape="poly" id="edge13_Node000011_Node000002" title=" " alt="" coords="359,194,90,242,89,237,358,189"/>
+<area shape="poly" id="edge18_Node000011_Node000003" title=" " alt="" coords="382,195,198,240,196,235,381,189"/>
+<area shape="poly" id="edge15_Node000011_Node000004" title=" " alt="" coords="497,188,508,189,860,237,860,242,507,195,496,193"/>
+<area shape="poly" id="edge12_Node000011_Node000007" title=" " alt="" coords="464,189,605,234,603,239,463,195"/>
+<area shape="poly" id="edge16_Node000011_Node000009" title=" " alt="" coords="485,189,711,235,710,240,484,195"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="343,240,435,265"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="423,194,404,229,399,227,419,191"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="459,240,593,265"/>
+<area shape="poly" id="edge17_Node000011_Node000013" title=" " alt="" coords="445,190,500,230,497,234,442,194"/>
+<area shape="rect" id="Node000014" href="$IManager_8hpp.html" title="The abstract behavioral contract for all managers." alt="" coords="208,240,319,265"/>
+<area shape="poly" id="edge19_Node000011_Node000014" title=" " alt="" coords="402,194,304,237,301,232,400,190"/>
+</map>

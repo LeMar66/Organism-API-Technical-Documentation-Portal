@@ -1,0 +1,74 @@
+\doxysection{Hardware\+::Pin\+Manager\+::State\+\_\+\+Monitor\+\_\+t Struct Reference}
+\hypertarget{structHardware_1_1PinManager_1_1State__Monitor__t}{}\label{structHardware_1_1PinManager_1_1State__Monitor__t}\index{Hardware::PinManager::State\_Monitor\_t@{Hardware::PinManager::State\_Monitor\_t}}
+
+
+Telemetry \& Health-\/\+State Awareness.  
+
+
+
+
+{\ttfamily \#include $<$Pin\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for Hardware\+::Pin\+Manager\+::State\+\_\+\+Monitor\+\_\+t\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{structHardware_1_1PinManager_1_1State__Monitor__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structHardware_1_1PinManager_1_1State__Monitor__t_a9a3cb85cfdf545c157eea6557218be69}{last\+\_\+error\+\_\+pin}} = -\/1
+\item 
+bool \mbox{\hyperlink{structHardware_1_1PinManager_1_1State__Monitor__t_ab8f5f78c31e5cc8bbf9f42fde9e2f27d}{initialized}} = false
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structHardware_1_1PinManager_1_1State__Monitor__t_ada48c9b682eef9b3df12ede6c783bb7c}{last\+\_\+update}} = 0
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structHardware_1_1PinManager_1_1State__Monitor__t_a53b84e7a5f1e87c3368455bd0780947c}{status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{structHardware_1_1PinManager_1_1State__Monitor__t_afc407f4b5e4c1007cb091596350da9ec}{last\+\_\+error}} = ESP\+\_\+\+OK
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Telemetry \& Health-\/\+State Awareness. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structHardware_1_1PinManager_1_1State__Monitor__t_ab8f5f78c31e5cc8bbf9f42fde9e2f27d}\label{structHardware_1_1PinManager_1_1State__Monitor__t_ab8f5f78c31e5cc8bbf9f42fde9e2f27d} 
+\index{Hardware::PinManager::State\_Monitor\_t@{Hardware::PinManager::State\_Monitor\_t}!initialized@{initialized}}
+\index{initialized@{initialized}!Hardware::PinManager::State\_Monitor\_t@{Hardware::PinManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{initialized}{initialized}}
+{\footnotesize\ttfamily bool Hardware\+::\+Pin\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::initialized = false}
+
+True after successful \doxylink{classHardware_1_1PinManager_a757500f3312bc9ee6c74a231af1b7329}{begin()}. \Hypertarget{structHardware_1_1PinManager_1_1State__Monitor__t_afc407f4b5e4c1007cb091596350da9ec}\label{structHardware_1_1PinManager_1_1State__Monitor__t_afc407f4b5e4c1007cb091596350da9ec} 
+\index{Hardware::PinManager::State\_Monitor\_t@{Hardware::PinManager::State\_Monitor\_t}!last\_error@{last\_error}}
+\index{last\_error@{last\_error}!Hardware::PinManager::State\_Monitor\_t@{Hardware::PinManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_error}{last\_error}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+Pin\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+error = ESP\+\_\+\+OK}
+
+Last recorded error. Last recorded error. \Hypertarget{structHardware_1_1PinManager_1_1State__Monitor__t_a9a3cb85cfdf545c157eea6557218be69}\label{structHardware_1_1PinManager_1_1State__Monitor__t_a9a3cb85cfdf545c157eea6557218be69} 
+\index{Hardware::PinManager::State\_Monitor\_t@{Hardware::PinManager::State\_Monitor\_t}!last\_error\_pin@{last\_error\_pin}}
+\index{last\_error\_pin@{last\_error\_pin}!Hardware::PinManager::State\_Monitor\_t@{Hardware::PinManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_error\_pin}{last\_error\_pin}}
+{\footnotesize\ttfamily int Hardware\+::\+Pin\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+error\+\_\+pin = -\/1}
+
+Last pin that gave an error. \Hypertarget{structHardware_1_1PinManager_1_1State__Monitor__t_ada48c9b682eef9b3df12ede6c783bb7c}\label{structHardware_1_1PinManager_1_1State__Monitor__t_ada48c9b682eef9b3df12ede6c783bb7c} 
+\index{Hardware::PinManager::State\_Monitor\_t@{Hardware::PinManager::State\_Monitor\_t}!last\_update@{last\_update}}
+\index{last\_update@{last\_update}!Hardware::PinManager::State\_Monitor\_t@{Hardware::PinManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_update}{last\_update}}
+{\footnotesize\ttfamily uint32\+\_\+t Hardware\+::\+Pin\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+update = 0}
+
+Last successful timestamp. \Hypertarget{structHardware_1_1PinManager_1_1State__Monitor__t_a53b84e7a5f1e87c3368455bd0780947c}\label{structHardware_1_1PinManager_1_1State__Monitor__t_a53b84e7a5f1e87c3368455bd0780947c} 
+\index{Hardware::PinManager::State\_Monitor\_t@{Hardware::PinManager::State\_Monitor\_t}!status@{status}}
+\index{status@{status}!Hardware::PinManager::State\_Monitor\_t@{Hardware::PinManager::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Hardware\+::\+Pin\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t\+::status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+The "{}\+At a Glance"{} status. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/pin/include/\mbox{\hyperlink{PinManager_8hpp}{Pin\+Manager.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Hardware::ExampleTempSensor" name="Hardware::ExampleTempSensor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,259,227,404"/>
+<area shape="rect" id="Node000002" href="$classHardware_1_1ISensor.html" title="Abstract interface for all physical sensors (Temp, Humidity, Pressure)." alt="" coords="49,5,183,211"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,225,119,258,113,258,113,225"/>
+</map>

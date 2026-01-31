@@ -1,0 +1,3 @@
+<map id="Hardware::SPIBus::BusGuard" name="Hardware::SPIBus::BusGuard">
+<area shape="rect" id="Node000001" title="RAII scoped&#45;lock for thread&#45;safe SPI access." alt="" coords="5,5,205,191"/>
+</map>

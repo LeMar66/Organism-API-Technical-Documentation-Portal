@@ -1,0 +1,135 @@
+\doxysection{Hardware\+::Sensor\+Manager Class Reference}
+\hypertarget{classHardware_1_1SensorManager}{}\label{classHardware_1_1SensorManager}\index{Hardware::SensorManager@{Hardware::SensorManager}}
+
+
+Orchestrates sensor acquisition and data storage in Data\+Manager. Industrial Grade. Core-\/\+Specific Pinning.  
+
+
+
+
+{\ttfamily \#include $<$Sensor\+Manager.\+hpp$>$}
+
+
+
+Inheritance diagram for Hardware\+::Sensor\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classHardware_1_1SensorManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Hardware\+::Sensor\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classHardware_1_1SensorManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structHardware_1_1SensorManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHardware_1_1SensorManager_a7bcab7ed5cef7838018fba07ac86dad9}{Sensor\+Manager}} (\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&shared\+State, \mbox{\hyperlink{classHardware_1_1BusManager}{Hardware\+::\+Bus\+Manager}} \&bus\+Manager)
+\begin{DoxyCompactList}\small\item\em Constructor with Dependency Injection. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1SensorManager_a1216627735eecd9f37af1850e4fbf264}\label{classHardware_1_1SensorManager_a1216627735eecd9f37af1850e4fbf264} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Sensor\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destructor Ensures safe completion of the acquisition task. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1SensorManager_ad8e9a8f602718b6acd7be591178ac613}\label{classHardware_1_1SensorManager_ad8e9a8f602718b6acd7be591178ac613} 
+{\bfseries Sensor\+Manager} (const \mbox{\hyperlink{classHardware_1_1SensorManager}{Sensor\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1SensorManager_a13af7fc0b0d5b4aef60b611375e68408}\label{classHardware_1_1SensorManager_a13af7fc0b0d5b4aef60b611375e68408} 
+\mbox{\hyperlink{classHardware_1_1SensorManager}{Sensor\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classHardware_1_1SensorManager}{Sensor\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1SensorManager_ab72127116193c4a9be22562f2d79f79a}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Initializes all registered sensors and starts the Core 1 Task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHardware_1_1SensorManager_a1466cf7af3cf7c9eebea90f8b94cc679}{register\+Sensor}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classHardware_1_1ISensor}{Hardware\+::\+ISensor}} $>$ sensor\+Instance)
+\begin{DoxyCompactList}\small\item\em Registers a sensor, ownership transfer via unique\+\_\+ptr. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHardware_1_1SensorManager_a65430c888453a1fa1363e61f24f87927}{task\+Loop}} ()
+\item 
+\mbox{\hyperlink{structHardware_1_1SensorManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classHardware_1_1SensorManager_ab65af1eb7fda34861cf2a5187e58d49f}{get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current health of the sensor subsystem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Orchestrates sensor acquisition and data storage in Data\+Manager. Industrial Grade. Core-\/\+Specific Pinning. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHardware_1_1SensorManager_a7bcab7ed5cef7838018fba07ac86dad9}\label{classHardware_1_1SensorManager_a7bcab7ed5cef7838018fba07ac86dad9} 
+\index{Hardware::SensorManager@{Hardware::SensorManager}!SensorManager@{SensorManager}}
+\index{SensorManager@{SensorManager}!Hardware::SensorManager@{Hardware::SensorManager}}
+\doxysubsubsection{\texorpdfstring{SensorManager()}{SensorManager()}}
+{\footnotesize\ttfamily Hardware\+::\+Sensor\+Manager\+::\+Sensor\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&}]{shared\+State,  }\item[{\mbox{\hyperlink{classHardware_1_1BusManager}{Hardware\+::\+Bus\+Manager}} \&}]{bus\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor with Dependency Injection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shared\+State} & Reference to central memory (PSRAM). \\
+\hline
+{\em bus\+Manager} & Hardware bus reference (I2\+C/\+SPI/1-\/\+Wire). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHardware_1_1SensorManager_ab72127116193c4a9be22562f2d79f79a}\label{classHardware_1_1SensorManager_ab72127116193c4a9be22562f2d79f79a} 
+\index{Hardware::SensorManager@{Hardware::SensorManager}!begin@{begin}}
+\index{begin@{begin}!Hardware::SensorManager@{Hardware::SensorManager}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+Sensor\+Manager\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes all registered sensors and starts the Core 1 Task. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK With successful start. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1SensorManager_ab65af1eb7fda34861cf2a5187e58d49f}\label{classHardware_1_1SensorManager_ab65af1eb7fda34861cf2a5187e58d49f} 
+\index{Hardware::SensorManager@{Hardware::SensorManager}!getState@{getState}}
+\index{getState@{getState}!Hardware::SensorManager@{Hardware::SensorManager}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structHardware_1_1SensorManager_1_1State__Monitor__t}{Hardware\+::\+Sensor\+Manager\+::\+State\+\_\+\+Monitor\+\_\+t}} Hardware\+::\+Sensor\+Manager\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current health of the sensor subsystem. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structHardware_1_1SensorManager_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t} The current status struct. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1SensorManager_a1466cf7af3cf7c9eebea90f8b94cc679}\label{classHardware_1_1SensorManager_a1466cf7af3cf7c9eebea90f8b94cc679} 
+\index{Hardware::SensorManager@{Hardware::SensorManager}!registerSensor@{registerSensor}}
+\index{registerSensor@{registerSensor}!Hardware::SensorManager@{Hardware::SensorManager}}
+\doxysubsubsection{\texorpdfstring{registerSensor()}{registerSensor()}}
+{\footnotesize\ttfamily void Hardware\+::\+Sensor\+Manager\+::register\+Sensor (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classHardware_1_1ISensor}{Hardware\+::\+ISensor}} $>$}]{sensor\+Instance }\end{DoxyParamCaption})}
+
+
+
+Registers a sensor, ownership transfer via unique\+\_\+ptr. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+Instance} & The hardware-\/specific implementation (inherited from \doxylink{classHardware_1_1ISensor}{ISensor}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHardware_1_1SensorManager_a65430c888453a1fa1363e61f24f87927}\label{classHardware_1_1SensorManager_a65430c888453a1fa1363e61f24f87927} 
+\index{Hardware::SensorManager@{Hardware::SensorManager}!taskLoop@{taskLoop}}
+\index{taskLoop@{taskLoop}!Hardware::SensorManager@{Hardware::SensorManager}}
+\doxysubsubsection{\texorpdfstring{taskLoop()}{taskLoop()}}
+{\footnotesize\ttfamily void Hardware\+::\+Sensor\+Manager\+::task\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+@brief\+The real-\/time task loop for Core 1. Processes acquisition and publishes data directly to the Data\+Manager. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/sensor/include/\mbox{\hyperlink{SensorManager_8hpp}{Sensor\+Manager.\+hpp}}\item 
+main/ceo/managers/sensor/\mbox{\hyperlink{SensorManager_8cpp}{Sensor\+Manager.\+cpp}}\end{DoxyCompactItemize}

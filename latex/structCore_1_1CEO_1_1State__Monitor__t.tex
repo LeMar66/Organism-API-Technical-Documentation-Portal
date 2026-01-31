@@ -1,0 +1,99 @@
+\doxysection{Core\+::CEO\+::State\+\_\+\+Monitor\+\_\+t Struct Reference}
+\hypertarget{structCore_1_1CEO_1_1State__Monitor__t}{}\label{structCore_1_1CEO_1_1State__Monitor__t}\index{Core::CEO::State\_Monitor\_t@{Core::CEO::State\_Monitor\_t}}
+
+
+Telemetry \& Health-\/\+State Awareness.  
+
+
+
+
+{\ttfamily \#include $<$CEO.\+hpp$>$}
+
+
+
+Collaboration diagram for Core\+::CEO\+::State\+\_\+\+Monitor\+\_\+t\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{structCore_1_1CEO_1_1State__Monitor__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_a7ab7fa857ac6b35a7a12cdd53230dd1b}\label{structCore_1_1CEO_1_1State__Monitor__t_a7ab7fa857ac6b35a7a12cdd53230dd1b} 
+char {\bfseries last\+\_\+event\+\_\+name} \mbox{[}32\mbox{]} = "{}None"{}
+\begin{DoxyCompactList}\small\item\em Naam van het laatste alarm. \end{DoxyCompactList}\item 
+\Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_ad6d6fb5be94ddf80e9023155050dea44}\label{structCore_1_1CEO_1_1State__Monitor__t_ad6d6fb5be94ddf80e9023155050dea44} 
+uint32\+\_\+t {\bfseries last\+\_\+alarm\+\_\+id} = 0
+\begin{DoxyCompactList}\small\item\em ID van het laatste alarm. \end{DoxyCompactList}\item 
+\Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_a8ece813c08350e649fd9439da4c2cdf3}\label{structCore_1_1CEO_1_1State__Monitor__t_a8ece813c08350e649fd9439da4c2cdf3} 
+uint32\+\_\+t {\bfseries total\+\_\+triggers} = 0
+\begin{DoxyCompactList}\small\item\em Teller voor statistieken. \end{DoxyCompactList}\item 
+\Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_aa6dec26250cff134c5bf1c0820189969}\label{structCore_1_1CEO_1_1State__Monitor__t_aa6dec26250cff134c5bf1c0820189969} 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} {\bfseries actuator\+\_\+manager} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+\Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_a51f75a21c9a514e107d4dfe841a73058}\label{structCore_1_1CEO_1_1State__Monitor__t_a51f75a21c9a514e107d4dfe841a73058} 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} {\bfseries bus\+\_\+manager} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+\Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_ae89d09a8896961b7ffb77266eed2f19c}\label{structCore_1_1CEO_1_1State__Monitor__t_ae89d09a8896961b7ffb77266eed2f19c} 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} {\bfseries communication\+\_\+manager} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+\Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_a8be3cc1d6b9b86ea0cfcf2a2f3a7ee20}\label{structCore_1_1CEO_1_1State__Monitor__t_a8be3cc1d6b9b86ea0cfcf2a2f3a7ee20} 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} {\bfseries pin\+\_\+manager} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+\Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_a4b3581b26cb7452163c61a5dffbbe893}\label{structCore_1_1CEO_1_1State__Monitor__t_a4b3581b26cb7452163c61a5dffbbe893} 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} {\bfseries sensor\+\_\+manager} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+\Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_aefd7bb77bf45415dc4e1d8850399db04}\label{structCore_1_1CEO_1_1State__Monitor__t_aefd7bb77bf45415dc4e1d8850399db04} 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} {\bfseries storage\+\_\+manager} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+\Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_ae961e217bfc53012c97aa776b0a21f9a}\label{structCore_1_1CEO_1_1State__Monitor__t_ae961e217bfc53012c97aa776b0a21f9a} 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} {\bfseries taskmonitor} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+\Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_a3a37f05bcd04c439601325f888c0fda8}\label{structCore_1_1CEO_1_1State__Monitor__t_a3a37f05bcd04c439601325f888c0fda8} 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} {\bfseries time\+\_\+manager} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structCore_1_1CEO_1_1State__Monitor__t_a65e9bb82eeaab3b1ff6e4990ce8a131a}{all\+\_\+status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structCore_1_1CEO_1_1State__Monitor__t_ae400975d61711e4c12c0f0763aabb3f1}{last\+\_\+update}} = 0
+\item 
+\mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} \mbox{\hyperlink{structCore_1_1CEO_1_1State__Monitor__t_a27d8d720566eb69387b3e091351a2d59}{status}} = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{structCore_1_1CEO_1_1State__Monitor__t_ad25d1db3c7a9adcf0c7a115585505bf5}{last\+\_\+error}} = ESP\+\_\+\+OK
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Telemetry \& Health-\/\+State Awareness. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_a65e9bb82eeaab3b1ff6e4990ce8a131a}\label{structCore_1_1CEO_1_1State__Monitor__t_a65e9bb82eeaab3b1ff6e4990ce8a131a} 
+\index{Core::CEO::State\_Monitor\_t@{Core::CEO::State\_Monitor\_t}!all\_status@{all\_status}}
+\index{all\_status@{all\_status}!Core::CEO::State\_Monitor\_t@{Core::CEO::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{all\_status}{all\_status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Core\+::\+CEO\+::\+State\+\_\+\+Monitor\+\_\+t\+::all\+\_\+status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+Status van de totale sensor-\/gezondheid. \Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_ad25d1db3c7a9adcf0c7a115585505bf5}\label{structCore_1_1CEO_1_1State__Monitor__t_ad25d1db3c7a9adcf0c7a115585505bf5} 
+\index{Core::CEO::State\_Monitor\_t@{Core::CEO::State\_Monitor\_t}!last\_error@{last\_error}}
+\index{last\_error@{last\_error}!Core::CEO::State\_Monitor\_t@{Core::CEO::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_error}{last\_error}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Core\+::\+CEO\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+error = ESP\+\_\+\+OK}
+
+Last recorded error. \Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_ae400975d61711e4c12c0f0763aabb3f1}\label{structCore_1_1CEO_1_1State__Monitor__t_ae400975d61711e4c12c0f0763aabb3f1} 
+\index{Core::CEO::State\_Monitor\_t@{Core::CEO::State\_Monitor\_t}!last\_update@{last\_update}}
+\index{last\_update@{last\_update}!Core::CEO::State\_Monitor\_t@{Core::CEO::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{last\_update}{last\_update}}
+{\footnotesize\ttfamily uint32\+\_\+t Core\+::\+CEO\+::\+State\+\_\+\+Monitor\+\_\+t\+::last\+\_\+update = 0}
+
+Last successful timestamp. \Hypertarget{structCore_1_1CEO_1_1State__Monitor__t_a27d8d720566eb69387b3e091351a2d59}\label{structCore_1_1CEO_1_1State__Monitor__t_a27d8d720566eb69387b3e091351a2d59} 
+\index{Core::CEO::State\_Monitor\_t@{Core::CEO::State\_Monitor\_t}!status@{status}}
+\index{status@{status}!Core::CEO::State\_Monitor\_t@{Core::CEO::State\_Monitor\_t}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8}{Core\+::\+State\+\_\+\+Monitor\+\_\+e}} Core\+::\+CEO\+::\+State\+\_\+\+Monitor\+\_\+t\+::status = \mbox{\hyperlink{DataManager_8hpp_a3063c81cf8890ee1dc5b4adff2e79ac8af068ebe4133e3e6563080836268ea979}{Core\+::\+State\+\_\+\+Monitor\+\_\+e\+::\+HEALTHY}}}
+
+The "{}\+At a Glance"{} status. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/include/\mbox{\hyperlink{CEO_8hpp}{CEO.\+hpp}}\end{DoxyCompactItemize}

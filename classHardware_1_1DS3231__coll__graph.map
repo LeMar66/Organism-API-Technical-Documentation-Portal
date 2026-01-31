@@ -1,0 +1,5 @@
+<map id="Hardware::DS3231" name="Hardware::DS3231">
+<area shape="rect" id="Node000001" title="Ultra&#45;precisiekklok driver via de thread&#45;safe I2CBus." alt="" coords="18,219,159,344"/>
+<area shape="rect" id="Node000002" href="$classHardware_1_1ITimeSource.html" title="Interface for hardware clock sources." alt="" coords="5,5,172,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,184,91,218,86,218,86,184"/>
+</map>

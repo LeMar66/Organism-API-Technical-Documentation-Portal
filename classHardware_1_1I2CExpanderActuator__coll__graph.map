@@ -1,0 +1,5 @@
+<map id="Hardware::I2CExpanderActuator" name="Hardware::I2CExpanderActuator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,279,228,444"/>
+<area shape="rect" id="Node000002" href="$classHardware_1_1IActuator.html" title="Abstract interface for all hardware outputs (Relays, PWM, Valves). Designed for deterministic synchro..." alt="" coords="45,5,189,231"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,244,119,279,114,279,114,244"/>
+</map>

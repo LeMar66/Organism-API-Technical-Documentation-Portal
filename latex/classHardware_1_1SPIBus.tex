@@ -1,0 +1,161 @@
+\doxysection{Hardware\+::SPIBus Class Reference}
+\hypertarget{classHardware_1_1SPIBus}{}\label{classHardware_1_1SPIBus}\index{Hardware::SPIBus@{Hardware::SPIBus}}
+
+
+Hardware gatekeeper for SPI communication.  
+
+
+
+
+{\ttfamily \#include $<$SPIBus.\+hpp$>$}
+
+
+
+Collaboration diagram for Hardware\+::SPIBus\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classHardware_1_1SPIBus__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classHardware_1_1SPIBus_1_1BusGuard}{Bus\+Guard}}
+\begin{DoxyCompactList}\small\item\em RAII scoped-\/lock for thread-\/safe SPI access. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structHardware_1_1SPIBus_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHardware_1_1SPIBus_aadb899db13284cc554cfdde219b5bc2d}{SPIBus}} (spi\+\_\+host\+\_\+device\+\_\+t host)
+\begin{DoxyCompactList}\small\item\em Inject hardware host resources. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1SPIBus_ae4668106c71f2e6aa2ed24f535d29629}\label{classHardware_1_1SPIBus_ae4668106c71f2e6aa2ed24f535d29629} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+SPIBus} ()
+\begin{DoxyCompactList}\small\item\em Destructor Ensures safe completion of the acquisition task, ensuring resource cleanup. \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1SPIBus_ac929d4a4b12aedf65eaf1bcce1aa0919}\label{classHardware_1_1SPIBus_ac929d4a4b12aedf65eaf1bcce1aa0919} 
+{\bfseries SPIBus} (const \mbox{\hyperlink{classHardware_1_1SPIBus}{SPIBus}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+\Hypertarget{classHardware_1_1SPIBus_ad629441f81ccb0bab6bf443f5572e930}\label{classHardware_1_1SPIBus_ad629441f81ccb0bab6bf443f5572e930} 
+\mbox{\hyperlink{classHardware_1_1SPIBus}{SPIBus}} \& {\bfseries operator=} (const \mbox{\hyperlink{classHardware_1_1SPIBus}{SPIBus}} \&)=delete
+\begin{DoxyCompactList}\small\item\em System Integrity. (No Copies Allowed) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1SPIBus_a1aa94515c229caa914f35fe2edce6805}{begin}} (int sck, int miso, int mosi)
+\begin{DoxyCompactList}\small\item\em Initialize the SPI master host. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1SPIBus_a26122f0769b46f4fdbb8438a842a69d0}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Attempt autonomous recovery of the bus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structHardware_1_1SPIBus_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classHardware_1_1SPIBus_a1a34fda3491720a5cd050d80500bb2e6}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current health of the subsystem. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHardware_1_1SPIBus_1_1BusGuard}{Bus\+Guard}} \mbox{\hyperlink{classHardware_1_1SPIBus_a6cc1d7614f2251019b144b7406848f60}{acquire}} ()
+\begin{DoxyCompactList}\small\item\em Acquire temporary ownership of the SPI bus. \end{DoxyCompactList}\item 
+spi\+\_\+host\+\_\+device\+\_\+t \mbox{\hyperlink{classHardware_1_1SPIBus_ae0584af78f83c0906f7a1c29bb18b93d}{get\+Host}} () const
+\begin{DoxyCompactList}\small\item\em Access the underlying ESP-\/\+IDF host identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHardware_1_1SPIBus_a90c972d72afd64852bb499242cd83088}\label{classHardware_1_1SPIBus_a90c972d72afd64852bb499242cd83088} 
+static constexpr Tick\+Type\+\_\+t {\bfseries BUS\+\_\+\+TIMEOUT\+\_\+\+TICKS} = pd\+MS\+\_\+\+TO\+\_\+\+TICKS(100)
+\begin{DoxyCompactList}\small\item\em Default timeout for bus arbitration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hardware gatekeeper for SPI communication. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHardware_1_1SPIBus_aadb899db13284cc554cfdde219b5bc2d}\label{classHardware_1_1SPIBus_aadb899db13284cc554cfdde219b5bc2d} 
+\index{Hardware::SPIBus@{Hardware::SPIBus}!SPIBus@{SPIBus}}
+\index{SPIBus@{SPIBus}!Hardware::SPIBus@{Hardware::SPIBus}}
+\doxysubsubsection{\texorpdfstring{SPIBus()}{SPIBus()}}
+{\footnotesize\ttfamily Hardware\+::\+SPIBus\+::\+SPIBus (\begin{DoxyParamCaption}\item[{spi\+\_\+host\+\_\+device\+\_\+t}]{host }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Inject hardware host resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & The SPI host identifier (e.\+g., SPI2\+\_\+\+HOST). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHardware_1_1SPIBus_a6cc1d7614f2251019b144b7406848f60}\label{classHardware_1_1SPIBus_a6cc1d7614f2251019b144b7406848f60} 
+\index{Hardware::SPIBus@{Hardware::SPIBus}!acquire@{acquire}}
+\index{acquire@{acquire}!Hardware::SPIBus@{Hardware::SPIBus}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHardware_1_1SPIBus_1_1BusGuard}{Bus\+Guard}} Hardware\+::\+SPIBus\+::acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Acquire temporary ownership of the SPI bus. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classHardware_1_1SPIBus_1_1BusGuard}{Bus\+Guard} RAII object. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1SPIBus_a1aa94515c229caa914f35fe2edce6805}\label{classHardware_1_1SPIBus_a1aa94515c229caa914f35fe2edce6805} 
+\index{Hardware::SPIBus@{Hardware::SPIBus}!begin@{begin}}
+\index{begin@{begin}!Hardware::SPIBus@{Hardware::SPIBus}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+SPIBus\+::begin (\begin{DoxyParamCaption}\item[{int}]{sck,  }\item[{int}]{miso,  }\item[{int}]{mosi }\end{DoxyParamCaption})}
+
+
+
+Initialize the SPI master host. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sck} & GPIO number for Clock line. \\
+\hline
+{\em miso} & GPIO number for Master-\/\+In-\/\+Slave-\/\+Out line. \\
+\hline
+{\em mosi} & GPIO number for Master-\/\+Out-\/\+Slave-\/\+In line. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK on success, or failure code. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1SPIBus_ae0584af78f83c0906f7a1c29bb18b93d}\label{classHardware_1_1SPIBus_ae0584af78f83c0906f7a1c29bb18b93d} 
+\index{Hardware::SPIBus@{Hardware::SPIBus}!getHost@{getHost}}
+\index{getHost@{getHost}!Hardware::SPIBus@{Hardware::SPIBus}}
+\doxysubsubsection{\texorpdfstring{getHost()}{getHost()}}
+{\footnotesize\ttfamily spi\+\_\+host\+\_\+device\+\_\+t Hardware\+::\+SPIBus\+::get\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access the underlying ESP-\/\+IDF host identifier. 
+
+\begin{DoxyReturn}{Returns}
+spi\+\_\+host\+\_\+device\+\_\+t The host ID. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1SPIBus_a1a34fda3491720a5cd050d80500bb2e6}\label{classHardware_1_1SPIBus_a1a34fda3491720a5cd050d80500bb2e6} 
+\index{Hardware::SPIBus@{Hardware::SPIBus}!getState@{getState}}
+\index{getState@{getState}!Hardware::SPIBus@{Hardware::SPIBus}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structHardware_1_1SPIBus_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} Hardware\+::\+SPIBus\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current health of the subsystem. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structHardware_1_1SPIBus_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t} The current status struct. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1SPIBus_a26122f0769b46f4fdbb8438a842a69d0}\label{classHardware_1_1SPIBus_a26122f0769b46f4fdbb8438a842a69d0} 
+\index{Hardware::SPIBus@{Hardware::SPIBus}!reset@{reset}}
+\index{reset@{reset}!Hardware::SPIBus@{Hardware::SPIBus}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t Hardware\+::\+SPIBus\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Attempt autonomous recovery of the bus. 
+
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t Result of the recovery attempt. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/bus/include/\mbox{\hyperlink{SPIBus_8hpp}{SPIBus.\+hpp}}\item 
+main/ceo/managers/bus/\mbox{\hyperlink{SPIBus_8cpp}{SPIBus.\+cpp}}\end{DoxyCompactItemize}

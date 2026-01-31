@@ -1,0 +1,189 @@
+\doxysection{Hardware\+::ISensor Class Reference}
+\hypertarget{classHardware_1_1ISensor}{}\label{classHardware_1_1ISensor}\index{Hardware::ISensor@{Hardware::ISensor}}
+
+
+Abstract interface for all physical sensors (Temp, Humidity, Pressure).  
+
+
+
+
+{\ttfamily \#include $<$ISensor.\+hpp$>$}
+
+
+
+Inheritance diagram for Hardware\+::ISensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHardware_1_1ISensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Hardware\+::ISensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classHardware_1_1ISensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structHardware_1_1ISensor_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classHardware_1_1ISensor_a620f99f127a7c612f59bb53c2b52d600}\label{classHardware_1_1ISensor_a620f99f127a7c612f59bb53c2b52d600} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+ISensor} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor essential for proper cleanup of derived objects. \end{DoxyCompactList}\item 
+virtual esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1ISensor_acd915048b89a57fe88c25a5f8c77b991}{begin}} (\mbox{\hyperlink{classHardware_1_1BusManager}{Hardware\+::\+Bus\+Manager}} \&bus)=0
+\begin{DoxyCompactList}\small\item\em Hardware handshake and initial configuration. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classHardware_1_1ISensor_ade0295a8bf774db8913be384a645c244}{update}} (\mbox{\hyperlink{classHardware_1_1BusManager}{Bus\+Manager}} \&bus)=0
+\begin{DoxyCompactList}\small\item\em This method runs within the \doxylink{classHardware_1_1SensorManager}{Sensor\+Manager} task (Core 1). Acquisition\+: Reads the physical hardware on the bus. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classHardware_1_1ISensor_a8ee9551120e74b88f1c39685ea1fcbf3}{publish}} (\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&state)=0
+\begin{DoxyCompactList}\small\item\em High-\/\+Speed ​​\+Publication\+: Commits the raw data to the Data\+Manager. \end{DoxyCompactList}\item 
+virtual esp\+\_\+err\+\_\+t \mbox{\hyperlink{classHardware_1_1ISensor_a3b4f61a656690f1cc075fec1ceaf67dc}{to\+Json}} (c\+JSON \texorpdfstring{$\ast$}{*}const root) const =0
+\begin{DoxyCompactList}\small\item\em Remote Reporting\+: Formats the data for web/\+API communication. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classHardware_1_1ISensor_a3a45cb8c1abe34e72a6f72601c589c11}{configure}} (const c\+JSON \texorpdfstring{$\ast$}{*}const config)=0
+\begin{DoxyCompactList}\small\item\em Remote Configuration\+: Adjust sensor-\/specific settings via JSON. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structHardware_1_1ISensor_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} \mbox{\hyperlink{classHardware_1_1ISensor_a4648f516409e72eb4efc21ac33b1a243}{get\+State}} () const =0
+\begin{DoxyCompactList}\small\item\em Telemetry \& Health-\/\+State Awareness. \end{DoxyCompactList}\item 
+virtual const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classHardware_1_1ISensor_af64e0cd607065f130e8d3166ce7c8bde}{get\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em The unique identification of the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract interface for all physical sensors (Temp, Humidity, Pressure). 
+
+\begin{DoxyNote}{Note}
+Inheritance from the base interface. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHardware_1_1ISensor_acd915048b89a57fe88c25a5f8c77b991}\label{classHardware_1_1ISensor_acd915048b89a57fe88c25a5f8c77b991} 
+\index{Hardware::ISensor@{Hardware::ISensor}!begin@{begin}}
+\index{begin@{begin}!Hardware::ISensor@{Hardware::ISensor}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily virtual esp\+\_\+err\+\_\+t Hardware\+::\+ISensor\+::begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHardware_1_1BusManager}{Hardware\+::\+Bus\+Manager}} \&}]{bus }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Hardware handshake and initial configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bus} & Reference to the central \doxylink{classHardware_1_1BusManager}{Bus\+Manager}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK upon successful binding. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classHardware_1_1Bme280Sensor_a95b3f8ebf1bb150d28e4d024f63c0730}{Hardware\+::\+Bme280\+Sensor}}, and \mbox{\hyperlink{classHardware_1_1ExampleTempSensor_afb071cdd620433c6e69c332b3f507a4a}{Hardware\+::\+Example\+Temp\+Sensor}}.
+
+\Hypertarget{classHardware_1_1ISensor_a3a45cb8c1abe34e72a6f72601c589c11}\label{classHardware_1_1ISensor_a3a45cb8c1abe34e72a6f72601c589c11} 
+\index{Hardware::ISensor@{Hardware::ISensor}!configure@{configure}}
+\index{configure@{configure}!Hardware::ISensor@{Hardware::ISensor}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily virtual void Hardware\+::\+ISensor\+::configure (\begin{DoxyParamCaption}\item[{const c\+JSON \texorpdfstring{$\ast$}{*}const}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remote Configuration\+: Adjust sensor-\/specific settings via JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Const pointer to the configuration object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHardware_1_1ISensor_af64e0cd607065f130e8d3166ce7c8bde}\label{classHardware_1_1ISensor_af64e0cd607065f130e8d3166ce7c8bde} 
+\index{Hardware::ISensor@{Hardware::ISensor}!getName@{getName}}
+\index{getName@{getName}!Hardware::ISensor@{Hardware::ISensor}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual const char \texorpdfstring{$\ast$}{*} Hardware\+::\+ISensor\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The unique identification of the sensor. 
+
+\begin{DoxyReturn}{Returns}
+const char\texorpdfstring{$\ast$}{*} Pointer to the driver\textquotesingle{}s TAG. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classHardware_1_1Bme280Sensor_ae949a9cf87ca34fc8bd8434f4ac530b7}{Hardware\+::\+Bme280\+Sensor}}, and \mbox{\hyperlink{classHardware_1_1ExampleTempSensor_a1b41a09207fb50656a65c3f50bf35069}{Hardware\+::\+Example\+Temp\+Sensor}}.
+
+\Hypertarget{classHardware_1_1ISensor_a4648f516409e72eb4efc21ac33b1a243}\label{classHardware_1_1ISensor_a4648f516409e72eb4efc21ac33b1a243} 
+\index{Hardware::ISensor@{Hardware::ISensor}!getState@{getState}}
+\index{getState@{getState}!Hardware::ISensor@{Hardware::ISensor}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structHardware_1_1ISensor_1_1State__Monitor__t}{State\+\_\+\+Monitor\+\_\+t}} Hardware\+::\+ISensor\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Telemetry \& Health-\/\+State Awareness. 
+
+\begin{DoxyReturn}{Returns}
+State\+\_\+\+Monitor\+\_\+e The current operational status of the hardware. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1ISensor_a8ee9551120e74b88f1c39685ea1fcbf3}\label{classHardware_1_1ISensor_a8ee9551120e74b88f1c39685ea1fcbf3} 
+\index{Hardware::ISensor@{Hardware::ISensor}!publish@{publish}}
+\index{publish@{publish}!Hardware::ISensor@{Hardware::ISensor}}
+\doxysubsubsection{\texorpdfstring{publish()}{publish()}}
+{\footnotesize\ttfamily virtual void Hardware\+::\+ISensor\+::publish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCore_1_1DataManager}{Core\+::\+Data\+Manager}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+High-\/\+Speed ​​\+Publication\+: Commits the raw data to the Data\+Manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Reference to the central thread-\/safe memory. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHardware_1_1ISensor_a3b4f61a656690f1cc075fec1ceaf67dc}\label{classHardware_1_1ISensor_a3b4f61a656690f1cc075fec1ceaf67dc} 
+\index{Hardware::ISensor@{Hardware::ISensor}!toJson@{toJson}}
+\index{toJson@{toJson}!Hardware::ISensor@{Hardware::ISensor}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily virtual esp\+\_\+err\+\_\+t Hardware\+::\+ISensor\+::to\+Json (\begin{DoxyParamCaption}\item[{c\+JSON \texorpdfstring{$\ast$}{*}const}]{root }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remote Reporting\+: Formats the data for web/\+API communication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & The c\+JSON root object to which data is added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+esp\+\_\+err\+\_\+t ESP\+\_\+\+OK if successful. 
+\end{DoxyReturn}
+\Hypertarget{classHardware_1_1ISensor_ade0295a8bf774db8913be384a645c244}\label{classHardware_1_1ISensor_ade0295a8bf774db8913be384a645c244} 
+\index{Hardware::ISensor@{Hardware::ISensor}!update@{update}}
+\index{update@{update}!Hardware::ISensor@{Hardware::ISensor}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Hardware\+::\+ISensor\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHardware_1_1BusManager}{Bus\+Manager}} \&}]{bus }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method runs within the \doxylink{classHardware_1_1SensorManager}{Sensor\+Manager} task (Core 1). Acquisition\+: Reads the physical hardware on the bus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bus} & For thread-\/safe hardware interaction. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classHardware_1_1Bme280Sensor_a29235dc96c065162f13b7413a012fb7a}{Hardware\+::\+Bme280\+Sensor}}, and \mbox{\hyperlink{classHardware_1_1ExampleTempSensor_a07a0302913861c2b3a358d5f6a43c053}{Hardware\+::\+Example\+Temp\+Sensor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/contracts/include/\mbox{\hyperlink{ISensor_8hpp}{ISensor.\+hpp}}\end{DoxyCompactItemize}

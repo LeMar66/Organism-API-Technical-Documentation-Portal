@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classHardware_1_1ITimeSource.html" title="Interface for hardware clock sources." alt="" coords="5,5,180,31"/>
+<area shape="rect" id="Node000001" href="$classHardware_1_1DS3231.html" title="Ultra&#45;precisiekklok driver via de thread&#45;safe I2CBus." alt="" coords="228,5,371,31"/>
+<area shape="poly" id="edge9_Node000000_Node000001" title=" " alt="" coords="194,15,227,15,227,21,194,21"/>
+</map>

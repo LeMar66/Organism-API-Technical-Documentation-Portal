@@ -1,0 +1,592 @@
+\doxysection{AGX Namespace Reference}
+\hypertarget{namespaceAGX}{}\label{namespaceAGX}\index{AGX@{AGX}}
+
+
+Implementation of the Composition Root.  
+
+
+
+
+\doxysubsection{Detailed Description}
+Implementation of the Composition Root. 
+
+Implementatie van Systeem-\/utilities conform \doxylink{namespaceAGX}{AGX} Rules.
+
+Implementatie van Systeemdiagnostiek conform \doxylink{namespaceAGX}{AGX} Rules.
+
+Industrial Grade Time Management with Cached Astro-\/\+Data and Fixed Scheduler. Complies with \doxylink{namespaceAGX}{AGX} System Rules 1-\/38.
+
+Implementatie van de Sensor Orchestrator conform \doxylink{namespaceAGX}{AGX} Rules.
+
+Netwerk Orchestrator implementatie conform \doxylink{namespaceAGX}{AGX} Rules.
+
+Implementation of the industrial UART bus driver. Complies with \doxylink{namespaceAGX}{AGX} System Rules.
+
+Implementation of the industrial SPI Master bus driver. Complies with \doxylink{namespaceAGX}{AGX} System Rules.
+
+Implementation of the industrial I2C Master bus driver. Complies with \doxylink{namespaceAGX}{AGX} System Rules.
+
+Implementation of the hardware gatekeeper (Bus\+Manager). Cleaned for strict separation of bus init and protocol config. Complies with \doxylink{namespaceAGX}{AGX} System Rules.
+
+Implementatie van de Actuator Orchestrator conform \doxylink{namespaceAGX}{AGX} Rules.
+
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Defines the essential interface that all concrete actuators must implement. It enables the Actuator\+Manager to treat diverse hardware (relays, PWM dimmers, motors) uniformly, abstracting the physical implementation details behind a common set of methods.
+
+DESIGN PRINCIPLES\+: ✔ Polymorphism\+: Allows the Actuator\+Manager to manage disparate actuator types via a single interface. ✔ Abstraction\+: Hides device-\/specific logic (e.\+g., I2C register writes vs. GPIO toggle) from the core logic. ✔ Hardware Access Control\+: Forces compliance with initialization sequences and hardware access rules. ✔ State Synchronization\+: Mandates an interface for syncing the hardware\textquotesingle{}s actual state with the desired state. ✔ State Reporting\+: Requires all actuators to report their specific health status via get\+Health(). ✔ Emergency Response\+: Defines a universal panic() method for system-\/wide fail-\/safe shutdown.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Interface (Abstract Base Class)
+\item Implemented by\+: Relay\+Actuator, Pwm\+Actuator, Rs485\+Actuator
+\item Used by\+: Actuator\+Manager \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Defines the essential interface that all concrete actuators must implement. It enables the Actuator\+Manager to treat diverse hardware (relays, PWM dimmers, motors) uniformly, abstracting the physical implementation details behind a common set of methods.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Polymorphism\+: Allows the Actuator\+Manager to manage disparate actuator types via a single interface. ✔ Abstraction\+: Hides device-\/specific logic (e.\+g., I2C register writes vs. GPIO toggle) from the core logic. ✔ Hardware Access Control\+: Forces compliance with initialization sequences and hardware access rules. ✔ State Synchronization\+: Mandates an interface for syncing the hardware\textquotesingle{}s actual state with the desired state. ✔ State Reporting\+: Requires all actuators to report their specific health status via get\+Health(). ✔ Emergency Response\+: Defines a universal panic() method for system-\/wide fail-\/safe shutdown.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Interface (Abstract Base Class)
+\item Implemented by\+:
+\item Used by\+: \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Defines the essential interface that all concrete sensors must implement. It enables the Sensor\+Manager to treat diverse hardware (BME280, DS18\+B20, pH probes) uniformly, abstracting the physical measurement protocols behind a common set of methods.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Polymorphism\+: Allows the Sensor\+Manager to manage disparate sensor types via a single interface. ✔ Abstraction\+: Hides device-\/specific bus logic (e.\+g., I2C vs. One\+Wire communication) from the core logic. ✔ Data Normalization\+: Forces compliance with standardized data output (e.\+g., Celsius, percentage, voltage). ✔ Read Integrity\+: Mandates interfaces for data acquisition and validation to ensure reliable input. ✔ State Reporting\+: Requires all sensors to report their specific health status, last error, and unique tag. ✔ Timely Acquisition\+: Defines a clear update() mechanism for synchronized data polling cycles.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Interface (Abstract Base Class)
+\item Implemented by\+: Bme280\+Sensor, Ph\+Sensor, etc.
+\item Used by\+: Sensor\+Manager \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Defines the essential interface for hardware and software time sources. It allows the Time\+Manager to abstract the physical RTC (Real-\/\+Time Clock) or NTP (Network Time Protocol) implementation details, ensuring a unified method for acquiring and setting the system time.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Precision Abstraction\+: Decouples high-\/level time management from low-\/level RTC chip registers or NTP stacks. ✔ Temporal Integrity\+: Mandates a method to verify the validity and drift of the current time source. ✔ Synchronization Logic\+: Provides a standard interface for adjusting and calibrating the time reference. ✔ Reliability Monitoring\+: Requires reporting on the source\textquotesingle{}s status (e.\+g., battery low, sync lost) via Health\+Status. ✔ Zero-\/\+Lock Policy\+: Ensures that time acquisition methods are non-\/blocking to maintain the organism\textquotesingle{}s rhythm. ✔ Atomic Updates\+: Standardizes the handover of \textquotesingle{}tm\textquotesingle{} structures between the hardware domain and the Core.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Interface (Abstract Base Class)
+\item Implemented by\+: External\+Rtc\+Source, Internal\+Rtc\+Source, Ntp\+Source
+\item Used by\+: Time\+Manager \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Provides a static validation layer for the ESP32 GPIO matrix. It encapsulates the physical constraints of the silicon, such as strapping pin detection, input-\/only restrictions, and RTC-\/domain mapping. This prevents permanent hardware damage and boot-\/loop scenarios by enforcing strict pin-\/usage rules at compile-\/time.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Hard-\/\+Wired Safety\+: Implements non-\/negotiable checks for strapping pins to guarantee boot stability. ✔ Silicon Awareness\+: Deep integration with ESP32-\/specific GPIO characteristics (e.\+g., Input-\/only pins 34-\/39). ✔ Static Enforcement\+: Utilizes constexpr logic to catch invalid hardware assignments during the build process. ✔ Domain Mapping\+: Identifies RTC-\/capable pins for low-\/power wake-\/up and deep-\/sleep survival scenarios. ✔ Conflict Prevention\+: Works in tandem with the Pin\+Manager to ensure logical bus assignments match physical reality. ✔ Deterministic Routing\+: Validates that critical signals (I2\+C/\+SPI) are mapped to optimized hardware paths.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Foundation Module (Static Tool\+Box)
+\item Used by\+: Pin\+Manager, Bus\+Manager, CEO (Validation Phase) \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Centralizes the definition of all physical GPIO assignments. It acts as the single source of truth for the hardware wiring diagram, ensuring that logical functions (Bus, Sensor, Actuator) are mapped to the correct silicon-\/level pins.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Single Source of Truth\+: Centralizes all pin definitions to prevent duplicate or conflicting assignments. ✔ Semantic Naming\+: Provides human-\/readable aliases for raw GPIO numbers based on their functional role. ✔ Hardware Decoupling\+: Allows for rapid board-\/revision changes by modifying only the anatomical map. ✔ Bus Alignment\+: Groups pin assignments by interface (I2C, SPI, UART) for logical consistency. ✔ Traceability\+: Enables the Pin\+Manager to validate physical wiring against the intended system design. ✔ Fixed Geometry\+: Enforces the use of constexpr values to ensure zero runtime overhead for pin lookups.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Configuration Layer (Static Registry)
+\item Primary input for\+: Pin\+Manager, Pin\+Capabilities \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Defines the logical roles and operational boundaries for every GPIO resource. It ensures that pins are not only physically available but also functionally appropriate for their assigned tasks (e.\+g., Interrupts, PWM, ADC), preventing logical conflicts before hardware initialization.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Role Specialization\+: Categorizes pins into clear functional domains (Digital I/O, Analog, Communication). ✔ Capability Enforcement\+: Validates that a pin\textquotesingle{}s assigned role matches its physical silicon capabilities. ✔ Interrupt Mapping\+: Centralizes the management of edge-\/triggering and interrupt-\/capable pins for the organism. ✔ Bus Cohesion\+: Groups pins by role to ensure proper signal integrity for high-\/speed protocols (I2\+C/\+SPI). ✔ State Defaults\+: Defines the safe power-\/on behavior (Pull-\/up/\+Pull-\/down) based on the assigned functional role. ✔ Conflict Auditing\+: Works with Pin\+Manager to detect when a single pin is erroneously assigned to multiple roles.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Configuration Layer (Logical Registry)
+\item Used by\+: Pin\+Manager, Pin\+Capabilities, Hardware Managers \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyCopyright}{Copyright}
+Advanced Grow Xperience (\doxylink{namespaceAGX}{AGX}) 2026 
+\end{DoxyCopyright}
+Voldoet aan\+:
+\end{DoxyItemize}
+
+Full File Protocol.
+\begin{DoxyItemize}
+\item Multi-\/core orchestratie (Core 0\+: Comms, Core 1\+: Industrial Engine).
+\item Explicit Dependency Injection.
+
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Acts as the primary orchestrator that integrates all sub-\/managers. It manages the bootstrap sequence, supervises the system health, and dispatches events between the logical core and physical hardware. The CEO class ensures the organism operates as a single, cohesive unit by mediating between sensors, actuators, and storage.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Centralized Orchestration\+: Coordinates the lifecycle and communication of all system managers. ✔ Bootstrap Management\+: Ensures a fail-\/fast initialization sequence from storage to hardware. ✔ Event Dispatching\+: The "{}\+Grand Dispatcher"{} that routes alarm triggers to multi-\/manager scenarios. ✔ System Supervision\+: Monitors the Health-\/\+State of all sub-\/systems to maintain overall integrity. ✔ Thread Safety \& Priority\+: Manages task allocation to ensure critical logic remains responsive. ✔ Shared State Integrity\+: Synchronizes the internal state mirror with global system parameters.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Root Component
+\item Controls\+: Time\+Manager, Storage\+Manager, Actuator\+Manager, Sensor\+Manager, Communication\+Manager \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyCopyright}{Copyright}
+Advanced Grow Xperience (\doxylink{namespaceAGX}{AGX}) 2026 
+\end{DoxyCopyright}
+Voldoet aan\+:
+\end{DoxyItemize}
+
+TAG conform Class-\/naam.
+\begin{DoxyItemize}
+\item Command Verification \& Feedback Loop.
+\item Strikte pinning op Core 1.
+
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Defines the a core hardware-\/abstraction component responsible for the orchestration, synchronization, and health monitoring of all physical actuators (e.\+g., relays, dimmers, motors). It serves as the bridge between the high-\/level system logic (Data\+Manager) and the low-\/level communication buses. DESIGN PRINCIPLES\+: ✔ Dynamic Registration\+: Manages a collection of polymorphic actuators via the IActuator interface. ✔ State Synchronization\+: Automatically synchronizes the physical state of hardware with the "{}\+Desired State"{} defined in the Data\+Manager. ✔ Real-\/time Execution\+: Operates on a dedicated high-\/priority Task Loop (Core 1) to ensure stable timing and responsive hardware control. ✔ Feedback \& Verification\+: Implements a command verification loop to ensure physical actions are successfully completed. ✔ Health Telemetry\+: Maintains a detailed State\+\_\+\+Monitor\+\_\+t mirror, providing real-\/time diagnostics, error codes, and specific component failure tracking. ✔ Emergency Safety\+: Provides a centralized Panic/\+Emergency Stop mechanism for immediate hardware shutdown during critical failures.
+\end{DoxyItemize}\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Owned by\+: CEO \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Advanced Grow Xperience (\doxylink{namespaceAGX}{AGX}) 2026
+\end{DoxyCopyright}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Responsible for the centralized management, initialization, and supervision of all hardware communication buses (I2C, SPI, UART). It acts as a gatekeeper to ensure collision-\/free access to shared hardware resources and provides a unified interface for all drivers.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Resource Arbitration\+: Provides thread-\/safe, exclusive access to physical buses for multiple clients. ✔ Hierarchical Health\+: Monitors individual bus integrity (I2\+C/\+SPI/\+UART) through nested health-\/states. ✔ Hardware Abstraction\+: Encapsulates ESP-\/\+IDF driver complexities, exposing a clean API to the hardware layer. ✔ Dynamic Scaling\+: Supports the registration and configuration of multiple bus instances and speeds. ✔ Fault Isolation\+: Detects and reports bus-\/specific failures (e.\+g., timeouts, signal noise) without halting the core. ✔ Lifecycle Management\+: Coordinates the exact power-\/on and initialization sequence of the physical interfaces.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Owned by\+: CEO
+\item Supervises\+: I2\+CBus, SPIBus, UARTBus \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Advanced Grow Xperience (\doxylink{namespaceAGX}{AGX}) 2026
+\end{DoxyCopyright}
+Manages the ESP-\/\+IDF I2C master driver lifecycle, providing thread-\/safe access via RAII Bus\+Guard and autonomous health reporting for the \doxylink{namespaceAGX}{AGX} organism. Complies with \doxylink{namespaceAGX}{AGX} System Rules 1-\/35. Core-\/\+Target\+: Core 1 \texorpdfstring{$\vert$}{|} Hardware\+: I2C Master
+\end{DoxyItemize}\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Owned by\+: Bus\+Manager
+\item Manages\+: Physical I2C SDA/\+SCL lines
+\end{DoxyItemize}
+
+(Advanced Grow Xperience) \begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Advanced Grow Xperience (\doxylink{namespaceAGX}{AGX}) 2026
+\end{DoxyCopyright}
+Manages the ESP-\/\+IDF SPI master host lifecycle, providing thread-\/safe access via RAII Bus\+Guard and autonomous health reporting for the \doxylink{namespaceAGX}{AGX} organism. Complies with \doxylink{namespaceAGX}{AGX} System Rules 1-\/35. Core-\/\+Target\+: Core 1 \texorpdfstring{$\vert$}{|} Hardware\+: SPI Master\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Owned by\+: Bus\+Manager
+\item Manages\+: Physical SPI SCK/\+MISO/\+MOSI lines
+\end{DoxyItemize}
+
+(Advanced Grow Xperience) \begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Advanced Grow Xperience (\doxylink{namespaceAGX}{AGX}) 2026
+\end{DoxyCopyright}
+Manages the ESP-\/\+IDF UART driver lifecycle, providing thread-\/safe access via RAII Bus\+Guard and autonomous health reporting for the \doxylink{namespaceAGX}{AGX} organism. Complies with \doxylink{namespaceAGX}{AGX} System Rules 1-\/35. Core-\/\+Target\+: Core 1 \texorpdfstring{$\vert$}{|} Hardware\+: UART Peripheral\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Owned by\+: Bus\+Manager
+\item Manages\+: Physical UART TX/\+RX lines
+\end{DoxyItemize}
+
+(Advanced Grow Xperience) \begin{DoxyCopyright}{Copyright}
+Advanced Grow Xperience (\doxylink{namespaceAGX}{AGX}) 2026
+\end{DoxyCopyright}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Manages all long-\/range and external communication protocols, with a primary focus on RS485/\+Modbus connectivity. It handles the translation of internal events into external bus commands and processes incoming data from remote nodes into the Data\+Manager.
+
+DESIGN PRINCIPLES\+: ✔ Protocol Orchestration\+: Manages complex communication stacks (RS485, Modbus) on dedicated tasks. ✔ Remote Node Supervision\+: Tracks the availability and health of external hardware modules. ✔ Async Messaging\+: Implements non-\/blocking command queues to prevent bus latency from affecting the Core. ✔ Core Isolation\+: Operates on a dedicated CPU core (Core 0) to ensure high-\/speed I/O stability. ✔ Data Integrity\+: Validates incoming packets and ensures command delivery via checksums and retries. ✔ Bridge Functionality\+: Acts as the primary link between the CEO and the distributed RS485 network.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Owned by\+: CEO
+\item Manages\+: RS485\+Bus, Modbus\+Stack, Network\+Interfaces \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Manages the single source of truth for all dynamic system parameters, environmental data, configuration settings, and desired actuator states. It provides a thread-\/safe API, enabling all managers (Sensors, Actuators, Time, Comms) to interact without race conditions.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Single Source of Truth\+: All components synchronize their actual state against this central repository. ✔ Thread Safety\+: Access control via mutexes or Free\+RTOS queues ensures data integrity across multiple tasks/cores. ✔ State Mirroring\+: Reflects the real-\/time physical environment and the organism\textquotesingle{}s intended actions. ✔ Decoupling\+: Acts as a buffer, allowing the Actuator\+Manager to safely read desired states without direct interaction with the Sensor\+Manager. ✔ Persistent Link\+: Provides the bridge between the volatile RAM state and the permanent storage (Storage\+Manager). ✔ Telemetry Hub\+: The primary source for the web interface or display to visualize the organism\textquotesingle{}s current status.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Core Tool\+Box (Data Hub)
+\item Used by\+: All Core and Hardware Managers \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Acts as the low-\/level gatekeeper for all General Purpose Input/\+Output (GPIO) pins. It ensures safe pin allocation, prevents hardware conflicts, and validates pin capabilities (Strapping, Input, Output) before any physical action is executed.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Safe Allocation\+: Prevents multiple managers from claiming the same physical GPIO resource. ✔ Static Validation\+: Uses compile-\/time checks to ensure pins are not assigned to strapping or reserved functions. ✔ Hardware Protection\+: Enforces safe default states (tri-\/state/pull-\/up) during the bootstrap sequence. ✔ Direct Access Control\+: Provides a unified, thread-\/safe interface for digital I/O, PWM, and ADC mapping. ✔ Conflict Resolution\+: Maintains a global registry of pin usage to detect logical design flaws at startup. ✔ Compliance\+: Implements zero-\/tolerance validation for critical control pins (e.\+g., I2C SDA/\+SCL).\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Owned by\+: CEO
+\item Foundation for\+: Actuator\+Manager, Sensor\+Manager, Bus\+Manager \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Responsible for the centralized management, polling, and data acquisition of all environmental sensors. It transforms raw hardware signals into meaningful telemetry, ensuring that the organism perceives its surroundings with high precision and reliability.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Dynamic Perception\+: Manages a polymorphic collection of sensors via the ISensor interface. ✔ Data Normalization\+: Converts varied hardware inputs into standardized units for system-\/wide consumption. ✔ Adaptive Polling\+: Implements intelligent sampling rates to balance accuracy with bus load and power efficiency. ✔ Telemetry Mirroring\+: Synchronizes real-\/time environmental data with the Data\+Manager. ✔ Sensory Health\+: Continuously monitors sensor integrity, identifying faulty probes or communication timeouts. ✔ Noise Filtering\+: Employs digital filtering techniques to ensure stable data for the core decision-\/making logic.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Owned by\+: CEO
+\item Manages\+: Bme280\+Sensor, Tsl2561\+Sensor, Ph\+Sensor, Ec\+Sensor (ISensor Derivatives) \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyCopyright}{Copyright}
+Advanced Grow Xperience (\doxylink{namespaceAGX}{AGX}) 2026 
+\end{DoxyCopyright}
+Voldoet aan\+:
+\end{DoxyItemize}
+
+TAG conform Class-\/naam.
+\begin{DoxyItemize}
+\item Scheiding van acquisitie en publicatie.
+\item Strikte pinning op Core 1.
+
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Manages all persistent data structures, handling the lifecycle of system configurations, alarm schedules, and calibration data. It provides a unified interface for both fast NVS parameters and structured JSON storage on the Little\+FS filesystem.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Atomic Persistence\+: Implements safe write-\/cycles (Write-\/\+Atomic) to prevent data corruption during power loss. ✔ Schema Validation\+: Ensures JSON structures (e.\+g., Alarms) are validated against system rules during injection. ✔ Hybrid Storage\+: Manages fast Non-\/\+Volatile Storage (NVS) for states and Little\+FS for complex object archiving. ✔ Data Orchestration\+: Facilitates the "{}\+Load and Inject"{} sequence during bootstrap to restore the organism\textquotesingle{}s state. ✔ File Integrity\+: Monitors filesystem health, including mount status and available space metrics. ✔ Serialization Logic\+: Handles the translation between binary C++ objects and persistent JSON formats (c\+JSON).\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Owned by\+: CEO
+\item Foundation for\+: Time\+Manager (Alarm Persistence), Data\+Manager (Config Persistence) \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Responsible for maintaining high-\/precision system time and orchestrating the complex alarm scheduler. It manages the synchronization between the internal RTC and external time sources, and evaluates intricate temporal masks for event triggering.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Temporal Synchronization\+: Coordinates the pulse of the organism via internal RTC and NTP protocols. ✔ Advanced Scheduling\+: Evaluates multi-\/layered bitmasks (weeks, months, days) for precise event execution. ✔ Astronomical Logic\+: Calculates solar cycles (sunrise/sunset) to align executive actions with natural light. ✔ Deterministic Triggering\+: Implements a fail-\/safe evaluation loop ensuring no alarm events are missed or duplicated. ✔ Resource Efficiency\+: Uses a fixed-\/size scheduler array to eliminate runtime heap fragmentation. ✔ Temporal Integrity\+: Monitors the drift and health of the hardware time source.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Owned by\+: CEO
+\item Interfaces with\+: ITime\+Source (RTC), Storage\+Manager (Persistence) \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+callback example\+: void my\+Light\+Action(\+Core\+::\+Alarm\+\_\+\+Event\+\_\+t\& triggered\+Event) \{ // 1. Controleer de status (de user kan dit checken of veranderen) if (triggered\+Event.\+status = Core\+::\+Alarm\+\_\+\+State\+\_\+e\+::\+INACTIVE) \{ ESP\+\_\+\+LOGI("{}\+APP"{}, "{}\+Alarm was inactief, doe niets."{}); return; \}
+\end{DoxyItemize}
+
+// 2. Voer de actie uit (hardware aansturen) // ... (Aansturen van je \doxylink{classHardware_1_1PinManager}{Hardware\+::\+Pin\+Manager} bijvoorbeeld) ...
+
+// 3. Verander eventueel de status voor de volgende keer if (triggered\+Event.\+frequency = Core\+::\+Alarm\+\_\+\+Frequency\+\_\+e\+::\+DAILY) \{ ESP\+\_\+\+LOGI("{}\+APP"{}, "{}\+Dagelijks alarm uitgevoerd."{}); \} else \{ // Eenmalig alarm\+: Zet hem na de actie op inactief triggered\+Event.\+status = Core\+::\+Alarm\+\_\+\+State\+\_\+e\+::\+INACTIVE; \} \}
+
+(Advanced Grow Xperience) \begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+3.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Advanced Grow Xperience (\doxylink{namespaceAGX}{AGX}) 2026
+\end{DoxyCopyright}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Acts as the central diagnostic hub that monitors the heartbeat, health-\/state, and operational stability of all system managers. It prevents system paralysis by detecting stalled tasks and triggers corrective actions or alerts when anomalies are detected.
+
+DESIGN PRINCIPLES\+: ✔ System Vigilance\+: Periodically audits the Health\+Status mirrors of all registered managers. ✔ Stall Detection\+: Monitors heartbeats (last\+\_\+update) to identify and report unresponsive tasks. ✔ Anomaly Aggregation\+: Consolidates distributed error codes (esp\+\_\+err\+\_\+t) into a unified system diagnostic report. ✔ Homeostatic Control\+: Initiates fail-\/safe procedures if critical subsystems (e.\+g., Bus\+Manager) enter a FATAL state. ✔ Telemetry Reporting\+: Provides a standardized interface for real-\/time health visualization (✔ Icons). ✔ Resource Watchdog\+: Complements hardware watchdogs by implementing logical supervision of the software lifecycle.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Owned by\+: CEO
+\item Supervises\+: All Core and Hardware Managers \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Manages the hardware-\/specific constants and software parameters that define the unique identity of the device. It provides the static configuration data required by managers during the bootstrap phase, such as network credentials, bus speeds, and calibration offsets.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Identity Definition\+: Stores unique identifiers (UUID/\+MAC) to distinguish the organism within a network. ✔ Static Optimization\+: Utilizes compile-\/time constants where possible to reduce runtime memory overhead. ✔ Environment Mapping\+: Defines the operational boundaries and safety limits specific to the local hardware environment. ✔ Calibration Storage\+: Holds the factory-\/reset and user-\/defined calibration values for sensitive sensors (p\+H/\+EC). ✔ Bus Geometry\+: Provides the exact timing and frequency parameters required for stable I2C, SPI, and RS485 communication. ✔ Fail-\/\+Safe Defaults\+: Ensures that in the absence of user settings, the organism reverts to a safe, pre-\/defined state.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Configuration Layer (Static \& Persistent)
+\item Primary input for\+: CEO, Storage\+Manager, Bus\+Manager \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+The primary entry point (app\+\_\+main) for the ESP32 firmware. This file orchestrates the absolute minimum low-\/level initialization required to instantiate the CEO, which then takes over the full lifecycle of the organism. It manages the primary stack allocation and the global execution context.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Minimalist Entry\+: Keeps the entry point clean, delegating all complex orchestration to the CEO. ✔ Fatal Error Catching\+: Implements the final safety net for any exceptions or initialization failures during boot. ✔ Resource Allocation\+: Handles the primary instantiation of the core singleton objects and managers. ✔ NVS \& Flash Activation\+: Ensures the physical storage layer is available before any logical operations commence. ✔ Watchdog Seeding\+: Initializes the initial hardware watchdogs before handing over control to the Task\+Monitor. ✔ Clean Shutdown\+: Manages the orderly deconstruction of the system in the rare event of a controlled termination.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Global Entry Point (ESP-\/\+IDF Context)
+\item Instantiates\+: CEO \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyVersion}{Version}
+1.\+0.\+0 (2026 Edition) 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2026-\/01-\/29 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+M.\+F. Saathof 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(c) 2026, All Rights Reserved.
+\end{DoxyCopyright}
+Provides a collection of optimized, stateless helper functions and macros used across all managers. It handles common tasks such as string manipulation, mathematical conversions, and system-\/level bitwise operations essential for mask processing.
+\end{DoxyItemize}
+
+DESIGN PRINCIPLES\+: ✔ Zero Side-\/\+Effects\+: Implements strictly pure functions to ensure predictable behavior across different CPU cores. ✔ Mathematical Precision\+: Contains specialized algorithms for environmental data conversion (e.\+g., PH/\+EC compensation). ✔ Memory Efficiency\+: Optimized for embedded use, avoiding unnecessary heap allocations. ✔ Type Safety\+: Leverages C++ templates to provide safe type casting and range checking. ✔ Bitwise Mastery\+: Powers the complex alarm bitmasks (skip\+\_\+weeks\+\_\+mask) via high-\/performance manipulation logic. ✔ String Sanitization\+: Ensures safe formatting of telemetry and logs for display and communication interfaces.\hypertarget{namespaceAGX_Class_Hierarchy}{}\doxysubsection{\texorpdfstring{Class\+\_\+\+Hierarchy}{Class\_Hierarchy}}\label{namespaceAGX_Class_Hierarchy}
+
+\begin{DoxyItemize}
+\item Global Tool\+Box Layer (Standalone)
+\item Used by\+: All Core and Hardware Managers \begin{DoxyNote}{Note}
+Certified to \doxylink{namespaceAGX}{AGX} System Rules.
+\end{DoxyNote}
+(Advanced Grow Xperience) \begin{DoxyCopyright}{Copyright}
+Advanced Grow Xperience (\doxylink{namespaceAGX}{AGX}) 2026 
+\end{DoxyCopyright}
+Voldoet aan\+:
+\end{DoxyItemize}
+
+Native ESP-\/\+IDF v5.\+x WDT en POSIX tijd.
+\begin{DoxyItemize}
+\item Integratie met \doxylink{TimeManager_8hpp}{Time\+Manager.\+hpp}.
+\item Geen Arduino String of onveilige geheugenacties.
+\item TAG conform Class-\/naam. 
+\end{DoxyItemize}

@@ -1,0 +1,52 @@
+\doxysection{Core\+::Data\+Manager\+::State\+Guard\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classCore_1_1DataManager_1_1StateGuard}{}\label{classCore_1_1DataManager_1_1StateGuard}\index{Core::DataManager::StateGuard$<$ T $>$@{Core::DataManager::StateGuard$<$ T $>$}}
+
+
+RAII wrapper for secure, timed access to system data.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for Core\+::Data\+Manager\+::State\+Guard\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classCore_1_1DataManager_1_1StateGuard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCore_1_1DataManager_1_1StateGuard_a50a8ab6548e5f6caffcba9ff2d0cf294}\label{classCore_1_1DataManager_1_1StateGuard_a50a8ab6548e5f6caffcba9ff2d0cf294} 
+{\bfseries State\+Guard} (Semaphore\+Handle\+\_\+t m, T \&data)
+\item 
+\Hypertarget{classCore_1_1DataManager_1_1StateGuard_aa6efa1c5101310babf14490437c7da90}\label{classCore_1_1DataManager_1_1StateGuard_aa6efa1c5101310babf14490437c7da90} 
+bool {\bfseries is\+Valid} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the lock was successfully obtained. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1DataManager_1_1StateGuard_ae317838036e7e35922ac3123b9ad2637}\label{classCore_1_1DataManager_1_1StateGuard_ae317838036e7e35922ac3123b9ad2637} 
+T \texorpdfstring{$\ast$}{*} {\bfseries operator-\/$>$} ()
+\begin{DoxyCompactList}\small\item\em Pointer-\/to-\/member access. \end{DoxyCompactList}\item 
+\Hypertarget{classCore_1_1DataManager_1_1StateGuard_acaf8b7e393db9880bca4e519f3972bd0}\label{classCore_1_1DataManager_1_1StateGuard_acaf8b7e393db9880bca4e519f3972bd0} 
+T \& {\bfseries get} ()
+\begin{DoxyCompactList}\small\item\em Direct reference access. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Core\+::\+Data\+Manager\+::\+State\+Guard$<$ T $>$}
+RAII wrapper for secure, timed access to system data. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Het datatype (Sensor\+Data\+\_\+t of Actuator\+Data\+\_\+t). \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/ceo/managers/data/include/\mbox{\hyperlink{DataManager_8hpp}{Data\+Manager.\+hpp}}\end{DoxyCompactItemize}

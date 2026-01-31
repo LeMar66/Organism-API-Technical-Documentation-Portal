@@ -1,0 +1,3 @@
+<map id="Hardware::ISensor" name="Hardware::ISensor">
+<area shape="rect" id="Node000001" title="Abstract interface for all physical sensors (Temp, Humidity, Pressure)." alt="" coords="5,5,139,211"/>
+</map>

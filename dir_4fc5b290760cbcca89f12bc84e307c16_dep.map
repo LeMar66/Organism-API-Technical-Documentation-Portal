@@ -1,0 +1,16 @@
+<map id="main/ceo/managers/storage/include" name="main/ceo/managers/storage/include">
+<area shape="rect" id="node1" href="dir_4fc5b290760cbcca89f12bc84e307c16.html" title="include" alt="" coords="143,52,212,77"/>
+<area shape="rect" id="node2" href="dir_1076dd02d5eb8cf6d0e12dcc1217a0a2.html" title="bus" alt="" coords="5,125,51,151"/>
+<area shape="poly" id="edge1" href="dir_000030_000002.html" alt="" coords="154,80,64,122,62,118,152,75"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000030_000002.html" title="1" alt="" coords="66,118,76,133"/>
+<area shape="rect" id="node3" href="dir_409f97388efe006bc3438b95e9edef48.html" title="components" alt="" coords="75,125,178,151"/>
+<area shape="poly" id="edge2" href="dir_000030_000005.html" alt="" coords="171,79,145,116,141,113,167,76"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000030_000005.html" title="1" alt="" coords="148,108,157,123"/>
+<area shape="rect" id="node4" href="dir_e4b9c6f7e7339e84c015f7e12cbe2261.html" title="time" alt="" coords="202,125,254,151"/>
+<area shape="poly" id="edge3" href="dir_000030_000046.html" alt="" coords="188,76,214,113,210,116,184,79"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000030_000046.html" title="1" alt="" coords="211,98,221,113"/>
+<area shape="rect" id="node5" href="dir_f0def43da6858815fcb024e72019effa.html" title="data" alt="" coords="279,125,329,151"/>
+<area shape="poly" id="edge4" href="dir_000030_000007.html" alt="" coords="199,75,273,116,270,121,196,80"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000030_000007.html" title="1" alt="" coords="267,102,276,116"/>
+<area shape="rect" id="clust1" href="dir_c80600dd16cc4e35cda59ae9218956ae.html" title="storage" alt="" coords="132,16,223,88"/>
+</map>
