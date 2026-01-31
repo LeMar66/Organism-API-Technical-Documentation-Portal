@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['directory_5fstructure_0',['Directory_Structure',['../md_docs_2Directory__Structure.html',1,'']]]
+  ['anatomie_20structuur_0',['Project Anatomie &amp; Structuur',['../md_docs_2Directory__Structure.html',1,'']]]
 ];

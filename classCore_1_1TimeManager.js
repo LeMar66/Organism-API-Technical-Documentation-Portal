@@ -1,0 +1,26 @@
+var classCore_1_1TimeManager =
+[
+    [ "State_Monitor_t", "structCore_1_1TimeManager_1_1State__Monitor__t.html", "structCore_1_1TimeManager_1_1State__Monitor__t" ],
+    [ "TimeManager", "classCore_1_1TimeManager.html#a22ec37fef18f78d90cfacd62d718172c", null ],
+    [ "~TimeManager", "classCore_1_1TimeManager.html#a79a9099b74e445652458377ac3dc2435", null ],
+    [ "TimeManager", "classCore_1_1TimeManager.html#a4c08a7f41df6544d1a64d988ab40542d", null ],
+    [ "addAlarm", "classCore_1_1TimeManager.html#a34fdeba5a9fbd8a183249055d689e634", null ],
+    [ "addDurationToStruct", "classCore_1_1TimeManager.html#a32debb89e7acb40a3a20652f34abfe31", null ],
+    [ "addStructToStruct", "classCore_1_1TimeManager.html#ac06870aaa32850a499f00c4d14d68440", null ],
+    [ "begin", "classCore_1_1TimeManager.html#a3fc826cf5999bfc98b9e48898d01f1c9", null ],
+    [ "getAlarmById", "classCore_1_1TimeManager.html#a615252efec58f093111f17a254802038", null ],
+    [ "getAlarms", "classCore_1_1TimeManager.html#a349e571cc8132a3d6c056ea323293bc8", null ],
+    [ "getDifference", "classCore_1_1TimeManager.html#acb1fa8644a95df772f0013b8cd3858b5", null ],
+    [ "getDifferenceBetweenStructs", "classCore_1_1TimeManager.html#a50bc1bdf1697729af9c306d0ca0a05eb", null ],
+    [ "getISOTime", "classCore_1_1TimeManager.html#af0e0d93f3c73e4036d065256ec6c1040", null ],
+    [ "getMoonPhase", "classCore_1_1TimeManager.html#a30b7e6f581815dc303bb30c8a54b516d", null ],
+    [ "getMoonPhaseName", "classCore_1_1TimeManager.html#ae3ad251ef10dd84da336a642f3c6dac5", null ],
+    [ "getState", "classCore_1_1TimeManager.html#a5739b95228b5f97743d332d034f8b962", null ],
+    [ "getSunrise", "classCore_1_1TimeManager.html#a0623f5eeb390d57dce8926b321d80c49", null ],
+    [ "getSunset", "classCore_1_1TimeManager.html#a724d72b18cd4ccdd3ee254e8c3a0aa1c", null ],
+    [ "initNTP", "classCore_1_1TimeManager.html#a0f69d2d1b760a6195c086c1a8c3e5c50", null ],
+    [ "operator=", "classCore_1_1TimeManager.html#af64cdc11923ed9ca310da5ef2cce1d1e", null ],
+    [ "removeAlarm", "classCore_1_1TimeManager.html#a8be5239eb73c793fc412cf309bfea123", null ],
+    [ "toDateTime", "classCore_1_1TimeManager.html#aa3dc32fc7cda17cb0e70f15edbf2ffa7", null ],
+    [ "update", "classCore_1_1TimeManager.html#a2f084cb2c938939ddf980e3bbf0e1faa", null ]
+];

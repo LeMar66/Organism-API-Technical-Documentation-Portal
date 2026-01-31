@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['reference_0',['🚀 Interface Reference',['..//home/marcel/Documents/PlatformIO/Organism/main/ceo/managers/time/README.md#autotoc_md37',1,'']]],
+  ['reference_0',['🚀 Interface Reference',['..//home/marcel/Documents/PlatformIO/Organism/main/ceo/managers/time/README.md#autotoc_md39',1,'']]],
   ['registeractuator_1',['registerActuator',['../classHardware_1_1ActuatorManager.html#a7dff5f726a2ad582fc43345d76ef645b',1,'Hardware::ActuatorManager']]],
   ['registersensor_2',['registerSensor',['../classHardware_1_1SensorManager.html#a1466cf7af3cf7c9eebea90f8b94cc679',1,'Hardware::SensorManager']]],
   ['relayactuator_3',['relayactuator',['../classHardware_1_1RelayActuator.html',1,'Hardware::RelayActuator'],['../classHardware_1_1RelayActuator.html#a1b388606c31b944b843e6f44035cd0ee',1,'Hardware::RelayActuator::RelayActuator()']]],
