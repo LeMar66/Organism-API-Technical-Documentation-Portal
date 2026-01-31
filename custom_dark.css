@@ -1,0 +1,6 @@
+/* Dit zorgt dat de witte SVG diagrammen worden omgezet naar dark mode kleuren */
+.dotgraph,
+.graphviz {
+  filter: invert(90%) hue-rotate(180deg) brightness(1.2);
+  background-color: transparent !important;
+}
